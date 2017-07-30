@@ -32,7 +32,7 @@ let htmlToJson = (body) => {
 }
 
 let saveToJson = (json) => {
-  let file = 'raw-scrape.json'
+  let file = './data/raw-scrape.json'
   let obj = json
    
   jsonfile.writeFile(file, obj, function (err) {

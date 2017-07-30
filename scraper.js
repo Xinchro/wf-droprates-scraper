@@ -1,13 +1,13 @@
 var fs = require('fs')
 
-let rawScrape = require("./raw-scrape.json")
+let rawScrape = require("./data/raw-scrape.json")
 
-// saveFile("stored-data.json", JSON.stringify(rawScrape, null, 2))
+saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
 loadFullFile()
 
 function saveFile(fileName, data, stringify) {
   if(stringify) data = JSON.stringify(data, null, 2)
-  fs.writeFile(`${fileName}.json`, data, function(err) {
+  fs.writeFile(`./data/${fileName}.json`, data, function(err) {
     if(err) {
       console.log(`File to save ${fileName}!`)
       return console.log(err)
@@ -19,22 +19,22 @@ function saveFile(fileName, data, stringify) {
 
 function saveFileSync(fileName, data, stringify) {
   if(stringify) data = JSON.stringify(data, null, 2)
-  fs.writeFileSync(`${fileName}.json`, data)
+  fs.writeFileSync(`./data/${fileName}.json`, data)
   console.log(`File ${fileName} was saved successfully!`)
 }
 
 
 function loadFullFile() {
-  let data = require("./stored-data.json")
+  let data = require("./data/stored-data.json")
   let dom = data.dom
   let html = dom[2]
   let body = html.children[1]
   let glossary = body.children[4]
-  // htmlListToJson(glossary, "glossary")
+  htmlListToJson(glossary, "glossary")
   let missionRewards = body.children[6]
-  // htmlTableToJson(missionRewards, "missionRewards")
+  htmlTableToJson(missionRewards, "missionRewards")
   let relicRewards = body.children[8]
-  // htmlTableToJson(relicRewards, "relicRewards")
+  htmlTableToJson(relicRewards, "relicRewards")
   let keyRewards = body.children[10]
   htmlTableToJson(keyRewards, "keyRewards")
 }
