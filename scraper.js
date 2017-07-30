@@ -6,8 +6,7 @@ const body = data.dom[2].children[1]
 // saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
 // saveEverything()
 
-saveSortiesRewards()
-// saveModsByMod()
+saveModsByMod()
 // saveModsByEnemy()
 // saveBlueprintsByBlueprint()
 // saveBlueprintsByEnemy()
@@ -67,22 +66,27 @@ function saveTransientRewards() {
   let transientRewards = body.children[12]
   htmlTableToJson(transientRewards, "transientRewards")
 }
+
 function saveSortiesRewards() {
   let sortiesRewards = body.children[14]
   htmlTableToJson(sortiesRewards, "sortiesRewards")
 }
+
 function saveModsByMod() {
-  Error.stackTraceLimit = 1
-  console.trace("Please complete me")
+  let modsByMod = body.children[16]
+  htmlTableToJson(modsByMod, "modsByMod")
 }
+
 function saveModsByEnemy() {
   Error.stackTraceLimit = 1
   console.trace("Please complete me")
 }
+
 function saveBlueprintsByBlueprint() {
   Error.stackTraceLimit = 1
   console.trace("Please complete me")
 }
+
 function saveBlueprintsByEnemy() {
   Error.stackTraceLimit = 1
   console.trace("Please complete me")
