@@ -33,7 +33,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -91,12 +96,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -225,7 +225,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -283,12 +288,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -365,21 +365,16 @@
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Mercury/Elion (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -529,6 +524,10 @@
       ]
     },
     {
+      "section": "Mercury/Elion (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Mercury/Terminus (Caches)",
       "subSections": [
         {
@@ -549,7 +548,12 @@
             {
               "name": "2500 Credits Cache",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "45 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -587,12 +591,7 @@
               "droprate": "Ultra Rare (1.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -666,9 +665,13 @@
     },
     {
       "section": "Mercury/Tolstoj (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Mercury/Neruda (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Mercury/Neruda (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1000 Credits Cache",
@@ -687,12 +690,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -731,7 +729,12 @@
             {
               "name": "400 Endo",
               "droprate": "Ultra Rare (1.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (15.10%)"
@@ -783,17 +786,7 @@
             {
               "name": "Xiphos Fuselage Blueprint",
               "droprate": "Legendary (0.50%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Event: Mercury/Caduceus (Exterminate)",
-          "items": [
+            },
             {
               "name": "Morphic Transformer",
               "droprate": "Rare (5.64%)"
@@ -821,6 +814,10 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Event: Mercury/Caduceus (Exterminate)",
+      "subSections": []
     },
     {
       "section": "Mercury/Odin (Interception)",
@@ -875,7 +872,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (8.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.00%)"
@@ -957,12 +959,7 @@
               "droprate": "Rare (5.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1047,7 +1044,12 @@
             {
               "name": "Parry",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -1081,12 +1083,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1171,7 +1168,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -1229,12 +1231,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1319,7 +1316,12 @@
             {
               "name": "2500 Credits Cache",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "45 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -1357,12 +1359,7 @@
               "droprate": "Ultra Rare (1.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1455,7 +1452,12 @@
             {
               "name": "Parry",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -1489,12 +1491,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1599,7 +1596,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (8.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.00%)"
@@ -1681,12 +1683,7 @@
               "droprate": "Rare (5.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1747,21 +1744,16 @@
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Venus/Fossa (Assassination)",
-          "items": [
+            },
             {
               "name": "Rhino Neuroptics Blueprint",
               "droprate": "Common (38.72%)"
@@ -1777,6 +1769,10 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Venus/Fossa (Assassination)",
+      "subSections": []
     },
     {
       "section": "Venus/Unda (Spy)",
@@ -1811,7 +1807,12 @@
             {
               "name": "Parry",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -1845,12 +1846,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -1935,7 +1931,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -1993,12 +1994,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -2192,9 +2188,13 @@
     },
     {
       "section": "Venus/Venera (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Venus/Tessera (Defense)",
       "subSections": [
         {
-          "subSection": "Venus/Tessera (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -2257,12 +2257,7 @@
               "droprate": "Rare (6.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -2321,7 +2316,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Metal Auger",
               "droprate": "Rare (6.67%)"
@@ -2387,10 +2387,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Venus/Kiliken (Excavation)",
       "subSections": [
         {
-          "subSection": "Venus/Kiliken (Excavation)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "500 Credits Cache",
@@ -2421,12 +2421,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -2485,7 +2480,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (9.68%)"
@@ -2547,10 +2547,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Venus/Romula (Defense)",
       "subSections": [
         {
-          "subSection": "Venus/Romula (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -2621,12 +2621,7 @@
               "droprate": "Rare (9.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -2745,7 +2740,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Ultra Rare (1.30%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Hellfire",
               "droprate": "Rare (7.59%)"
@@ -2857,17 +2857,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Ultra Rare (1.70%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Venus/Montes (Exterminate)",
-          "items": [
+            },
             {
               "name": "Morphic Transformer",
               "droprate": "Rare (5.64%)"
@@ -3041,10 +3031,18 @@
       ]
     },
     {
+      "section": "Venus/Montes (Exterminate)",
+      "subSections": []
+    },
+    {
       "section": "Earth/Mantle (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Earth/Cambria (Spy)",
       "subSections": [
         {
-          "subSection": "Earth/Cambria (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -3075,12 +3073,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -3115,7 +3108,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Uncommon (12.50%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "2000 Credits Cache",
               "droprate": "Rare (9.09%)"
@@ -3165,10 +3163,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Earth/Everest (Excavation)",
       "subSections": [
         {
-          "subSection": "Earth/Everest (Excavation)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "500 Credits Cache",
@@ -3199,12 +3197,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -3263,7 +3256,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (9.68%)"
@@ -3325,22 +3323,17 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Earth/Pacific (Rescue)",
       "subSections": [
         {
-          "subSection": "Earth/Pacific (Rescue)",
+          "subSection": "Rotation B",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -3417,7 +3410,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -3475,12 +3473,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -3601,7 +3594,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (8.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.00%)"
@@ -3683,12 +3681,7 @@
               "droprate": "Rare (5.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -3761,7 +3754,12 @@
             {
               "name": "2500 Credits Cache",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "300X Ferrite",
               "droprate": "Uncommon (12.18%)"
@@ -3799,12 +3797,7 @@
               "droprate": "Rare (2.58%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -3878,9 +3871,13 @@
     },
     {
       "section": "Earth/Oro (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Earth/Coba (Defense)",
       "subSections": [
         {
-          "subSection": "Earth/Coba (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -3951,12 +3948,7 @@
               "droprate": "Rare (9.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -4075,7 +4067,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Ultra Rare (1.30%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Hellfire",
               "droprate": "Rare (7.59%)"
@@ -4187,17 +4184,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Ultra Rare (1.70%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Earth/Erpo (Mobile Defense)",
-          "items": [
+            },
             {
               "name": "Polar Magazine",
               "droprate": "Common (38.72%)"
@@ -4235,6 +4222,10 @@
       ]
     },
     {
+      "section": "Earth/Erpo (Mobile Defense)",
+      "subSections": []
+    },
+    {
       "section": "Earth/Tikal (Excavation)",
       "subSections": [
         {
@@ -4267,7 +4258,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -4325,12 +4321,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -4427,7 +4418,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -4485,12 +4481,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -4619,7 +4610,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -4677,12 +4673,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -4803,7 +4794,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (8.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.00%)"
@@ -4885,12 +4881,7 @@
               "droprate": "Rare (5.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -4975,7 +4966,12 @@
             {
               "name": "Parry",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -5009,12 +5005,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -5099,7 +5090,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -5157,12 +5153,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -5372,21 +5363,20 @@
     },
     {
       "section": "Mars/Ara (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Mars/Martialis (Rescue)",
       "subSections": [
         {
-          "subSection": "Mars/Martialis (Rescue)",
+          "subSection": "Rotation B",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -5471,7 +5461,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (8.43%)"
@@ -5589,12 +5584,7 @@
               "droprate": "Ultra Rare (1.30%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -5728,9 +5718,13 @@
     },
     {
       "section": "Mars/War (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Mars/Gradivus (Caches)",
       "subSections": [
         {
-          "subSection": "Mars/Gradivus (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1000 Credits Cache",
@@ -5749,12 +5743,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -5793,7 +5782,12 @@
             {
               "name": "400 Endo",
               "droprate": "Ultra Rare (1.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (15.10%)"
@@ -5851,10 +5845,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Mars/Wahiba (Survival)",
       "subSections": [
         {
-          "subSection": "Mars/Wahiba (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -5881,12 +5875,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -5957,7 +5946,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (9.68%)"
@@ -5997,17 +5991,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.68%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Event: Mars/Quirinus (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -6181,10 +6165,18 @@
       ]
     },
     {
+      "section": "Event: Mars/Quirinus (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Mars/Syrtis (Exterminate)",
+      "subSections": []
+    },
+    {
+      "section": "Jupiter/Adrastea (Caches)",
       "subSections": [
         {
-          "subSection": "Jupiter/Adrastea (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -6199,12 +6191,7 @@
               "droprate": "Common (33.33%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -6247,7 +6234,12 @@
             {
               "name": "640 Endo",
               "droprate": "Ultra Rare (1.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (15.10%)"
@@ -6305,10 +6297,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Jupiter/Amalthea (Spy)",
       "subSections": [
         {
-          "subSection": "Jupiter/Amalthea (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -6355,12 +6347,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -6435,7 +6422,12 @@
             {
               "name": "50 Endo",
               "droprate": "Rare (5.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Metal Auger",
               "droprate": "Rare (5.64%)"
@@ -6501,29 +6493,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Jupiter/Metis (Rescue)",
       "subSections": [
         {
-          "subSection": "Jupiter/Metis (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -6533,10 +6525,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Jupiter/Io (Defense)",
       "subSections": [
         {
-          "subSection": "Jupiter/Io (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Meso D1 Relic",
@@ -6583,12 +6575,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -6655,7 +6642,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (4.51%)"
@@ -6713,10 +6705,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Jupiter/Elara (Survival)",
       "subSections": [
         {
-          "subSection": "Jupiter/Elara (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -6743,12 +6735,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -6819,7 +6806,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (9.68%)"
@@ -6881,10 +6873,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Jupiter/Callisto (Interception)",
       "subSections": [
         {
-          "subSection": "Jupiter/Callisto (Interception)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -6943,12 +6935,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -7015,7 +7002,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -7047,17 +7039,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Uncommon (12.50%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Jupiter/Themisto (Assassination)",
-          "items": [
+            },
             {
               "name": "Valkyr Neuroptics Blueprint",
               "droprate": "Common (38.72%)"
@@ -7073,6 +7055,10 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Jupiter/Themisto (Assassination)",
+      "subSections": []
     },
     {
       "section": "Jupiter/Sinai (Defense)",
@@ -7147,7 +7133,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (8.43%)"
@@ -7265,12 +7256,7 @@
               "droprate": "Ultra Rare (1.30%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -7529,17 +7515,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Beyond Legendary (Under Review) (0.09%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Jupiter/Ananke (Capture)",
-      "subSections": [
-        {
-          "subSection": "Jupiter/Galilea (Sabotage)",
-          "items": [
+            },
             {
               "name": "Glacial Edge",
               "droprate": "Uncommon (25.81%)"
@@ -7581,6 +7557,14 @@
       ]
     },
     {
+      "section": "Jupiter/Ananke (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Jupiter/Galilea (Sabotage)",
+      "subSections": []
+    },
+    {
       "section": "Jupiter/Cameria (Survival)",
       "subSections": [
         {
@@ -7609,7 +7593,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.88%)"
@@ -7679,12 +7668,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -7781,7 +7765,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -7847,12 +7836,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -7941,7 +7925,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.88%)"
@@ -8011,12 +8000,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -8129,7 +8113,12 @@
             {
               "name": "15 Endo",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.56%)"
@@ -8203,12 +8192,7 @@
               "droprate": "Rare (5.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -8285,18 +8269,18 @@
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -8369,7 +8353,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Target Cracker",
               "droprate": "Rare (6.25%)"
@@ -8435,12 +8424,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -8487,17 +8471,7 @@
             {
               "name": "Ember Systems Blueprint",
               "droprate": "Uncommon (22.56%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Saturn/Tethys (Assassination)",
-      "subSections": [
-        {
-          "subSection": "Event: Saturn/Phoebe (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -8647,6 +8621,14 @@
       ]
     },
     {
+      "section": "Saturn/Tethys (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Saturn/Phoebe (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Saturn/Rhea (Interception)",
       "subSections": [
         {
@@ -8707,7 +8689,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Target Cracker",
               "droprate": "Rare (6.25%)"
@@ -8773,12 +8760,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -8835,7 +8817,12 @@
             {
               "name": "4000 Credits Cache",
               "droprate": "Common (33.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "75 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -8877,12 +8864,7 @@
               "droprate": "Ultra Rare (1.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -8991,7 +8973,12 @@
             {
               "name": "15 Endo",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.56%)"
@@ -9065,12 +9052,7 @@
               "droprate": "Rare (5.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -9284,28 +9266,32 @@
     },
     {
       "section": "Saturn/Cassini (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Saturn/Anthe (Rescue)",
       "subSections": [
         {
-          "subSection": "Saturn/Anthe (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -9315,29 +9301,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Saturn/Numa (Rescue)",
       "subSections": [
         {
-          "subSection": "Saturn/Numa (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -9347,10 +9333,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Saturn/Calypso (Caches)",
       "subSections": [
         {
-          "subSection": "Saturn/Calypso (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -9365,12 +9351,7 @@
               "droprate": "Common (33.33%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -9413,7 +9394,12 @@
             {
               "name": "640 Endo",
               "droprate": "Ultra Rare (1.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (15.10%)"
@@ -9471,10 +9457,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Saturn/Pandora (Pursuit)",
       "subSections": [
         {
-          "subSection": "Saturn/Pandora (Pursuit)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Tempered Blade",
@@ -9513,12 +9499,7 @@
               "droprate": "Rare (2.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -9549,7 +9530,12 @@
             {
               "name": "150 Endo",
               "droprate": "Very Common (77.44%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "400 Endo",
               "droprate": "Rare (9.09%)"
@@ -9599,10 +9585,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Saturn/Cephalon Capture (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/Cephalon Capture (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -9757,12 +9743,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -9995,7 +9976,12 @@
             {
               "name": "Precision Munition",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -10069,10 +10055,10 @@
       ]
     },
     {
-      "section": "Rotation B",
+      "section": "Saturn/Team Annihilation (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/Team Annihilation (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -10227,12 +10213,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -10465,7 +10446,12 @@
             {
               "name": "Precision Munition",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -10539,10 +10525,10 @@
       ]
     },
     {
-      "section": "Rotation B",
+      "section": "Saturn/Annihilation (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/Annihilation (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -10697,12 +10683,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -10935,7 +10916,12 @@
             {
               "name": "Draining Gloom",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -11009,10 +10995,10 @@
       ]
     },
     {
-      "section": "Rotation B",
+      "section": "Saturn/Lunaro Arena (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/Lunaro Arena (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -11167,12 +11153,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -11405,7 +11386,12 @@
             {
               "name": "Draining Gloom",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -11479,10 +11465,10 @@
       ]
     },
     {
-      "section": "Rotation B",
+      "section": "Saturn/Piscinas (Survival)",
       "subSections": [
         {
-          "subSection": "Saturn/Piscinas (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -11509,12 +11495,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -11585,7 +11566,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (9.68%)"
@@ -11631,10 +11617,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Saturn/Caracol (Defection)",
       "subSections": [
         {
-          "subSection": "Saturn/Caracol (Defection)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -11661,12 +11647,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -11721,7 +11702,12 @@
             {
               "name": "Bane Of Corrupted",
               "droprate": "Rare (5.64%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Uncommon (11.06%)"
@@ -11763,10 +11749,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Saturn/(Variant) Cephalon Capture (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/(Variant) Cephalon Capture (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -11921,12 +11907,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -12159,7 +12140,12 @@
             {
               "name": "Precision Munition",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -12233,10 +12219,10 @@
       ]
     },
     {
-      "section": "Rotation B",
+      "section": "Saturn/(Variant) Team Annihilation (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/(Variant) Team Annihilation (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -12391,12 +12377,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -12629,7 +12610,12 @@
             {
               "name": "Precision Munition",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -12703,10 +12689,10 @@
       ]
     },
     {
-      "section": "Rotation B",
+      "section": "Saturn/(Variant) Annihilation (Conclave)",
       "subSections": [
         {
-          "subSection": "Saturn/(Variant) Annihilation (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -12861,12 +12847,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -13099,7 +13080,12 @@
             {
               "name": "Draining Gloom",
               "droprate": "Rare (2.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "400X Alloy Plate",
               "droprate": "Uncommon (12.65%)"
@@ -13167,17 +13153,7 @@
             {
               "name": "Forma Blueprint",
               "droprate": "Legendary (0.25%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
-        {
-          "subSection": "Uranus/Ariel (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -13359,10 +13335,18 @@
       ]
     },
     {
+      "section": "Uranus/Ariel (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Uranus/Titania (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Uranus/Umbriel (Interception)",
       "subSections": [
         {
-          "subSection": "Uranus/Umbriel (Interception)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -13421,12 +13405,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -13493,7 +13472,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -13531,10 +13515,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Miranda (Defense)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Miranda (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -13581,12 +13565,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -13657,7 +13636,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (2.26%)"
@@ -13739,10 +13723,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Uranus/Ophelia (Survival)",
       "subSections": [
         {
-          "subSection": "Uranus/Ophelia (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -13761,12 +13745,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -13833,7 +13812,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -13899,10 +13883,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Portia (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Portia (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "4000 Credits Cache",
@@ -13917,12 +13901,7 @@
               "droprate": "Uncommon (22.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -13961,7 +13940,12 @@
             {
               "name": "640 Endo",
               "droprate": "Rare (2.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (12.58%)"
@@ -14023,10 +14007,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Uranus/Desdemona (Caches)",
       "subSections": [
         {
-          "subSection": "Uranus/Desdemona (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -14049,12 +14033,7 @@
               "droprate": "Uncommon (20.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -14097,7 +14076,12 @@
             {
               "name": "Patagium",
               "droprate": "Rare (4.51%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "2X Gallium",
               "droprate": "Uncommon (15.49%)"
@@ -14143,10 +14127,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Cupid (Survival)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Cupid (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -14165,12 +14149,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -14237,7 +14216,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -14303,10 +14287,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Uranus/Rosalind (Spy)",
       "subSections": [
         {
-          "subSection": "Uranus/Rosalind (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -14337,12 +14321,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -14417,7 +14396,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (5.96%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "4000 Credits Cache",
               "droprate": "Rare (6.45%)"
@@ -14483,10 +14467,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Bianca (Defense)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Bianca (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -14533,12 +14517,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -14609,7 +14588,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (2.26%)"
@@ -14691,10 +14675,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Prospero (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Prospero (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -14717,12 +14701,7 @@
               "droprate": "Uncommon (20.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -14765,7 +14744,12 @@
             {
               "name": "Patagium",
               "droprate": "Rare (4.51%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "2X Gallium",
               "droprate": "Uncommon (15.49%)"
@@ -14811,29 +14795,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Mab (Rescue)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Mab (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -14843,10 +14827,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Uranus/Setebos (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Uranus/Setebos (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -14869,12 +14853,7 @@
               "droprate": "Uncommon (20.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -14917,7 +14896,12 @@
             {
               "name": "Patagium",
               "droprate": "Rare (4.51%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "2X Gallium",
               "droprate": "Uncommon (15.49%)"
@@ -14963,29 +14947,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Uranus/Caliban (Rescue)",
       "subSections": [
         {
-          "subSection": "Uranus/Caliban (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -14995,10 +14979,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Uranus/Ur (Defense)",
       "subSections": [
         {
-          "subSection": "Uranus/Ur (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -15069,12 +15053,7 @@
               "droprate": "Rare (9.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -15193,7 +15172,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Ultra Rare (1.30%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Hellfire",
               "droprate": "Rare (7.59%)"
@@ -15311,10 +15295,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Uranus/Stephano (Defense)",
       "subSections": [
         {
-          "subSection": "Uranus/Stephano (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -15361,12 +15345,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -15437,7 +15416,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (2.26%)"
@@ -15513,17 +15497,7 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (8.60%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Event: Uranus/Trinculo (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -15673,6 +15647,10 @@
       ]
     },
     {
+      "section": "Event: Uranus/Trinculo (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Uranus/Caelus (Interception)",
       "subSections": [
         {
@@ -15721,7 +15699,12 @@
             {
               "name": "250 Endo",
               "droprate": "Common (38.72%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Superior Defenses",
               "droprate": "Uncommon (10.00%)"
@@ -15763,12 +15746,7 @@
               "droprate": "Uncommon (10.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -15841,7 +15819,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -15907,12 +15890,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -15981,7 +15959,12 @@
             {
               "name": "2X 5000 Credits Cache",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "75 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -16019,12 +16002,7 @@
               "droprate": "Rare (2.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -16234,9 +16212,13 @@
     },
     {
       "section": "Neptune/Galatea (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Neptune/Proteus (Defense)",
       "subSections": [
         {
-          "subSection": "Neptune/Proteus (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -16283,12 +16265,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -16359,7 +16336,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (2.26%)"
@@ -16441,29 +16423,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Neptune/Triton (Rescue)",
       "subSections": [
         {
-          "subSection": "Neptune/Triton (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -16473,10 +16455,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Neptune/Despina (Excavation)",
       "subSections": [
         {
-          "subSection": "Neptune/Despina (Excavation)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -16495,12 +16477,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -16567,7 +16544,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -16633,10 +16615,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Neptune/Halimede (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Neptune/Halimede (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "4000 Credits Cache",
@@ -16651,12 +16633,7 @@
               "droprate": "Uncommon (22.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -16695,7 +16672,12 @@
             {
               "name": "640 Endo",
               "droprate": "Rare (2.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (12.58%)"
@@ -16751,17 +16733,7 @@
             {
               "name": "Xiphos Avionics Blueprint",
               "droprate": "Legendary (0.50%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Neptune/Salacia (Mobile Defense)",
-          "items": [
+            },
             {
               "name": "Polar Magazine",
               "droprate": "Common (38.72%)"
@@ -16811,10 +16783,18 @@
       ]
     },
     {
+      "section": "Neptune/Salacia (Mobile Defense)",
+      "subSections": []
+    },
+    {
       "section": "Neptune/Psamathe (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Neptune/Laomedeia (Spy)",
       "subSections": [
         {
-          "subSection": "Neptune/Laomedeia (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -16845,12 +16825,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -16925,7 +16900,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (5.96%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "4000 Credits Cache",
               "droprate": "Rare (6.45%)"
@@ -16991,10 +16971,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Neptune/Yursa (Defection)",
       "subSections": [
         {
-          "subSection": "Neptune/Yursa (Defection)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -17013,12 +16993,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -17065,7 +17040,12 @@
             {
               "name": "Bane Of Corrupted",
               "droprate": "Rare (5.64%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Uncommon (11.06%)"
@@ -17107,10 +17087,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Neptune/Kelashin (Survival)",
       "subSections": [
         {
-          "subSection": "Neptune/Kelashin (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -17129,12 +17109,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -17201,7 +17176,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -17251,10 +17231,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Neptune/Cephalon Capture (Conclave)",
       "subSections": [
         {
-          "subSection": "Neptune/Cephalon Capture (Conclave)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "400 Endo",
@@ -17409,12 +17389,7 @@
               "droprate": "Rare (2.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -17499,18 +17474,18 @@
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -17531,18 +17506,18 @@
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -17563,18 +17538,18 @@
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -17595,18 +17570,18 @@
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Profit: ",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -17667,7 +17642,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (5.88%)"
@@ -17737,12 +17717,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -17835,18 +17810,18 @@
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -17875,7 +17850,12 @@
             {
               "name": "2X 5000 Credits Cache",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "75 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -17913,12 +17893,7 @@
               "droprate": "Rare (2.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -18121,17 +18096,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Beyond Legendary (Under Review) (0.09%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Pluto/Hydra (Capture)",
-      "subSections": [
-        {
-          "subSection": "Pluto/Hades (Assassination)",
-          "items": [
+            },
             {
               "name": "Excalibur Neuroptics Blueprint",
               "droprate": "Common (38.72%)"
@@ -18147,6 +18112,14 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Pluto/Hydra (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Pluto/Hades (Assassination)",
+      "subSections": []
     },
     {
       "section": "Pluto/Cypress (Caches)",
@@ -18165,7 +18138,12 @@
             {
               "name": "2X 5000 Credits Cache",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "75 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -18203,12 +18181,7 @@
               "droprate": "Rare (2.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -18321,7 +18294,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi C2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -18355,12 +18333,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -18425,7 +18398,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -18491,12 +18469,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -18637,7 +18610,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (8.43%)"
@@ -18755,12 +18733,7 @@
               "droprate": "Ultra Rare (1.30%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -18913,7 +18886,12 @@
             {
               "name": "Power Throw",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.96%)"
@@ -18987,12 +18965,7 @@
               "droprate": "Rare (5.96%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -19081,7 +19054,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -19147,12 +19125,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -19366,21 +19339,20 @@
     },
     {
       "section": "Event: Pluto/Corb (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Ceres/Olla (Rescue)",
       "subSections": [
         {
-          "subSection": "Event: Ceres/Olla (Rescue)",
+          "subSection": "Rotation B",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -19409,7 +19381,12 @@
             {
               "name": "4000 Credits Cache",
               "droprate": "Common (33.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "75 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -19451,12 +19428,7 @@
               "droprate": "Ultra Rare (1.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -19565,7 +19537,12 @@
             {
               "name": "15 Endo",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.56%)"
@@ -19639,12 +19616,7 @@
               "droprate": "Rare (5.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -19777,7 +19749,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -19835,12 +19812,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -20054,21 +20026,20 @@
     },
     {
       "section": "Ceres/Lex (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Ceres/Nuovo (Rescue)",
       "subSections": [
         {
-          "subSection": "Ceres/Nuovo (Rescue)",
+          "subSection": "Rotation B",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -20113,7 +20084,12 @@
             {
               "name": "Parry",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -20147,12 +20123,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -20223,17 +20194,7 @@
             {
               "name": "Twin Gremlins Blueprint",
               "droprate": "Uncommon (16.67%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Ceres/Exta (Assassination)",
-      "subSections": [
-        {
-          "subSection": "Ceres/Exta (Assassination) Extra",
-          "items": [
+            },
             {
               "name": "Trinity Neuroptics Blueprint",
               "droprate": "Common (38.72%)"
@@ -20249,6 +20210,14 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Ceres/Exta (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Ceres/Exta (Assassination) Extra",
+      "subSections": []
     },
     {
       "section": "Ceres/Casta (Defense)",
@@ -20315,7 +20284,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -20373,12 +20347,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -20499,7 +20468,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (8.33%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.00%)"
@@ -20581,12 +20555,7 @@
               "droprate": "Rare (5.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -20703,7 +20672,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -20761,12 +20735,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -20863,7 +20832,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.88%)"
@@ -20933,12 +20907,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -21035,7 +21004,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -21093,12 +21067,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -21219,7 +21188,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (8.43%)"
@@ -21337,12 +21311,7 @@
               "droprate": "Ultra Rare (1.30%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -21495,7 +21464,12 @@
             {
               "name": "Power Throw",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.96%)"
@@ -21569,12 +21543,7 @@
               "droprate": "Rare (5.96%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -21788,9 +21757,13 @@
     },
     {
       "section": "Event: Eris/Cosis (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Eris/Candiru (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Eris/Candiru (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -21817,12 +21790,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -21861,7 +21829,12 @@
             {
               "name": "Fever Strike",
               "droprate": "Rare (5.64%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neurodes",
               "droprate": "Uncommon (15.49%)"
@@ -21907,29 +21880,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Eris/Brugia (Rescue)",
       "subSections": [
         {
-          "subSection": "Eris/Brugia (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -21939,10 +21912,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Eris/Lepis (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Eris/Lepis (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -21969,12 +21942,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -22013,7 +21981,12 @@
             {
               "name": "Fever Strike",
               "droprate": "Rare (5.64%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neurodes",
               "droprate": "Uncommon (15.49%)"
@@ -22059,10 +22032,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Eris/Kala-Azar (Defense)",
       "subSections": [
         {
-          "subSection": "Eris/Kala-Azar (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -22109,12 +22082,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -22185,7 +22153,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (2.26%)"
@@ -22267,10 +22240,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Eris/Hymeno (Survival)",
       "subSections": [
         {
-          "subSection": "Event: Eris/Hymeno (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -22289,12 +22262,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -22361,7 +22329,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -22421,17 +22394,7 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (8.60%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Eris/Isos (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -22581,6 +22544,10 @@
       ]
     },
     {
+      "section": "Eris/Isos (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Event: Eris/Gnathos (Spy)",
       "subSections": [
         {
@@ -22613,7 +22580,12 @@
             {
               "name": "Power Throw",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.96%)"
@@ -22687,12 +22659,7 @@
               "droprate": "Rare (5.96%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -22809,7 +22776,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi C2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -22843,12 +22815,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -22941,7 +22908,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (5.88%)"
@@ -23011,12 +22983,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -23149,7 +23116,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi C2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -23183,12 +23155,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -23281,7 +23248,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (5.88%)"
@@ -23351,12 +23323,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -23401,18 +23368,18 @@
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -23453,7 +23420,12 @@
             {
               "name": "Thief's Wit",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "4000 Credits Cache",
               "droprate": "Uncommon (15.49%)"
@@ -23491,12 +23463,7 @@
               "droprate": "Rare (5.64%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -23565,7 +23532,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -23631,12 +23603,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -23777,7 +23744,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (8.43%)"
@@ -23895,12 +23867,7 @@
               "droprate": "Ultra Rare (1.30%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24029,18 +23996,18 @@
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24101,7 +24068,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi C2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -24135,12 +24107,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24213,7 +24180,12 @@
             {
               "name": "Thief's Wit",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "4000 Credits Cache",
               "droprate": "Uncommon (15.49%)"
@@ -24251,12 +24223,7 @@
               "droprate": "Rare (5.64%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24325,7 +24292,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -24359,12 +24331,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24441,7 +24408,12 @@
             {
               "name": "Thief's Wit",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "4000 Credits Cache",
               "droprate": "Uncommon (15.49%)"
@@ -24479,12 +24451,7 @@
               "droprate": "Rare (5.64%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24565,7 +24532,12 @@
             {
               "name": "Power Throw",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.96%)"
@@ -24639,12 +24611,7 @@
               "droprate": "Rare (5.96%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -24858,9 +24825,13 @@
     },
     {
       "section": "Sedna/Rusalka (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Sedna/Camenae (Defense)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Camenae (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Meso D1 Relic",
@@ -24907,12 +24878,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -24979,7 +24945,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (4.51%)"
@@ -25031,17 +25002,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.68%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Sedna/Vodyanoi (Arena)",
-          "items": [
+            },
             {
               "name": "5000 Credits Cache",
               "droprate": "Very Common (75.50%)"
@@ -25107,22 +25068,25 @@
       ]
     },
     {
+      "section": "Sedna/Vodyanoi (Arena)",
+      "subSections": []
+    },
+    {
       "section": "Event: Sedna/Undine (Arena)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Sedna/Jengu (Rescue)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Jengu (Rescue)",
+          "subSection": "Rotation B",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -25168,9 +25132,13 @@
     },
     {
       "section": "Sedna/Nakki (Arena)",
+      "subSections": []
+    },
+    {
+      "section": "Sedna/Berehynia (Interception)",
       "subSections": [
         {
-          "subSection": "Sedna/Berehynia (Interception)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -25217,12 +25185,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -25257,7 +25220,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Uncommon (12.50%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi C2 Relic",
               "droprate": "Rare (2.58%)"
@@ -25299,10 +25267,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Sedna/Tikoloshe (Spy)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Tikoloshe (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -25333,12 +25301,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -25413,7 +25376,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (5.96%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "4000 Credits Cache",
               "droprate": "Rare (6.45%)"
@@ -25479,10 +25447,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Sedna/Selkie (Survival)",
       "subSections": [
         {
-          "subSection": "Sedna/Selkie (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -25501,12 +25469,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -25573,7 +25536,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -25639,10 +25607,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Sedna/Phithale (Caches)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Phithale (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "4000 Credits Cache",
@@ -25657,12 +25625,7 @@
               "droprate": "Uncommon (22.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -25701,7 +25664,12 @@
             {
               "name": "640 Endo",
               "droprate": "Rare (2.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (12.58%)"
@@ -25763,10 +25731,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Sedna/Kelpie (Caches)",
       "subSections": [
         {
-          "subSection": "Sedna/Kelpie (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "4000 Credits Cache",
@@ -25781,12 +25749,7 @@
               "droprate": "Uncommon (22.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -25825,7 +25788,12 @@
             {
               "name": "640 Endo",
               "droprate": "Rare (2.01%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (12.58%)"
@@ -25887,43 +25855,33 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Sedna/Naga (Rescue)",
       "subSections": [
         {
-          "subSection": "Sedna/Naga (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Sedna/Yam (Arena)",
-          "items": [
+            },
             {
               "name": "5000 Credits Cache",
               "droprate": "Very Common (75.50%)"
@@ -25973,10 +25931,18 @@
       ]
     },
     {
+      "section": "Sedna/Yam (Arena)",
+      "subSections": []
+    },
+    {
       "section": "Sedna/Merrow (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Sedna/Hydron (Defense)",
       "subSections": [
         {
-          "subSection": "Sedna/Hydron (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -26023,12 +25989,7 @@
               "droprate": "Rare (9.09%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -26099,7 +26060,12 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Vital Sense",
               "droprate": "Rare (2.26%)"
@@ -26181,10 +26147,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Sedna/Scylla (Survival)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Scylla (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -26203,12 +26169,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -26275,7 +26236,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -26341,10 +26307,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Sedna/Yemaja (Survival)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Yemaja (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -26363,12 +26329,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -26435,7 +26396,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -26501,10 +26467,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Sedna/Amarna (Survival)",
       "subSections": [
         {
-          "subSection": "Sedna/Amarna (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -26523,12 +26489,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -26595,7 +26556,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -26645,29 +26611,29 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Sedna/Veles (Rescue)",
       "subSections": [
         {
-          "subSection": "Event: Sedna/Veles (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -26677,10 +26643,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Sedna/Sangeru (Defense)",
       "subSections": [
         {
-          "subSection": "Sedna/Sangeru (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -26751,12 +26717,7 @@
               "droprate": "Rare (9.48%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -26875,7 +26836,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Ultra Rare (1.30%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Hellfire",
               "droprate": "Rare (7.59%)"
@@ -26987,17 +26953,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Ultra Rare (1.70%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Europa/Abaddon (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -27179,29 +27135,37 @@
       ]
     },
     {
+      "section": "Europa/Abaddon (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Event: Europa/Gamygyn (Mobile Defense)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Europa/Eligor (Rescue)",
       "subSections": [
         {
-          "subSection": "Event: Europa/Eligor (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -27211,10 +27175,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Europa/Lillith (Excavation)",
       "subSections": [
         {
-          "subSection": "Event: Europa/Lillith (Excavation)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -27241,12 +27205,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -27317,7 +27276,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (9.68%)"
@@ -27373,17 +27337,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.68%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Europa/Naamah (Assassination)",
-          "items": [
+            },
             {
               "name": "Nova Neuroptics Blueprint",
               "droprate": "Common (38.72%)"
@@ -27399,6 +27353,10 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Europa/Naamah (Assassination)",
+      "subSections": []
     },
     {
       "section": "Europa/Valefor (Excavation)",
@@ -27429,7 +27387,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.88%)"
@@ -27499,12 +27462,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -27629,7 +27587,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Target Cracker",
               "droprate": "Rare (6.25%)"
@@ -27695,12 +27658,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -27789,7 +27747,12 @@
             {
               "name": "15 Endo",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (5.56%)"
@@ -27863,12 +27826,7 @@
               "droprate": "Rare (5.56%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -27945,18 +27903,18 @@
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -28017,7 +27975,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -28083,12 +28046,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -28157,18 +28115,18 @@
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -28209,7 +28167,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (16.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (5.88%)"
@@ -28279,12 +28242,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -28421,7 +28379,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.48%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Speed Trigger",
               "droprate": "Rare (8.43%)"
@@ -28539,12 +28502,7 @@
               "droprate": "Ultra Rare (1.30%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -28803,17 +28761,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Beyond Legendary (Under Review) (0.09%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Event: Europa/Cryotic Front (Capture)",
-      "subSections": [
-        {
-          "subSection": "Event: Europa/Beleth (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -28963,6 +28911,14 @@
       ]
     },
     {
+      "section": "Event: Europa/Cryotic Front (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Europa/Beleth (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Event: Europa/Cryotic Front (Excavation)",
       "subSections": [
         {
@@ -28983,7 +28939,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -29049,12 +29010,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -29268,9 +29224,13 @@
     },
     {
       "section": "Event: Europa/Cryotic Front (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Europa/Cholistan (Excavation)",
       "subSections": [
         {
-          "subSection": "Europa/Cholistan (Excavation)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2000 Credits Cache",
@@ -29289,12 +29249,7 @@
               "droprate": "Uncommon (25.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -29361,7 +29316,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (6.25%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -29421,17 +29381,7 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (8.60%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Event: Europa/Cryotic Front (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -29723,12 +29673,20 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Event: Europa/Cryotic Front (Capture)",
+      "subSections": []
     },
     {
       "section": "Void/Hepit (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Void/Taranis (Defense)",
       "subSections": [
         {
-          "subSection": "Void/Taranis (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -29791,12 +29749,7 @@
               "droprate": "Rare (6.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -29855,7 +29808,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Metal Auger",
               "droprate": "Rare (6.67%)"
@@ -29921,10 +29879,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Void/Stribog (Caches)",
       "subSections": [
         {
-          "subSection": "Void/Stribog (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "3000 Credits Cache",
@@ -29939,12 +29897,7 @@
               "droprate": "Common (33.33%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -29983,7 +29936,12 @@
             {
               "name": "300X Plastids",
               "droprate": "Uncommon (12.65%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "80 Endo",
               "droprate": "Uncommon (18.88%)"
@@ -30037,10 +29995,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Void/Ani (Survival)",
       "subSections": [
         {
-          "subSection": "Void/Ani (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -30067,12 +30025,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -30143,7 +30096,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (9.68%)"
@@ -30199,17 +30157,7 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.68%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Void/Ukko (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -30359,6 +30307,10 @@
       ]
     },
     {
+      "section": "Void/Ukko (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Void/Belenus (Defense)",
       "subSections": [
         {
@@ -30407,7 +30359,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (5.88%)"
@@ -30477,12 +30434,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -30587,7 +30539,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -30621,12 +30578,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -30687,7 +30639,12 @@
             {
               "name": "10000 Credits Cache",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "150 Endo",
               "droprate": "Uncommon (15.18%)"
@@ -30721,12 +30678,7 @@
               "droprate": "Uncommon (15.18%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -30823,7 +30775,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi C2 Relic",
               "droprate": "Uncommon (12.50%)"
@@ -30857,12 +30814,7 @@
               "droprate": "Uncommon (12.50%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -31052,9 +31004,13 @@
     },
     {
       "section": "Event: Phobos/Limtoc (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Phobos/Grildrig (Spy)",
       "subSections": [
         {
-          "subSection": "Event: Phobos/Grildrig (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -31085,12 +31041,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -31125,7 +31076,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Uncommon (12.50%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "2000 Credits Cache",
               "droprate": "Rare (9.09%)"
@@ -31175,10 +31131,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Phobos/Stickney (Survival)",
       "subSections": [
         {
-          "subSection": "Phobos/Stickney (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -31209,12 +31165,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -31273,7 +31224,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (9.68%)"
@@ -31329,17 +31285,7 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.68%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Phobos/Skyresh (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -31489,6 +31435,10 @@
       ]
     },
     {
+      "section": "Phobos/Skyresh (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Event: Phobos/Drunlo (Defense)",
       "subSections": [
         {
@@ -31553,7 +31503,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (6.67%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.14%)"
@@ -31611,12 +31566,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -31693,7 +31643,12 @@
             {
               "name": "Vapor Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
@@ -31703,10 +31658,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Phobos/Kepler (Rush)",
       "subSections": [
         {
-          "subSection": "Phobos/Kepler (Rush)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Tempered Blade",
@@ -31737,12 +31692,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -31773,7 +31723,12 @@
             {
               "name": "150 Endo",
               "droprate": "Very Common (77.44%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Meteor Crash",
               "droprate": "Rare (7.52%)"
@@ -31827,10 +31782,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Phobos/Gulliver (Defense)",
       "subSections": [
         {
-          "subSection": "Phobos/Gulliver (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -31893,12 +31848,7 @@
               "droprate": "Rare (6.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -31957,7 +31907,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Metal Auger",
               "droprate": "Rare (6.67%)"
@@ -32023,10 +31978,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Phobos/Shklovsky (Spy)",
       "subSections": [
         {
-          "subSection": "Phobos/Shklovsky (Spy)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Synthula",
@@ -32057,12 +32012,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -32097,7 +32047,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Uncommon (12.50%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "2000 Credits Cache",
               "droprate": "Rare (9.09%)"
@@ -32147,10 +32102,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Event: Phobos/Wendell (Excavation)",
       "subSections": [
         {
-          "subSection": "Event: Phobos/Wendell (Excavation)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "500 Credits Cache",
@@ -32181,12 +32136,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -32245,7 +32195,12 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (7.14%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (9.68%)"
@@ -32301,17 +32256,7 @@
             {
               "name": "Lith B1 Relic",
               "droprate": "Rare (9.68%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Event: Phobos/Todd (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -32461,6 +32406,10 @@
       ]
     },
     {
+      "section": "Event: Phobos/Todd (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Event: Phobos/Flimnap (Survival)",
       "subSections": [
         {
@@ -32493,7 +32442,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Rare (7.14%)"
@@ -32551,12 +32505,7 @@
               "droprate": "Rare (7.14%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -32653,7 +32602,12 @@
             {
               "name": "80 Endo",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Lith V2 Relic",
               "droprate": "Uncommon (11.06%)"
@@ -32703,12 +32657,7 @@
               "droprate": "Rare (4.51%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -32770,9 +32719,13 @@
     },
     {
       "section": "Phobos/Iliad (Assassination)",
+      "subSections": []
+    },
+    {
+      "section": "Event: Phobos/Opik (Rush)",
       "subSections": [
         {
-          "subSection": "Event: Phobos/Opik (Rush)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Vitality",
@@ -32839,12 +32792,7 @@
               "droprate": "Rare (2.21%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -32955,7 +32903,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Ultra Rare (1.30%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Hellfire",
               "droprate": "Rare (6.90%)"
@@ -33061,10 +33014,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Phobos/Zeugma (Survival)",
       "subSections": [
         {
-          "subSection": "Phobos/Zeugma (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "1500 Credits Cache",
@@ -33091,12 +33044,7 @@
               "droprate": "Uncommon (16.67%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -33167,7 +33115,12 @@
             {
               "name": "Meso M1 Relic",
               "droprate": "Rare (5.88%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (9.68%)"
@@ -33213,10 +33166,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Derelict/Orokin Derelict Defense (Defense)",
       "subSections": [
         {
-          "subSection": "Derelict/Orokin Derelict Defense (Defense)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "240 Endo",
@@ -33259,12 +33212,7 @@
               "droprate": "Uncommon (10.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -33279,7 +33227,12 @@
             {
               "name": "Mutalist Alad V Nav Coordinate",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Meso O1 Relic",
               "droprate": "Rare (7.74%)"
@@ -33329,10 +33282,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Derelict/Orokin Derelict Sabotage (Caches)",
       "subSections": [
         {
-          "subSection": "Derelict/Orokin Derelict Sabotage (Caches)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "2500 Credits Cache",
@@ -33363,12 +33316,7 @@
               "droprate": "Uncommon (14.29%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -33415,7 +33363,12 @@
             {
               "name": "Expel Infested",
               "droprate": "Rare (4.42%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Argon Crystal",
               "droprate": "Uncommon (19.36%)"
@@ -33461,10 +33414,10 @@
       ]
     },
     {
-      "section": "Rotation C",
+      "section": "Derelict/Orokin Derelict Survival (Survival)",
       "subSections": [
         {
-          "subSection": "Derelict/Orokin Derelict Survival (Survival)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Lith V2 Relic",
@@ -33507,12 +33460,7 @@
               "droprate": "Uncommon (10.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
@@ -33551,7 +33499,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Uncommon (11.11%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (8.60%)"
@@ -33591,17 +33544,7 @@
             {
               "name": "Axi R1 Relic",
               "droprate": "Rare (8.60%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Derelict/Orokin Derelict Assassinate (Assassination)",
-          "items": [
+            },
             {
               "name": "Nekros Chassis Blueprint",
               "droprate": "Common (33.33%)"
@@ -33617,6 +33560,10 @@
           ]
         }
       ]
+    },
+    {
+      "section": "Derelict/Orokin Derelict Assassinate (Assassination)",
+      "subSections": []
     },
     {
       "section": "Lua/Plato (Caches)",
@@ -33651,7 +33598,12 @@
             {
               "name": "Octavia Systems Blueprint",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "2500 Credits Cache",
               "droprate": "Uncommon (25.29%)"
@@ -33677,12 +33629,7 @@
               "droprate": "Ultra Rare (1.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -33779,7 +33726,12 @@
             {
               "name": "Astral Twilight",
               "droprate": "Ultra Rare (1.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Focused Defense",
               "droprate": "Rare (6.49%)"
@@ -33849,12 +33801,7 @@
               "droprate": "Rare (6.49%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -33919,7 +33866,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -33985,12 +33937,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -34107,7 +34054,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (5.88%)"
@@ -34177,12 +34129,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -34412,42 +34359,36 @@
     },
     {
       "section": "Lua/Copernicus (Capture)",
+      "subSections": []
+    },
+    {
+      "section": "Lua/Zeipel (Rescue)",
       "subSections": [
         {
-          "subSection": "Lua/Zeipel (Rescue)",
+          "subSection": "Rotation A",
           "items": [
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation A",
-      "subSections": [
+        },
         {
           "subSection": "Rotation B",
           "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
             {
               "name": "Cosmic Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation C",
-      "subSections": [
-        {
-          "subSection": "Kuva Fortress/Nabuk (Capture)",
-          "items": [
+            },
             {
               "name": "Vitality",
               "droprate": "Rare (6.32%)"
@@ -34597,6 +34538,10 @@
       ]
     },
     {
+      "section": "Kuva Fortress/Nabuk (Capture)",
+      "subSections": []
+    },
+    {
       "section": "Kuva Fortress/Taveuni (Survival)",
       "subSections": [
         {
@@ -34617,7 +34562,12 @@
             {
               "name": "400 Endo",
               "droprate": "Uncommon (25.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Neo V5 Relic",
               "droprate": "Rare (6.25%)"
@@ -34683,12 +34633,7 @@
               "droprate": "Rare (6.25%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -34805,7 +34750,12 @@
             {
               "name": "Neo B3 Relic",
               "droprate": "Rare (9.09%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Axi G1 Relic",
               "droprate": "Rare (5.88%)"
@@ -34875,12 +34825,7 @@
               "droprate": "Rare (5.88%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -34981,7 +34926,12 @@
             {
               "name": "2X 5000 Credits Cache",
               "droprate": "Uncommon (22.56%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "75 Endo",
               "droprate": "Uncommon (12.65%)"
@@ -35019,12 +34969,7 @@
               "droprate": "Rare (2.01%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -35125,7 +35070,12 @@
             {
               "name": "Power Throw",
               "droprate": "Uncommon (14.29%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Meso D1 Relic",
               "droprate": "Rare (7.04%)"
@@ -35191,12 +35141,7 @@
               "droprate": "Rare (7.04%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [
@@ -35269,18 +35214,18 @@
             {
               "name": "Phase Specter Blueprint",
               "droprate": "Very Common (100.00%)"
-            },
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
             {
               "name": "Force Specter Blueprint",
               "droprate": "Very Common (100.00%)"
             }
           ]
-        }
-      ]
-    },
-    {
-      "section": "Rotation B",
-      "subSections": [
+        },
         {
           "subSection": "Rotation C",
           "items": [

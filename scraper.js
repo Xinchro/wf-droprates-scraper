@@ -33,6 +33,10 @@ function loadFullFile() {
   // htmlListToJson(glossary, "glossary")
   let missionRewards = body.children[6]
   // htmlTableToJson(missionRewards, "missionRewards")
+  let relicRewards = body.children[8]
+  // htmlTableToJson(relicRewards, "relicRewards")
+  let keyRewards = body.children[10]
+  htmlTableToJson(keyRewards, "keyRewards")
 }
 
 
@@ -47,7 +51,6 @@ function htmlListToJson(list, listName) {
   let data = { glossaryList: [] }
 
   list.children.forEach((child) => {
-    console.log(child.children[0].attribs.href)
     data.glossaryList.push({
       type: child.raw,
       href: child.children[0].attribs.href,
@@ -68,26 +71,18 @@ function htmlTableToJson(table, tableName) {
 
   let data = { sections: [] }
 
-  let titleToggle = false
+  let title = true
 
   let currentSection, currentSubSection
   table.children.forEach((row, index) => {
-    // console.log(row.children[0])
     if(row.children[0].attribs) {
+      if(row.children[0].attribs.class === "blank-row") {
+        title = true
+      }
       if(parseInt(row.children[0].attribs.colspan) === 2
           && !row.children[0].attribs.class) {
         // title(section) or subtitle(subsection) (1 column)
-        if(titleToggle) {
-          //new subsection
-          currentSection.subSections.push({
-            subSection: row.children[0].children[0].data,
-            items: []
-          })
-
-          // set current subsection to last in list
-          currentSubSection = currentSection.subSections[currentSection.subSections.length-1]
-          titleToggle = false
-        } else {
+        if(title) {
           //new section
           data.sections.push({
             section: row.children[0].children[0].data,
@@ -96,19 +91,43 @@ function htmlTableToJson(table, tableName) {
 
           // set current section to last in list
           currentSection = data.sections[data.sections.length-1]
-          titleToggle = true
+          currentSubSection = null
+          title = false
+        } else {
+          //new subsection
+          currentSection.subSections.push({
+            subSection: row.children[0].children[0].data,
+            items: []
+          })
+
+          // set current subsection to last in list
+          currentSubSection = currentSection.subSections[currentSection.subSections.length-1]
         }
       }
     } else {
       // item (2 columns)
       // [0] is name
       // [1] is drop rate
-      currentSubSection.items.push({
-        name: row.children[0].children[0].data,
-        droprate: row.children[1].children[0].data
-      })
+
+      // checks if this is a subsection style table
+      if(currentSubSection) {
+        currentSubSection.items.push({
+          name: row.children[0].children[0].data,
+          droprate: row.children[1].children[0].data
+        })
+      } else {
+        // if there is no items array, creates items array in topmost section and removes the subsection element
+        if(!currentSection.items) {
+          currentSection.items = []
+          delete currentSection.subSections
+        }
+        currentSection.items.push({
+          name: row.children[0].children[0].data,
+          droprate: row.children[1].children[0].data
+        })
+      }
     }
   })
 
-  saveFileSync("missionRewards", data, true)
+  saveFileSync(tableName, data, true)
 }

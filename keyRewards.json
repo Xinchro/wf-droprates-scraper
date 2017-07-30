@@ -1,0 +1,1012 @@
+{
+  "sections": [
+    {
+      "section": "Recover The Orokin Archive",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Vitality",
+              "droprate": "Uncommon (15.18%)"
+            },
+            {
+              "name": "Fast Deflection",
+              "droprate": "Uncommon (15.18%)"
+            },
+            {
+              "name": "Fast Deflection",
+              "droprate": "Uncommon (15.18%)"
+            },
+            {
+              "name": "Rush",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Magazine Warp",
+              "droprate": "Uncommon (15.18%)"
+            },
+            {
+              "name": "Trick Mag",
+              "droprate": "Uncommon (15.18%)"
+            },
+            {
+              "name": "Pressure Point",
+              "droprate": "Rare (2.01%)"
+            },
+            {
+              "name": "Ammo Drum",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Fast Hands",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith S4 Relic",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith N3 Relic",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith V2 Relic",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith S6 Relic",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith V4 Relic",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith A2 Relic",
+              "droprate": "Rare (2.21%)"
+            },
+            {
+              "name": "Lith B1 Relic",
+              "droprate": "Rare (2.21%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Speed Trigger",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Fast Hands",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Point Strike",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Vital Sense",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Piercing Hit",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Metal Auger",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Pistol Gambit",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Target Cracker",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "No Return",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Ravage",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Blunderbuss",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Point Blank",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Serration",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Hornet Strike",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Fury",
+              "droprate": "Rare (2.01%)"
+            },
+            {
+              "name": "Reflex Coil",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Pressure Point",
+              "droprate": "Rare (8.43%)"
+            },
+            {
+              "name": "Meso S2 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso S4 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso D1 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso F1 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso O1 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso S5 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso N4 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso V5 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso S6 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            },
+            {
+              "name": "Meso M1 Relic",
+              "droprate": "Ultra Rare (1.30%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Hellfire",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Heated Charge",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Molten Impact",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Barrel Diffusion",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Streamline",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Intensify",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Neo T1 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Thunderbolt",
+              "droprate": "Rare (2.01%)"
+            },
+            {
+              "name": "50 Endo",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "80 Endo",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Meso S2 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Meso S4 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Neo V5 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Neo V2 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Neo S6 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Neo B2 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Meso O1 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Meso S5 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Meso N4 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Neo N6 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Meso V5 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Neo N7 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            },
+            {
+              "name": "Meso S6 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Meso M1 Relic",
+              "droprate": "Rare (6.90%)"
+            },
+            {
+              "name": "Neo B3 Relic",
+              "droprate": "Ultra Rare (1.70%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Help Clem Retrieve The Relic",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Help Clem Retrieve The Relic",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Help Clem Retrieve The Relic",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Help Clem Retrieve The Relic",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Help Clem Retrieve The Relic",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Clem Clone Blueprint",
+              "droprate": "Very Common (100.00%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Mutalist Alad V Assassinate",
+      "items": [
+        {
+          "name": "Mesa Neuroptics Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Mesa Chassis Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Mesa Systems Blueprint",
+          "droprate": "Uncommon (22.56%)"
+        }
+      ]
+    },
+    {
+      "section": "Acquire The Incubator Segment",
+      "subSections": [
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "2000 Credits Cache",
+              "droprate": "Common (33.33%)"
+            },
+            {
+              "name": "5000 Credits Cache",
+              "droprate": "Common (33.33%)"
+            },
+            {
+              "name": "80 Endo",
+              "droprate": "Common (33.33%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "2000 Credits Cache",
+              "droprate": "Common (33.33%)"
+            },
+            {
+              "name": "5000 Credits Cache",
+              "droprate": "Common (33.33%)"
+            },
+            {
+              "name": "80 Endo",
+              "droprate": "Common (33.33%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Raid",
+      "items": [
+        {
+          "name": "Arcane Guardian",
+          "droprate": "Uncommon (18.97%)"
+        },
+        {
+          "name": "Arcane Avenger",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Grace",
+          "droprate": "Legendary (0.29%)"
+        },
+        {
+          "name": "Arcane Barrier",
+          "droprate": "Legendary (0.29%)"
+        },
+        {
+          "name": "Arcane Agility",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Phantasm",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Victory",
+          "droprate": "Legendary (0.29%)"
+        },
+        {
+          "name": "Arcane Trickery",
+          "droprate": "Uncommon (18.97%)"
+        },
+        {
+          "name": "Arcane Rage",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Acceleration",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Strike",
+          "droprate": "Uncommon (18.97%)"
+        },
+        {
+          "name": "Arcane Awakening",
+          "droprate": "Uncommon (18.97%)"
+        },
+        {
+          "name": "Arcane Pulse",
+          "droprate": "Legendary (0.29%)"
+        },
+        {
+          "name": "Arcane Eruption",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Resistance",
+          "droprate": "Legendary (0.29%)"
+        },
+        {
+          "name": "Arcane Ice",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Warmth",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Nullifier",
+          "droprate": "Rare (2.46%)"
+        },
+        {
+          "name": "Arcane Healing",
+          "droprate": "Legendary (0.29%)"
+        },
+        {
+          "name": "Arcane Deflection",
+          "droprate": "Legendary (0.29%)"
+        }
+      ]
+    },
+    {
+      "section": "Nightmare_raid",
+      "items": [
+        {
+          "name": "Arcane Grace",
+          "droprate": "Uncommon (14.29%)"
+        },
+        {
+          "name": "Arcane Barrier",
+          "droprate": "Uncommon (14.29%)"
+        },
+        {
+          "name": "Arcane Victory",
+          "droprate": "Uncommon (14.29%)"
+        },
+        {
+          "name": "Arcane Pulse",
+          "droprate": "Uncommon (14.29%)"
+        },
+        {
+          "name": "Arcane Resistance",
+          "droprate": "Uncommon (14.29%)"
+        },
+        {
+          "name": "Arcane Healing",
+          "droprate": "Uncommon (14.29%)"
+        },
+        {
+          "name": "Arcane Deflection",
+          "droprate": "Uncommon (14.29%)"
+        }
+      ]
+    },
+    {
+      "section": "Raid",
+      "items": [
+        {
+          "name": "Arcane Aegis",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Ultimatum",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Fury",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Precision",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Velocity",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Tempo",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Momentum",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Consequence",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Arachne",
+          "droprate": "Uncommon (10.00%)"
+        },
+        {
+          "name": "Arcane Energize",
+          "droprate": "Uncommon (10.00%)"
+        }
+      ]
+    },
+    {
+      "section": "Orokin Derelict Defense",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "240 Endo",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "150 Endo",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith V2 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith N3 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith S6 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith V4 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith A2 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith S4 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith V3 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith B1 Relic",
+              "droprate": "Uncommon (10.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "240 Endo",
+              "droprate": "Common (38.72%)"
+            },
+            {
+              "name": "150 Endo",
+              "droprate": "Common (38.72%)"
+            },
+            {
+              "name": "Mutalist Alad V Nav Coordinate",
+              "droprate": "Uncommon (22.56%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Meso O1 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso D1 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso S2 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Forma Blueprint",
+              "droprate": "Uncommon (22.56%)"
+            },
+            {
+              "name": "Meso F1 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso S4 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso S5 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso N4 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso V5 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso S6 Relic",
+              "droprate": "Rare (7.74%)"
+            },
+            {
+              "name": "Meso M1 Relic",
+              "droprate": "Rare (7.74%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Orokin Derelict Assassinate",
+      "items": [
+        {
+          "name": "Nekros Chassis Blueprint",
+          "droprate": "Common (33.33%)"
+        },
+        {
+          "name": "Nekros Neuroptics Blueprint",
+          "droprate": "Common (33.33%)"
+        },
+        {
+          "name": "Nekros Systems Blueprint",
+          "droprate": "Common (33.33%)"
+        }
+      ]
+    },
+    {
+      "section": "Orokin Derelict Survival",
+      "subSections": [
+        {
+          "subSection": "Rotation A",
+          "items": [
+            {
+              "name": "Lith V2 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith S4 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith N3 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith S6 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith V4 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith A2 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith V3 Relic",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "320 Endo",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "400 Endo",
+              "droprate": "Uncommon (10.00%)"
+            },
+            {
+              "name": "Lith B1 Relic",
+              "droprate": "Uncommon (10.00%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation B",
+          "items": [
+            {
+              "name": "Neo V2 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo T1 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo V5 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo S6 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Mutalist Alad V Nav Coordinate",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo B2 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo N6 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo N7 Relic",
+              "droprate": "Uncommon (11.11%)"
+            },
+            {
+              "name": "Neo B3 Relic",
+              "droprate": "Uncommon (11.11%)"
+            }
+          ]
+        },
+        {
+          "subSection": "Rotation C",
+          "items": [
+            {
+              "name": "Axi G1 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi C2 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi H2 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi E2 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi O1 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Octavia Neuroptics Blueprint",
+              "droprate": "Uncommon (22.56%)"
+            },
+            {
+              "name": "Axi A1 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi V5 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi B2 Relic",
+              "droprate": "Rare (8.60%)"
+            },
+            {
+              "name": "Axi R1 Relic",
+              "droprate": "Rare (8.60%)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Mutalist Alad V Assassinate",
+      "items": [
+        {
+          "name": "Mesa Neuroptics Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Mesa Chassis Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Mesa Systems Blueprint",
+          "droprate": "Uncommon (22.56%)"
+        }
+      ]
+    },
+    {
+      "section": "Orokin Derelict Assassinate",
+      "items": [
+        {
+          "name": "Nekros Chassis Blueprint",
+          "droprate": "Common (33.33%)"
+        },
+        {
+          "name": "Nekros Neuroptics Blueprint",
+          "droprate": "Common (33.33%)"
+        },
+        {
+          "name": "Nekros Systems Blueprint",
+          "droprate": "Common (33.33%)"
+        }
+      ]
+    },
+    {
+      "section": "Jordas Golem Assassinate",
+      "items": [
+        {
+          "name": "Atlas Neuroptics Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Atlas Chassis Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Atlas Systems Blueprint",
+          "droprate": "Uncommon (22.56%)"
+        }
+      ]
+    },
+    {
+      "section": "Vay Hek Frequency Triangulator",
+      "items": [
+        {
+          "name": "Hydroid Neuroptics Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Hydroid Chassis Blueprint",
+          "droprate": "Common (38.72%)"
+        },
+        {
+          "name": "Hydroid Systems Blueprint",
+          "droprate": "Uncommon (22.56%)"
+        }
+      ]
+    }
+  ]
+}
