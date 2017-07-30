@@ -1,9 +1,17 @@
-var fs = require('fs')
-
+let fs = require('fs')
 let rawScrape = require("./data/raw-scrape.json")
+const data = require("./data/stored-data.json")
+const body = data.dom[2].children[1]
 
-saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
-loadFullFile()
+// saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
+// saveEverything()
+
+saveNonLocationsSpecificRewards()
+// saveSortiesRewards()
+// saveModsByMod()
+// saveModsByEnemy()
+// saveBlueprintsByBlueprint()
+// saveBlueprintsByEnemy()
 
 function saveFile(fileName, data, stringify) {
   if(stringify) data = JSON.stringify(data, null, 2)
@@ -12,7 +20,6 @@ function saveFile(fileName, data, stringify) {
       console.log(`File to save ${fileName}!`)
       return console.log(err)
     }
-
     console.log(`File ${fileName} was saved successfully!`)
   })
 }
@@ -24,21 +31,63 @@ function saveFileSync(fileName, data, stringify) {
 }
 
 
-function loadFullFile() {
-  let data = require("./data/stored-data.json")
-  let dom = data.dom
-  let html = dom[2]
-  let body = html.children[1]
+function saveEverything() {
+  saveGlossary()
+  saveMissionRewards()
+  saveRelicRewards()
+  saveKeyRewards()
+  saveNonLocationsSpecificRewards()
+  saveSortiesRewards()
+  saveModsByMod()
+  saveModsByEnemy()
+  saveBlueprintsByBlueprint()
+  saveBlueprintsByEnemy()
+}
+
+function saveGlossary(){
   let glossary = body.children[4]
   htmlListToJson(glossary, "glossary")
+}
+
+function saveMissionRewards(){
   let missionRewards = body.children[6]
   htmlTableToJson(missionRewards, "missionRewards")
+}
+
+function saveRelicRewards(){
   let relicRewards = body.children[8]
   htmlTableToJson(relicRewards, "relicRewards")
+}
+
+function saveKeyRewards(){
   let keyRewards = body.children[10]
   htmlTableToJson(keyRewards, "keyRewards")
 }
 
+function saveNonLocationsSpecificRewards() {
+  Error.stackTraceLimit = 1
+  console.trace("Please complete me")
+}
+function saveSortiesRewards() {
+  Error.stackTraceLimit = 1
+  console.trace("Please complete me")
+}
+function saveModsByMod() {
+  Error.stackTraceLimit = 1
+  console.trace("Please complete me")
+}
+function saveModsByEnemy() {
+  Error.stackTraceLimit = 1
+  console.trace("Please complete me")
+}
+function saveBlueprintsByBlueprint() {
+  Error.stackTraceLimit = 1
+  console.trace("Please complete me")
+}
+function saveBlueprintsByEnemy() {
+  Error.stackTraceLimit = 1
+  console.trace("Please complete me")
+}
 
 function htmlListToJson(list, listName) {
   if(list.name != "ul") {
