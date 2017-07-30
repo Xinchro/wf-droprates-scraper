@@ -6,8 +6,7 @@ const body = data.dom[2].children[1]
 // saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
 // saveEverything()
 
-saveModsByMod()
-// saveModsByEnemy()
+saveModsByEnemy()
 // saveBlueprintsByBlueprint()
 // saveBlueprintsByEnemy()
 
@@ -78,8 +77,8 @@ function saveModsByMod() {
 }
 
 function saveModsByEnemy() {
-  Error.stackTraceLimit = 1
-  console.trace("Please complete me")
+  let modsByEnemy = body.children[18]
+  htmlTableToJson(modsByEnemy, "modsByEnemy")
 }
 
 function saveBlueprintsByBlueprint() {
@@ -136,11 +135,20 @@ function htmlTableToJson(table, tableName) {
     if(row.children[0].name === "th") {
       // title(section) or subtitle(subsection) (1 column)
       if(title) {
-        //new section
-        data.sections.push({
-          section: row.children[0].children[0].data,
-          subSections: []
-        })
+        if(row.children.length === 1) {
+          //new section
+          data.sections.push({
+            section: row.children[0].children[0].data,
+            subSections: []
+          })
+        } else if(row.children.length === 2) {
+           //new section with secondary title
+          data.sections.push({
+            section: row.children[0].children[0].data,
+            secondaryTitle: row.children[1].children[0].data,
+            subSections: []
+          })
+        }
 
         // set current section to last in list
         currentSection = data.sections[data.sections.length-1]
@@ -196,11 +204,18 @@ function htmlTableToJson(table, tableName) {
             droprate: row.children[1].children[0].data
           })
         } else if(row.children.length === 3) {
-          currentSection.items.push({
-            name: row.children[0].children[0].data,
-            modchance: row.children[1].children[0].data,
-            specificchance: row.children[2].children[0].data
-          })
+          if(row.children[0].children === undefined || row.children[0].children[0] === "") {
+            currentSection.items.push({
+              name: row.children[1].children[0].data,
+              droprate: row.children[2].children[0].data,
+            })
+          } else {
+            currentSection.items.push({
+              name: row.children[0].children[0].data,
+              modchance: row.children[1].children[0].data,
+              specificchance: row.children[2].children[0].data
+            })
+          }
         } else {
           console.error("Irregular number of columns in item")
         }
