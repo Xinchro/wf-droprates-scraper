@@ -4,9 +4,9 @@ const data = require("./data/stored-data.json")
 const body = data.dom[2].children[1]
 
 // saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
-// saveEverything()
+saveEverything()
 
-saveNonLocationsSpecificRewards()
+// saveTransientRewards()
 // saveSortiesRewards()
 // saveModsByMod()
 // saveModsByEnemy()
@@ -36,7 +36,7 @@ function saveEverything() {
   saveMissionRewards()
   saveRelicRewards()
   saveKeyRewards()
-  saveNonLocationsSpecificRewards()
+  saveTransientRewards()
   saveSortiesRewards()
   saveModsByMod()
   saveModsByEnemy()
@@ -64,9 +64,9 @@ function saveKeyRewards(){
   htmlTableToJson(keyRewards, "keyRewards")
 }
 
-function saveNonLocationsSpecificRewards() {
-  Error.stackTraceLimit = 1
-  console.trace("Please complete me")
+function saveTransientRewards() {
+  let transientRewards = body.children[12]
+  htmlTableToJson(transientRewards, "transientRewards")
 }
 function saveSortiesRewards() {
   Error.stackTraceLimit = 1
@@ -127,31 +127,31 @@ function htmlTableToJson(table, tableName) {
     if(row.children[0].attribs) {
       if(row.children[0].attribs.class === "blank-row") {
         title = true
+        return 
       }
-      if(parseInt(row.children[0].attribs.colspan) === 2
-          && !row.children[0].attribs.class) {
-        // title(section) or subtitle(subsection) (1 column)
-        if(title) {
-          //new section
-          data.sections.push({
-            section: row.children[0].children[0].data,
-            subSections: []
-          })
+    }
+    if(row.children[0].name === "th") {
+      // title(section) or subtitle(subsection) (1 column)
+      if(title) {
+        //new section
+        data.sections.push({
+          section: row.children[0].children[0].data,
+          subSections: []
+        })
 
-          // set current section to last in list
-          currentSection = data.sections[data.sections.length-1]
-          currentSubSection = null
-          title = false
-        } else {
-          //new subsection
-          currentSection.subSections.push({
-            subSection: row.children[0].children[0].data,
-            items: []
-          })
+        // set current section to last in list
+        currentSection = data.sections[data.sections.length-1]
+        currentSubSection = null
+        title = false
+      } else {
+        //new subsection
+        currentSection.subSections.push({
+          subSection: row.children[0].children[0].data,
+          items: []
+        })
 
-          // set current subsection to last in list
-          currentSubSection = currentSection.subSections[currentSection.subSections.length-1]
-        }
+        // set current subsection to last in list
+        currentSubSection = currentSection.subSections[currentSection.subSections.length-1]
       }
     } else {
       // item (2 columns)
@@ -170,6 +170,7 @@ function htmlTableToJson(table, tableName) {
           currentSection.items = []
           delete currentSection.subSections
         }
+        
         currentSection.items.push({
           name: row.children[0].children[0].data,
           droprate: row.children[1].children[0].data
