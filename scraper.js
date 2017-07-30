@@ -163,21 +163,47 @@ function htmlTableToJson(table, tableName) {
 
       // checks if this is a subsection style table
       if(currentSubSection) {
-        currentSubSection.items.push({
-          name: row.children[0].children[0].data,
-          droprate: row.children[1].children[0].data
-        })
+        // subsection
+
+        // check if the item has 2 or 3 columns
+         if(row.children.length === 2) {
+           currentSubSection.items.push({
+             name: row.children[0].children[0].data,
+             droprate: row.children[1].children[0].data
+           })
+         } else if(row.children.length === 3) {
+           currentSubSection.items.push({
+             name: row.children[0].children[0].data,
+             modchance: row.children[1].children[0].data,
+             specificchance: row.children[2].children[0].data
+           })
+         } else {
+           console.error("Irregular number of columns in item")
+         }
       } else {
+        // section
+
         // if there is no items array, creates items array in topmost section and removes the subsection element
         if(!currentSection.items) {
           currentSection.items = []
           delete currentSection.subSections
         }
 
-        currentSection.items.push({
-          name: row.children[0].children[0].data,
-          droprate: row.children[1].children[0].data
-        })
+        // check if the item has 2 or 3 columns
+        if(row.children.length === 2) {
+          currentSection.items.push({
+            name: row.children[0].children[0].data,
+            droprate: row.children[1].children[0].data
+          })
+        } else if(row.children.length === 3) {
+          currentSection.items.push({
+            name: row.children[0].children[0].data,
+            modchance: row.children[1].children[0].data,
+            specificchance: row.children[2].children[0].data
+          })
+        } else {
+          console.error("Irregular number of columns in item")
+        }
       }
     }
   })
