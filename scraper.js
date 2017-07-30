@@ -4,10 +4,9 @@ const data = require("./data/stored-data.json")
 const body = data.dom[2].children[1]
 
 // saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
-saveEverything()
+// saveEverything()
 
-// saveTransientRewards()
-// saveSortiesRewards()
+saveSortiesRewards()
 // saveModsByMod()
 // saveModsByEnemy()
 // saveBlueprintsByBlueprint()
@@ -69,8 +68,8 @@ function saveTransientRewards() {
   htmlTableToJson(transientRewards, "transientRewards")
 }
 function saveSortiesRewards() {
-  Error.stackTraceLimit = 1
-  console.trace("Please complete me")
+  let sortiesRewards = body.children[14]
+  htmlTableToJson(sortiesRewards, "sortiesRewards")
 }
 function saveModsByMod() {
   Error.stackTraceLimit = 1
@@ -170,7 +169,7 @@ function htmlTableToJson(table, tableName) {
           currentSection.items = []
           delete currentSection.subSections
         }
-        
+
         currentSection.items.push({
           name: row.children[0].children[0].data,
           droprate: row.children[1].children[0].data
