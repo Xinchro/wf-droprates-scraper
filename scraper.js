@@ -6,7 +6,7 @@ const body = data.dom[2].children[1]
 // saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
 // saveEverything()
 
-saveModsByEnemy()
+saveModsByMod()
 // saveBlueprintsByBlueprint()
 // saveBlueprintsByEnemy()
 
@@ -155,11 +155,18 @@ function htmlTableToJson(table, tableName) {
         currentSubSection = null
         title = false
       } else {
-        //new subsection
-        currentSection.subSections.push({
-          subSection: row.children[0].children[0].data,
-          items: []
-        })
+        if(row.children[0] < 2) {
+          //new subsection
+          currentSection.subSections.push({
+            subSection: row.children[0].children[0].data,
+            items: []
+          })
+        } else {
+          //new subsection without title
+          currentSection.subSections.push({
+            items: []
+          })
+        }
 
         // set current subsection to last in list
         currentSubSection = currentSection.subSections[currentSection.subSections.length-1]
