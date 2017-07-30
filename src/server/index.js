@@ -5,7 +5,7 @@ const request = require("request")
 const htmlparser = require("htmlparser")
 const jsonfile = require('jsonfile')
 
-let getWarframeHTML = (url) => {
+function getWarframeHTML(url) {
   console.log("Getting data...")
   return fetch(url)
   .then(function(res) {
@@ -15,7 +15,7 @@ let getWarframeHTML = (url) => {
   })
 }
 
-let htmlToJson = (body) => {
+function htmlToJson(body) {
   let rawHtml = body
   let handler = new htmlparser.DefaultHandler(function (error, dom) {
     if (error)
@@ -31,7 +31,7 @@ let htmlToJson = (body) => {
   })
 }
 
-let saveToJson = (json) => {
+function saveToJson(json) {
   let file = './data/raw-scrape.json'
   let obj = json
    
