@@ -6,8 +6,7 @@ const body = data.dom[2].children[1]
 // saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
 // saveEverything()
 
-saveModsByMod()
-// saveBlueprintsByBlueprint()
+saveBlueprintsByBlueprint()
 // saveBlueprintsByEnemy()
 
 function saveFile(fileName, data, stringify) {
@@ -82,8 +81,8 @@ function saveModsByEnemy() {
 }
 
 function saveBlueprintsByBlueprint() {
-  Error.stackTraceLimit = 1
-  console.trace("Please complete me")
+  let blueprintsByBlueprint = body.children[20]
+  htmlTableToJson(blueprintsByBlueprint, "blueprintsByBlueprint")
 }
 
 function saveBlueprintsByEnemy() {
@@ -189,7 +188,7 @@ function htmlTableToJson(table, tableName) {
          } else if(row.children.length === 3) {
            currentSubSection.items.push({
              name: row.children[0].children[0].data,
-             modchance: row.children[1].children[0].data,
+             itemchance: row.children[1].children[0].data,
              specificchance: row.children[2].children[0].data
            })
          } else {
@@ -219,7 +218,7 @@ function htmlTableToJson(table, tableName) {
           } else {
             currentSection.items.push({
               name: row.children[0].children[0].data,
-              modchance: row.children[1].children[0].data,
+              itemchance: row.children[1].children[0].data,
               specificchance: row.children[2].children[0].data
             })
           }
