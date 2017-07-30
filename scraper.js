@@ -3,11 +3,8 @@ let rawScrape = require("./data/raw-scrape.json")
 const data = require("./data/stored-data.json")
 const body = data.dom[2].children[1]
 
-// saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
-// saveEverything()
-
-saveBlueprintsByBlueprint()
-// saveBlueprintsByEnemy()
+saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
+saveEverything()
 
 function saveFile(fileName, data, stringify) {
   if(stringify) data = JSON.stringify(data, null, 2)
@@ -86,8 +83,8 @@ function saveBlueprintsByBlueprint() {
 }
 
 function saveBlueprintsByEnemy() {
-  Error.stackTraceLimit = 1
-  console.trace("Please complete me")
+  let blueprintsByEnemy = body.children[22]
+  htmlTableToJson(blueprintsByEnemy, "blueprintsByEnemy")
 }
 
 function htmlListToJson(list, listName) {
