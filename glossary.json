@@ -1,0 +1,49 @@
+{
+  "glossaryList": [
+    {
+      "type": "li",
+      "href": "#missionRewards",
+      "text": "Missions"
+    },
+    {
+      "type": "li",
+      "href": "#relicRewards",
+      "text": "Relics"
+    },
+    {
+      "type": "li",
+      "href": "#keyRewards",
+      "text": "Keys"
+    },
+    {
+      "type": "li",
+      "href": "#transientRewards",
+      "text": "Non-Location-Specific Rewards"
+    },
+    {
+      "type": "li",
+      "href": "#sortieRewards",
+      "text": "Sorties"
+    },
+    {
+      "type": "li",
+      "href": "#modLocations",
+      "text": "Mod Drops by Mod"
+    },
+    {
+      "type": "li",
+      "href": "#enemyModTables",
+      "text": "Mod Drops by Enemy"
+    },
+    {
+      "type": "li",
+      "href": "#blueprintLocations",
+      "text": "Blueprint Drops by Blueprint"
+    },
+    {
+      "type": "li",
+      "href": "#enemyBlueprintTables",
+      "text": "Blueprint Drops by Enemy"
+    }
+  ]
+}
