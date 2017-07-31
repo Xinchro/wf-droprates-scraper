@@ -3,8 +3,8 @@ let rawScrape = require("./data/raw-scrape.json")
 const data = require("./data/stored-data.json")
 const body = data.dom[2].children[1]
 
-saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
-saveEverything()
+// saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
+// saveEverything()
 
 function saveFile(fileName, data, stringify) {
   if(stringify) data = JSON.stringify(data, null, 2)
@@ -22,7 +22,6 @@ function saveFileSync(fileName, data, stringify) {
   fs.writeFileSync(`./data/${fileName}.json`, data)
   console.log(`File ${fileName} was saved successfully!`)
 }
-
 
 function saveEverything() {
   saveGlossary()
@@ -228,3 +227,15 @@ function htmlTableToJson(table, tableName) {
 
   saveFileSync(tableName, data, true)
 }
+
+exports.saveEverything = saveEverything
+exports.saveGlossary = saveGlossary
+exports.saveMissionRewards = saveMissionRewards
+exports.saveRelicRewards = saveRelicRewards
+exports.saveKeyRewards = saveKeyRewards
+exports.saveTransientRewards = saveTransientRewards
+exports.saveSortiesRewards = saveSortiesRewards
+exports.saveModsByMod = saveModsByMod
+exports.saveModsByEnemy = saveModsByEnemy
+exports.saveBlueprintsByBlueprint = saveBlueprintsByBlueprint
+exports.saveBlueprintsByEnemy = saveBlueprintsByEnemy
