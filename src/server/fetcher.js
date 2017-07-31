@@ -1,13 +1,14 @@
-require('dotenv').config()
+require("dotenv").config()
 
-const fetch = require('node-fetch');
+const fs = require("fs")
+const utils = require("./utils")
+const nodefetch = require("node-fetch")
 const request = require("request")
 const htmlparser = require("htmlparser")
-const jsonfile = require('jsonfile')
 
 function getWarframeHTML(url) {
   console.log("Getting data...")
-  return fetch(url)
+  return nodefetch(url)
   .then(function(res) {
     return res.text()
   }).then(function(body) {
@@ -16,10 +17,12 @@ function getWarframeHTML(url) {
 }
 
 function htmlToJson(body) {
+  console.log("Converting HTML to JSON...")
+
   let rawHtml = body
   let handler = new htmlparser.DefaultHandler(function (error, dom) {
     if (error)
-      console.log('Error while parsing html', error)
+      console.log("Error while parsing html", error)
     else
       return dom
   })
@@ -32,14 +35,17 @@ function htmlToJson(body) {
 }
 
 function saveToJson(json) {
-  let file = './data/raw-scrape.json'
+  console.log("Stringifying and saving JSON...")
+  
   let obj = json
-   
-  jsonfile.writeFile(file, obj, function (err) {
-    console.error(err)
-  })
+  
+  utils.saveFileSync("./data", "stored-data", obj, true)
 }
 
-getWarframeHTML(process.env.DATA_URL)
-.then(htmlToJson)
-.then(saveToJson)
+function fetch() {
+  return getWarframeHTML(process.env.DATA_URL)
+  .then(htmlToJson)
+  .then(saveToJson)
+}
+
+exports.fetch = fetch

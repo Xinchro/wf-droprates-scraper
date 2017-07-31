@@ -1,88 +1,65 @@
-let fs = require('fs')
-let rawScrape = require("./data/raw-scrape.json")
-const data = require("./data/stored-data.json")
-const body = data.dom[2].children[1]
+const utils = require("./utils")
 
-// saveFileSync("stored-data", JSON.stringify(rawScrape, null, 2))
-// saveEverything()
-
-function saveFile(fileName, data, stringify) {
-  if(stringify) data = JSON.stringify(data, null, 2)
-  fs.writeFile(`./data/${fileName}.json`, data, function(err) {
-    if(err) {
-      console.log(`File to save ${fileName}!`)
-      return console.log(err)
-    }
-    console.log(`File ${fileName} was saved successfully!`)
-  })
+function saveEverything(data) {
+  saveGlossary(data)
+  saveMissionRewards(data)
+  saveRelicRewards(data)
+  saveKeyRewards(data)
+  saveTransientRewards(data)
+  saveSortiesRewards(data)
+  saveModsByMod(data)
+  saveModsByEnemy(data)
+  saveBlueprintsByBlueprint(data)
+  saveBlueprintsByEnemy(data)
 }
 
-function saveFileSync(fileName, data, stringify) {
-  if(stringify) data = JSON.stringify(data, null, 2)
-  fs.writeFileSync(`./data/${fileName}.json`, data)
-  console.log(`File ${fileName} was saved successfully!`)
-}
-
-function saveEverything() {
-  saveGlossary()
-  saveMissionRewards()
-  saveRelicRewards()
-  saveKeyRewards()
-  saveTransientRewards()
-  saveSortiesRewards()
-  saveModsByMod()
-  saveModsByEnemy()
-  saveBlueprintsByBlueprint()
-  saveBlueprintsByEnemy()
-}
-
-function saveGlossary(){
-  let glossary = body.children[4]
+function saveGlossary(data) {
+  let glossary = data.dom[2].children[1].children[4]
   htmlListToJson(glossary, "glossary")
 }
 
-function saveMissionRewards(){
-  let missionRewards = body.children[6]
+function saveMissionRewards(data) {
+  let missionRewards = data.dom[2].children[1].children[6]
   htmlTableToJson(missionRewards, "missionRewards")
 }
 
-function saveRelicRewards(){
-  let relicRewards = body.children[8]
+function saveRelicRewards(data) {
+  let relicRewards = data.dom[2].children[1].children[8]
   htmlTableToJson(relicRewards, "relicRewards")
 }
 
-function saveKeyRewards(){
-  let keyRewards = body.children[10]
+function saveKeyRewards(data) {
+  let keyRewards = data.dom[2].children[1].children[10]
   htmlTableToJson(keyRewards, "keyRewards")
 }
 
-function saveTransientRewards() {
-  let transientRewards = body.children[12]
+function saveTransientRewards(data) {
+  let transientRewards = data.dom[2].children[1].children[12]
   htmlTableToJson(transientRewards, "transientRewards")
 }
 
-function saveSortiesRewards() {
-  let sortiesRewards = body.children[14]
+function saveSortiesRewards(data) {
+  let sortiesRewards = data.dom[2].children[1].children[14]
   htmlTableToJson(sortiesRewards, "sortiesRewards")
 }
 
-function saveModsByMod() {
-  let modsByMod = body.children[16]
+function saveModsByMod(data) {
+  let modsByMod = data.dom[2].children[1].children[16]
   htmlTableToJson(modsByMod, "modsByMod")
 }
 
-function saveModsByEnemy() {
-  let modsByEnemy = body.children[18]
+function saveModsByEnemy(data) {
+  let modsByEnemy = data.dom[2].children[1].children[18]
   htmlTableToJson(modsByEnemy, "modsByEnemy")
 }
 
-function saveBlueprintsByBlueprint() {
-  let blueprintsByBlueprint = body.children[20]
+function saveBlueprintsByBlueprint(data) {
+  let blueprintsByBlueprint = data.dom[2].children[1].children[20]
   htmlTableToJson(blueprintsByBlueprint, "blueprintsByBlueprint")
 }
 
-function saveBlueprintsByEnemy() {
-  let blueprintsByEnemy = body.children[22]
+function saveBlueprintsByEnemy(data) {
+  let blueprintsByEnemy = data.dom[2].children[1].children[22]
   htmlTableToJson(blueprintsByEnemy, "blueprintsByEnemy")
 }
 
@@ -104,7 +81,7 @@ function htmlListToJson(list, listName) {
     })
   })
 
-  saveFileSync("glossary", data, true)
+  utils.saveFileSync("./data", "glossary", data, true)
 }
 
 function htmlTableToJson(table, tableName) {
@@ -225,7 +202,7 @@ function htmlTableToJson(table, tableName) {
     }
   })
 
-  saveFileSync(tableName, data, true)
+  utils.saveFileSync("./data", tableName, data, true)
 }
 
 exports.saveEverything = saveEverything

@@ -14,5 +14,8 @@
     "jsonfile": "^3.0.1",
     "node-fetch": "^1.7.1",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1"
   }
 }
