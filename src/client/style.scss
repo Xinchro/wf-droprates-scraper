@@ -2,7 +2,8 @@
   background: red;
   width: 200px;
   height: 100px;
-  overflow-y: auto; }
+  overflow-y: auto;
+}
 
 .header {
   width: 100%;
@@ -12,36 +13,47 @@
   top: 0;
   left: 0;
   padding: 10px;
-  box-sizing: border-box; }
-  .header .search-wrapper {
+  box-sizing: border-box;
+
+  .search-wrapper {
     height: 40px;
-    display: inline-block; }
-    .header .search-wrapper .search-bar {
+    display: inline-block;
+
+    .search-bar {
       background: cyan;
       width: 100px;
       height: 40px;
       border: none;
       padding: 5px;
-      box-sizing: border-box; }
-    .header .search-wrapper .search-button {
+      box-sizing: border-box;
+    }
+
+    .search-button {
       background: yellow;
       width: 40px;
       height: 40px;
       text-overflow: ellipsis;
       overflow: hidden;
       border: none;
-      padding: 5px; }
-  .header .filter-menu {
+      padding: 5px;
+    }
+  }
+
+  .filter-menu {
     display: inline-block;
     position: absolute;
-    right: 0; }
-    .header .filter-menu .menu {
+    right: 0;
+
+    .menu {
       background: green;
       position: fixed;
       top: 60px;
-      right: 0; }
+      right: 0;
+      // display: none;
+    }
+  }
+}
 
 .invisible {
-  display: none; }
-
-/*# sourceMappingURL=style.css.map */
+  display: none;
+}

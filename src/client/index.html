@@ -6,7 +6,8 @@
     <title>Warframe Droprate Explorer</title>
     <meta name="description" content="A simple exploration tool for the droprates in Warframe.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
+    <script src="https://unpkg.com/vue"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css"> 
   </head>
@@ -15,19 +16,47 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <input type="text"><button>Search</button>
-    <section id="wrap" class="data-wrapper">
+    <section id="vue-wrapper">
+            
+          
 
-    </section>
-    <button onclick="getData('glossary')">glossary</button>
-    <button onclick="getData('missionRewards')">missionRewards</button>
-    <button onclick="getData('relicRewards')">relicRewards</button>
-    <button onclick="getData('keyRewards')">keyRewards</button>
-    <button onclick="getData('transientRewards')">transientRewards</button>
-    <button onclick="getData('sortiesRewards')">sortiesRewards</button>
-    <button onclick="getData('modsByMod')">modsByMod</button>
-    <button onclick="getData('modsByEnemy')">modsByEnemy</button>
-    <button onclick="getData('blueprintsByBlueprint')">blueprintsByBlueprint</button>
-    <button onclick="getData('blueprintsByEnemy')">blueprintsByEnemy</button>
+      <header class="header">
+        <section class="search-wrapper">
+          <input class="search-bar" type="text">
+          <button class="search-button">
+            <img src="" alt="Search">
+          </button>
+        </section>
+        <section class="filter-menu">
+          <button class="menu-button" v-on:click="toggleMenu">
+            <span v-if="menuVisible">A</span>
+            <span v-else>V</span>
+          </button>
+          <section class="menu" v-bind:class="{ invisible: !menuVisible }">
+            <ul>
+              <li v-for="filter in filters">
+                <input type="checkbox">
+                <span>{{filter.name}}</span>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </header>
+
+      <section id="wrap" class="data-wrapper">
+        {{message}}
+      </section>
+
+      <button v-on:click="getData('glossary')">glossary</button>
+      <button v-on:click="getData('missionRewards')">missionRewards</button>
+      <button v-on:click="getData('relicRewards')">relicRewards</button>
+      <button v-on:click="getData('keyRewards')">keyRewards</button>
+      <button v-on:click="getData('transientRewards')">transientRewards</button>
+      <button v-on:click="getData('sortiesRewards')">sortiesRewards</button>
+      <button v-on:click="getData('modsByMod')">modsByMod</button>
+      <button v-on:click="getData('modsByEnemy')">modsByEnemy</button>
+      <button v-on:click="getData('blueprintsByBlueprint')">blueprintsByBlueprint</button>
+      <button v-on:click="getData('blueprintsByEnemy')">blueprintsByEnemy</button>
+    </section> <!-- end vue wrapper -->
   </body>
 </html>
