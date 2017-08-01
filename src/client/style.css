@@ -1,0 +1,6 @@
+.data-wrapper {
+  background: red;
+  width: 200px;
+  height: 100px;
+  overflow-y: auto;
+}

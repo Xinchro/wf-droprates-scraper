@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Warframe Droprate Explorer</title>
+    <meta name="description" content="A simple exploration tool for the droprates in Warframe.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <input type="text"><button>Search</button>
+    <section id="wrap" class="data-wrapper">
+
+    </section>
+    <button onclick="getData('glossary')">glossary</button>
+    <button onclick="getData('missionRewards')">missionRewards</button>
+    <button onclick="getData('relicRewards')">relicRewards</button>
+    <button onclick="getData('keyRewards')">keyRewards</button>
+    <button onclick="getData('transientRewards')">transientRewards</button>
+    <button onclick="getData('sortiesRewards')">sortiesRewards</button>
+    <button onclick="getData('modsByMod')">modsByMod</button>
+    <button onclick="getData('modsByEnemy')">modsByEnemy</button>
+    <button onclick="getData('blueprintsByBlueprint')">blueprintsByBlueprint</button>
+    <button onclick="getData('blueprintsByEnemy')">blueprintsByEnemy</button>
+  </body>
+</html>
