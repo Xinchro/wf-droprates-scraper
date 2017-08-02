@@ -7,50 +7,68 @@ let app = new Vue({
       //   id: 0 },
       { name: "missionRewards",
         label: "mission rewards",
-        id: 1 },
+        id: 1,
+        on: false },
       { name: "relicRewards",
         label: "relic rewards",
-        id: 2 },
+        id: 2,
+        on: false },
       { name: "keyRewards",
         label: "key rewards",
-        id: 3 },
+        id: 3,
+        on: false },
       { name: "transientRewards",
         label: "transient rewards",
-        id: 4 },
+        id: 4,
+        on: false },
       { name: "sortiesRewards",
         label: "sorties rewards",
-        id: 5 },
+        id: 5,
+        on: false },
       { name: "modsByMod",
         label: "mods by mod",
-        id: 6 },
+        id: 6,
+        on: false },
       { name: "modsByEnemy",
         label: "mods by enemy",
-        id: 7 },
+        id: 7,
+        on: false },
       { name: "blueprintsByBlueprint",
         label: "blueprints by blueprint",
-        id: 8 },
+        id: 8,
+        on: false },
       { name: "blueprintsByEnemy",
         label: "blueprints by enemy",
-        id: 9 }
+        id: 9,
+        on: false }
     ],
+    appliedFilters: 0,
     menuVisible: true,
-    currentFilters: [],
     dropdata: {}
   },
   methods: {
     getData(name) {
-      var xmlHttp = new XMLHttpRequest()
-      xmlHttp.onreadystatechange = () => { 
-          if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            this.dropdata = JSON.parse(xmlHttp.responseText)
+      // console.log("getting data", name)
+      if(name) {
+        var xmlHttp = new XMLHttpRequest()
+        xmlHttp.onreadystatechange = () => { 
+          if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            if(this.appliedFilters > 0) {
+              this.updateData(JSON.parse(xmlHttp.responseText))
+            }
+          }
+        }
+        xmlHttp.open("GET", `http://localhost:8080/${name}.json`, true) // true for asynchronous 
+        xmlHttp.send(null)
+      } else {
+        // console.log("empty data")
+        this.updateData({})
       }
-      xmlHttp.open("GET", `http://localhost:8080/${name}.json`, true) // true for asynchronous 
-      xmlHttp.send(null)
     },
 
-    updateData(data) {
-      // document.getElementById("wrap").innerHTML = data
-      this.message = data
+    updateData(newData) {
+      // console.log("updating data", newData)
+      this.dropdata = newData
     },
 
     toggleMenu() {
@@ -61,12 +79,15 @@ let app = new Vue({
       return document.getElementById(id)
     },
 
-    updateCurrentFilters() {
-      this.currentFilters = []
+    updateCurrentFilters(filterID) {
+      this.appliedFilters = 0
 
       for(let i=0;i<this.filters.length;i++) {
         if(this.checkbox(i+1).checked) {
-          this.currentFilters.push(i+1)
+          this.filters[i].on = true
+          this.appliedFilters++
+        }else{
+          this.filters[i].on = false
         }
       }
 
@@ -75,18 +96,21 @@ let app = new Vue({
 
     updateSearchResults() {
       let tempMsg = ""
-      let data = {}
+
       for(let i=0;i<this.filters.length;i++) {
-        for(let j=0;j<this.currentFilters.length;j++) {
-          if(this.currentFilters[j] === this.filters[i].id) {
-            tempMsg += `${this.filters[i].label} `
-            // TODO do this properly
-            this.getData(this.filters[i].name)
-          }
+        if(this.filters[i].on) {
+          tempMsg += `${this.filters[i].label} `
+          // TODO do this properly
+          this.getData(this.filters[i].name)
         }
       }
+      if(this.appliedFilters > 0) {
+        this.getData()
+      }
 
-      if(tempMsg === "") tempMsg = "No data selected!"
+      if(tempMsg === "") {
+        tempMsg = "No data selected!"
+      }
       this.message = tempMsg
 
       // this.dropdata = data

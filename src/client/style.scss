@@ -116,7 +116,7 @@ body {
         color: white;
       }
 
-      .subsection {
+      .subSection {
         background: cyan;
 
         .title {
@@ -125,16 +125,39 @@ body {
 
         .data {
           background: teal;
+          display: grid;
+          grid-template-columns: auto auto auto;
 
           .column-1 {
             background: darkgreen;
+            grid-column: 1;
           }
           .column-2 {
             background: darkgreen;
+            grid-column: 2;
           }
           .column-3 {
             background: darkgreen;
+            grid-column: 3;
           }
+        }
+
+      }
+      .data {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        .column-1 {
+          background: lightgreen;
+          grid-column: 1;
+        }
+        .column-2 {
+          background: lightgreen;
+          grid-column: 2;
+        }
+        .column-3 {
+          background: lightgreen;
+          grid-column: 3;
         }
       }
     }

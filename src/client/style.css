@@ -82,17 +82,34 @@ body {
       #vue-wrapper .data-wrapper .section .title {
         background: blue;
         color: white; }
-      #vue-wrapper .data-wrapper .section .subsection {
+      #vue-wrapper .data-wrapper .section .subSection {
         background: cyan; }
-        #vue-wrapper .data-wrapper .section .subsection .title {
+        #vue-wrapper .data-wrapper .section .subSection .title {
           background: pink; }
-        #vue-wrapper .data-wrapper .section .subsection .data {
-          background: teal; }
-          #vue-wrapper .data-wrapper .section .subsection .data .column-1 {
-            background: darkgreen; }
-          #vue-wrapper .data-wrapper .section .subsection .data .column-2 {
-            background: darkgreen; }
-          #vue-wrapper .data-wrapper .section .subsection .data .column-3 {
-            background: darkgreen; }
+        #vue-wrapper .data-wrapper .section .subSection .data {
+          background: teal;
+          display: grid;
+          grid-template-columns: auto auto auto; }
+          #vue-wrapper .data-wrapper .section .subSection .data .column-1 {
+            background: darkgreen;
+            grid-column: 1; }
+          #vue-wrapper .data-wrapper .section .subSection .data .column-2 {
+            background: darkgreen;
+            grid-column: 2; }
+          #vue-wrapper .data-wrapper .section .subSection .data .column-3 {
+            background: darkgreen;
+            grid-column: 3; }
+      #vue-wrapper .data-wrapper .section .data {
+        display: grid;
+        grid-template-columns: auto auto auto; }
+        #vue-wrapper .data-wrapper .section .data .column-1 {
+          background: lightgreen;
+          grid-column: 1; }
+        #vue-wrapper .data-wrapper .section .data .column-2 {
+          background: lightgreen;
+          grid-column: 2; }
+        #vue-wrapper .data-wrapper .section .data .column-3 {
+          background: lightgreen;
+          grid-column: 3; }
 
 /*# sourceMappingURL=style.css.map */

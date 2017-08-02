@@ -32,7 +32,7 @@
           </button>
 
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
-            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" v-on:click="updateCurrentFilters()">
+            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" v-on:click="updateCurrentFilters(filter.id)">
               <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible">
               <label v-bind:for="filter.id" class="filter-checkbox-box"></label>
               <label v-bind:for="filter.id" class="filter-name">{{filter.label}}</label>
@@ -50,10 +50,9 @@
           <section class="title">
             <p>{{section.section}}</p>
           </section>
-
-          <section v-if="section.subSubsections" v-for="subSection in section.subSections" class="subsection">
+          <section v-if="section.subSections" v-for="subSection in section.subSections" class="subSection">
             <section class="title">
-              <p>{{subsection.subsection}}</p>
+              <p>{{subSection.subSection}}</p>
             </section>
 
             <section class="data" v-for="item in subSection.items">
@@ -64,7 +63,7 @@
 
           </section>
 
-          <section v-if="section.items" v-for="item in section.items" class="subsection">
+          <section v-if="section.items" v-for="item in section.items" class="data">
             <p class="column-1">{{item.name}}</p>
             <p class="column-2">{{item.droprate}}</p>
             <p class="column-3">{{item.name}}</p>
