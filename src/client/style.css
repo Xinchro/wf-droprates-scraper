@@ -1,47 +1,98 @@
-.data-wrapper {
-  background: red;
-  width: 200px;
-  height: 100px;
-  overflow-y: auto; }
+body {
+  padding: 0;
+  margin: 0; }
 
-.header {
-  width: 100%;
-  height: 60px;
-  background: blue;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px;
-  box-sizing: border-box; }
-  .header .search-wrapper {
-    height: 40px;
-    display: inline-block; }
-    .header .search-wrapper .search-bar {
-      background: cyan;
-      width: 100px;
-      height: 40px;
-      border: none;
-      padding: 5px;
-      box-sizing: border-box; }
-    .header .search-wrapper .search-button {
-      background: yellow;
-      width: 40px;
-      height: 40px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      border: none;
-      padding: 5px; }
-  .header .filter-menu {
-    display: inline-block;
-    position: absolute;
-    right: 0; }
-    .header .filter-menu .menu {
-      background: green;
-      position: fixed;
-      top: 60px;
-      right: 0; }
-
-.invisible {
-  display: none; }
+#vue-wrapper {
+  display: grid;
+  grid-template-columns: 10px auto auto auto auto auto auto 10px;
+  grid-template-rows: 60px 10px auto auto auto auto auto 10px;
+  height: 100vh;
+  width: 100vw;
+  position: fixed; }
+  #vue-wrapper .data-wrapper {
+    background: red;
+    overflow-y: auto;
+    grid-row-start: 3;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 8; }
+  #vue-wrapper .header {
+    display: grid;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-end: 1;
+    background: blue;
+    padding: 10px;
+    box-sizing: border-box;
+    grid-template-columns: auto 40px 40px; }
+    #vue-wrapper .header .search-wrapper {
+      display: grid;
+      grid-template-columns: 2;
+      grid-template-rows: 1;
+      grid-template-columns: auto 40px;
+      grid-column: 1; }
+      #vue-wrapper .header .search-wrapper .search-bar {
+        background: cyan;
+        border: none;
+        padding: 5px;
+        box-sizing: border-box;
+        grid-column: 1; }
+      #vue-wrapper .header .search-wrapper .search-button {
+        background: yellow;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        border: none;
+        padding: 5px;
+        grid-column: 2; }
+    #vue-wrapper .header .filter-menu {
+      right: 0;
+      grid-column: 3;
+      display: grid; }
+      #vue-wrapper .header .filter-menu .menu-button {
+        align-items: center; }
+      #vue-wrapper .header .filter-menu .menu {
+        background: pink;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: grid;
+        grid-template-rows: repeat(9, 30px); }
+        #vue-wrapper .header .filter-menu .menu li {
+          display: grid;
+          grid-template-columns: 30px auto; }
+          #vue-wrapper .header .filter-menu .menu li .filter-checkbox, #vue-wrapper .header .filter-menu .menu li .filter-checkbox-box {
+            grid-column: 1; }
+          #vue-wrapper .header .filter-menu .menu li .filter-name {
+            grid-column: 2;
+            padding: 0 5px; }
+          #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-checkbox-box {
+            background: green; }
+          #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-name {
+            background: green; }
+  #vue-wrapper .invisible {
+    display: none !important; }
+  #vue-wrapper .data-wrapper {
+    background: red; }
+    #vue-wrapper .data-wrapper .section {
+      background: green; }
+      #vue-wrapper .data-wrapper .section .title {
+        background: blue;
+        color: white; }
+      #vue-wrapper .data-wrapper .section .subsection {
+        background: cyan; }
+        #vue-wrapper .data-wrapper .section .subsection .title {
+          background: pink; }
+        #vue-wrapper .data-wrapper .section .subsection .data {
+          background: teal; }
+          #vue-wrapper .data-wrapper .section .subsection .data .column-1 {
+            background: darkgreen; }
+          #vue-wrapper .data-wrapper .section .subsection .data .column-2 {
+            background: darkgreen; }
+          #vue-wrapper .data-wrapper .section .subsection .data .column-3 {
+            background: darkgreen; }
 
 /*# sourceMappingURL=style.css.map */

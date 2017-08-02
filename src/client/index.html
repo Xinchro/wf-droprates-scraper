@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
     <title>Warframe Droprate Explorer</title>
     <meta name="description" content="A simple exploration tool for the droprates in Warframe.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +17,6 @@
         <![endif]-->
 
     <section id="vue-wrapper">
-            
-          
-
       <header class="header">
         <section class="search-wrapper">
           <input class="search-bar" type="text">
@@ -27,36 +24,56 @@
             <img src="" alt="Search">
           </button>
         </section>
+
         <section class="filter-menu">
           <button class="menu-button" v-on:click="toggleMenu">
             <span v-if="menuVisible">A</span>
             <span v-else>V</span>
           </button>
-          <section class="menu" v-bind:class="{ invisible: !menuVisible }">
-            <ul>
-              <li v-for="filter in filters">
-                <input type="checkbox">
-                <span>{{filter.name}}</span>
-              </li>
-            </ul>
-          </section>
+
+          <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
+            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" v-on:click="updateCurrentFilters()">
+              <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible">
+              <label v-bind:for="filter.id" class="filter-checkbox-box"></label>
+              <label v-bind:for="filter.id" class="filter-name">{{filter.label}}</label>
+            </li>
+          </ul>
+
         </section>
+
       </header>
 
-      <section id="wrap" class="data-wrapper">
+      <section id="data" class="data-wrapper">
         {{message}}
-      </section>
+        <section class="section" v-for="section in dropdata.sections">
 
-      <button v-on:click="getData('glossary')">glossary</button>
-      <button v-on:click="getData('missionRewards')">missionRewards</button>
-      <button v-on:click="getData('relicRewards')">relicRewards</button>
-      <button v-on:click="getData('keyRewards')">keyRewards</button>
-      <button v-on:click="getData('transientRewards')">transientRewards</button>
-      <button v-on:click="getData('sortiesRewards')">sortiesRewards</button>
-      <button v-on:click="getData('modsByMod')">modsByMod</button>
-      <button v-on:click="getData('modsByEnemy')">modsByEnemy</button>
-      <button v-on:click="getData('blueprintsByBlueprint')">blueprintsByBlueprint</button>
-      <button v-on:click="getData('blueprintsByEnemy')">blueprintsByEnemy</button>
-    </section> <!-- end vue wrapper -->
+          <section class="title">
+            <p>{{section.section}}</p>
+          </section>
+
+          <section v-if="section.subSubsections" v-for="subSection in section.subSections" class="subsection">
+            <section class="title">
+              <p>{{subsection.subsection}}</p>
+            </section>
+
+            <section class="data" v-for="item in subSection.items">
+              <p class="column-1">{{item.name}}</p>
+              <p class="column-2">{{item.droprate}}</p>
+              <p class="column-3">{{item.name}}</p>
+            </section>
+
+          </section>
+
+          <section v-if="section.items" v-for="item in section.items" class="subsection">
+            <p class="column-1">{{item.name}}</p>
+            <p class="column-2">{{item.droprate}}</p>
+            <p class="column-3">{{item.name}}</p>
+          </section>
+
+        </section> <!-- section -->
+
+      </section> <!-- end data-wrapper -->
+
+    </section> <!-- end vue-wrapper -->
   </body>
 </html>

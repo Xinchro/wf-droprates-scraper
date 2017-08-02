@@ -1,59 +1,142 @@
-.data-wrapper {
-  background: red;
-  width: 200px;
-  height: 100px;
-  overflow-y: auto;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.header {
-  width: 100%;
-  height: 60px;
-  background: blue;
+#vue-wrapper {
+  display: grid;
+  grid-template-columns: 10px auto auto auto auto auto auto 10px;
+  grid-template-rows: 60px 10px auto auto auto auto auto 10px;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px;
-  box-sizing: border-box;
 
-  .search-wrapper {
-    height: 40px;
-    display: inline-block;
-
-    .search-bar {
-      background: cyan;
-      width: 100px;
-      height: 40px;
-      border: none;
-      padding: 5px;
-      box-sizing: border-box;
-    }
-
-    .search-button {
-      background: yellow;
-      width: 40px;
-      height: 40px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      border: none;
-      padding: 5px;
-    }
+  .data-wrapper {
+    background: red;
+    overflow-y: auto;
+    grid-row-start: 3;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 8;
   }
 
-  .filter-menu {
-    display: inline-block;
-    position: absolute;
-    right: 0;
+  .header {
+    display: grid;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-end: 1;
+    background: blue;
+    padding: 10px;
+    box-sizing: border-box;
+    grid-template-columns: auto 40px 40px;
 
-    .menu {
-      background: green;
-      position: fixed;
-      top: 60px;
+    .search-wrapper {
+      display: grid;
+      grid-template-columns: 2;
+      grid-template-rows: 1;
+      grid-template-columns: auto 40px;
+      grid-column: 1;
+
+      .search-bar {
+        background: cyan;
+        border: none;
+        padding: 5px;
+        box-sizing: border-box;
+        grid-column: 1;
+      }
+
+      .search-button {
+        background: yellow;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        border: none;
+        padding: 5px;
+        grid-column: 2;
+      }
+    }
+
+    .filter-menu {
       right: 0;
-      // display: none;
+      grid-column: 3;
+      display: grid;
+
+      .menu-button {
+        align-items: center;
+      }
+
+      .menu {
+        background: pink;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: grid;
+        grid-template-rows: repeat(9, 30px);
+
+        li {
+          display: grid;
+          grid-template-columns: 30px auto;
+
+          .filter-checkbox, .filter-checkbox-box {
+            grid-column: 1;
+          }
+
+          .filter-name {
+            grid-column: 2;
+            padding: 0 5px;
+          }
+
+          .filter-checkbox:checked ~ .filter-checkbox-box {
+            background: green;
+          }
+
+          .filter-checkbox:checked ~ .filter-name {
+            background: green;
+          }
+        }
+      }
     }
   }
-}
 
-.invisible {
-  display: none;
+  .invisible {
+    display: none !important;
+  }
+
+  .data-wrapper {
+    background: red;
+    
+    .section {
+      background: green;
+
+      .title {
+        background: blue;
+        color: white;
+      }
+
+      .subsection {
+        background: cyan;
+
+        .title {
+          background: pink;
+        }
+
+        .data {
+          background: teal;
+
+          .column-1 {
+            background: darkgreen;
+          }
+          .column-2 {
+            background: darkgreen;
+          }
+          .column-3 {
+            background: darkgreen;
+          }
+        }
+      }
+    }
+  }
 }
