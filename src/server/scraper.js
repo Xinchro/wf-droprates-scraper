@@ -127,7 +127,7 @@ function htmlTableToJson(table, tableName) {
         currentSubSection = null
         title = false
       } else {
-        if(row.children[0] < 2) {
+        if(row.children[0].name === "th") {
           //new subsection
           currentSection.subSections.push({
             subSection: row.children[0].children[0].data,
