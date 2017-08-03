@@ -162,7 +162,7 @@ function htmlTableToJson(table, tableName) {
            currentSubSection.items.push({
              name: row.children[0].children[0].data,
              itemchance: row.children[1].children[0].data,
-             specificchance: row.children[2].children[0].data
+             droprate: row.children[2].children[0].data
            })
          } else {
            console.error("Irregular number of columns in item")
@@ -192,7 +192,7 @@ function htmlTableToJson(table, tableName) {
             currentSection.items.push({
               name: row.children[0].children[0].data,
               itemchance: row.children[1].children[0].data,
-              specificchance: row.children[2].children[0].data
+              droprate: row.children[2].children[0].data
             })
           }
         } else {
