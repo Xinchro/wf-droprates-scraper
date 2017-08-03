@@ -19,8 +19,8 @@
     <section id="vue-wrapper">
       <header class="header">
         <section class="search-wrapper">
-          <input class="search-bar" type="text">
-          <button class="search-button">
+          <input class="search-bar" type="text" v-model="searchText">
+          <button class="search-button" v-on:click="search(searchText)">
             <img src="" alt="Search">
           </button>
         </section>
@@ -45,7 +45,7 @@
 
       <section id="data" class="data-wrapper">
         {{message}}
-        <section class="section" v-for="section in dropdata.sections">
+        <section class="section" v-for="section in filteredData.sections">
 
           <section class="title">
             <p>{{section.section}}</p>

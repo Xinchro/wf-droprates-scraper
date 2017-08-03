@@ -44,7 +44,14 @@ let app = new Vue({
     ],
     appliedFilters: 0,
     menuVisible: true,
-    dropdata: {}
+    dropdata: {},
+    filteredData: {},
+    searchText: ""
+  },
+  watch :{
+    searchText: function (text) {
+      this.search(text)
+    }
   },
   methods: {
     getData(name) {
@@ -69,6 +76,7 @@ let app = new Vue({
     updateData(newData) {
       // console.log("updating data", newData)
       this.dropdata = newData
+      this.search("")
     },
 
     toggleMenu() {
@@ -114,6 +122,36 @@ let app = new Vue({
       this.message = tempMsg
 
       // this.dropdata = data
+    },
+
+    search(text) {
+      this.filteredData = {}
+      let searchTerms = text.split(" ")
+      let allSearchTerms
+
+      if(text != "") {
+        try {
+          this.dropdata.sections.forEach((section) => {
+            allSearchTerms = true
+            searchTerms.forEach((searchTerm) => {
+              if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
+                allSearchTerms = false
+              }
+            })
+
+            if(allSearchTerms) {
+              if(!this.filteredData.sections) this.filteredData.sections = []
+              this.filteredData.sections.push(section)
+            }
+          })
+        } catch(err) {
+          console.log(err)
+        }
+      } else {
+        this.filteredData = this.dropdata
+      }
+
     }
+
   }
 })
