@@ -89,7 +89,7 @@ body {
         #vue-wrapper .data-wrapper .section .subSection .data {
           background: teal;
           display: grid;
-          grid-template-columns: auto auto auto; }
+          grid-template-columns: 33.3% 33.3% 33.3%; }
           #vue-wrapper .data-wrapper .section .subSection .data .column-1 {
             background: darkgreen;
             grid-column: 1; }
@@ -101,7 +101,7 @@ body {
             grid-column: 3; }
       #vue-wrapper .data-wrapper .section .data {
         display: grid;
-        grid-template-columns: auto auto auto; }
+        grid-template-columns: 33.3% 33.3% 33.3%; }
         #vue-wrapper .data-wrapper .section .data .column-1 {
           background: lightgreen;
           grid-column: 1; }

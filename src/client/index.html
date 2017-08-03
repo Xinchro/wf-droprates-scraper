@@ -57,16 +57,16 @@
 
             <section class="data" v-for="item in subSection.items">
               <p class="column-1">{{item.name}}</p>
-              <p class="column-2">{{item.droprate}}</p>
-              <p class="column-3">{{item.name}}</p>
+              <p class="column-2">{{item.itemchance}}</p>
+              <p class="column-3">{{item.droprate}}</p>
             </section>
 
           </section>
 
           <section v-if="section.items" v-for="item in section.items" class="data">
             <p class="column-1">{{item.name}}</p>
-            <p class="column-2">{{item.droprate}}</p>
-            <p class="column-3">{{item.name}}</p>
+            <p class="column-2">{{item.itemchance}}</p>
+            <p class="column-3">{{item.droprate}}</p>
           </section>
 
         </section> <!-- section -->

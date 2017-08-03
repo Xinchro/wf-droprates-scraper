@@ -58,7 +58,7 @@ let app = new Vue({
             }
           }
         }
-        xmlHttp.open("GET", `http://localhost:8080/${name}.json`, true) // true for asynchronous 
+        xmlHttp.open("GET", `http://localhost:8080/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
         xmlHttp.send(null)
       } else {
         // console.log("empty data")
