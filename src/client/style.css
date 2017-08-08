@@ -2,6 +2,10 @@ body {
   padding: 0;
   margin: 0; }
 
+* {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px; }
+
 #vue-wrapper {
   display: grid;
   grid-template-columns: 10px auto auto auto auto auto auto 10px;
@@ -10,7 +14,8 @@ body {
   width: 100vw;
   position: fixed; }
   #vue-wrapper .data-wrapper {
-    background: red;
+    box-shadow: inset red 0 0 0 1px;
+    border: none;
     overflow-y: auto;
     grid-row-start: 3;
     grid-row-end: 8;
@@ -22,7 +27,8 @@ body {
     grid-column-start: 1;
     grid-column-end: 9;
     grid-row-end: 1;
-    background: blue;
+    box-shadow: inset blue 0 0 0 1px;
+    border: none;
     padding: 10px;
     box-sizing: border-box;
     grid-template-columns: auto 40px 40px; }
@@ -33,16 +39,16 @@ body {
       grid-template-columns: auto 40px;
       grid-column: 1; }
       #vue-wrapper .header .search-wrapper .search-bar {
-        background: cyan;
+        box-shadow: inset cyan 0 0 0 1px;
         border: none;
         padding: 5px;
         box-sizing: border-box;
         grid-column: 1; }
       #vue-wrapper .header .search-wrapper .search-button {
-        background: yellow;
+        box-shadow: inset yellow 0 0 0 1px;
+        border: none;
         text-overflow: ellipsis;
         overflow: hidden;
-        border: none;
         padding: 5px;
         grid-column: 2; }
     #vue-wrapper .header .filter-menu {
@@ -52,7 +58,8 @@ body {
       #vue-wrapper .header .filter-menu .menu-button {
         align-items: center; }
       #vue-wrapper .header .filter-menu .menu {
-        background: pink;
+        box-shadow: inset pink 0 0 0 1px;
+        border: none;
         position: fixed;
         top: 60px;
         right: 0;
@@ -70,46 +77,67 @@ body {
             grid-column: 2;
             padding: 0 5px; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-checkbox-box {
-            background: green; }
+            box-shadow: inset green 0 0 0 1px;
+            border: none; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-name {
-            background: green; }
+            box-shadow: inset green 0 0 0 1px;
+            border: none; }
   #vue-wrapper .invisible {
     display: none !important; }
   #vue-wrapper .data-wrapper {
-    background: red; }
+    box-shadow: inset red 0 0 0 1px;
+    border: none; }
     #vue-wrapper .data-wrapper .section {
-      background: green; }
+      box-shadow: inset green 0 0 0 1px;
+      border: none; }
       #vue-wrapper .data-wrapper .section .title {
-        background: blue;
-        color: white; }
+        box-shadow: inset blue 0 0 0 1px;
+        border: none; }
       #vue-wrapper .data-wrapper .section .subSection {
-        background: cyan; }
+        box-shadow: inset cyan 0 0 0 1px;
+        border: none; }
         #vue-wrapper .data-wrapper .section .subSection .title {
-          background: pink; }
+          box-shadow: inset pink 0 0 0 1px;
+          border: none; }
         #vue-wrapper .data-wrapper .section .subSection .data {
-          background: teal;
+          box-shadow: inset teal 0 0 0 1px;
+          border: none;
           display: grid;
           grid-template-columns: 33.3% 33.3% 33.3%; }
           #vue-wrapper .data-wrapper .section .subSection .data .column-1 {
-            background: darkgreen;
+            box-shadow: inset darkgreen 0 0 0 1px;
+            border: none;
             grid-column: 1; }
           #vue-wrapper .data-wrapper .section .subSection .data .column-2 {
-            background: darkgreen;
+            box-shadow: inset darkgreen 0 0 0 1px;
+            border: none;
             grid-column: 2; }
           #vue-wrapper .data-wrapper .section .subSection .data .column-3 {
-            background: darkgreen;
+            box-shadow: inset darkgreen 0 0 0 1px;
+            border: none;
             grid-column: 3; }
+          #vue-wrapper .data-wrapper .section .subSection .data.highlight {
+            font-weight: bold;
+            box-shadow: inset pink 0 0 0 1px;
+            border: none; }
       #vue-wrapper .data-wrapper .section .data {
         display: grid;
         grid-template-columns: 33.3% 33.3% 33.3%; }
         #vue-wrapper .data-wrapper .section .data .column-1 {
-          background: lightgreen;
+          box-shadow: inset lightgreen 0 0 0 1px;
+          border: none;
           grid-column: 1; }
         #vue-wrapper .data-wrapper .section .data .column-2 {
-          background: lightgreen;
+          box-shadow: inset lightgreen 0 0 0 1px;
+          border: none;
           grid-column: 2; }
         #vue-wrapper .data-wrapper .section .data .column-3 {
-          background: lightgreen;
+          box-shadow: inset lightgreen 0 0 0 1px;
+          border: none;
           grid-column: 3; }
+        #vue-wrapper .data-wrapper .section .data.highlight {
+          font-weight: bold;
+          box-shadow: inset pink 0 0 0 1px;
+          border: none; }
 
 /*# sourceMappingURL=style.css.map */

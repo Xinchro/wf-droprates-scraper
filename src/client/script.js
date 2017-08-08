@@ -1,7 +1,6 @@
 let app = new Vue({
   el: '#vue-wrapper',
   data: {
-    message: "No data selected!",
     filters: [
       // { name: "glossary",
       //   id: 0 },
@@ -42,11 +41,10 @@ let app = new Vue({
         id: 9,
         on: false }
     ],
-    appliedFilters: 0,
     menuVisible: true,
     dropdata: {},
     filteredData: {},
-    searchText: ""
+    searchText: "",
   },
   watch :{
     searchText: function (text) {
@@ -56,26 +54,25 @@ let app = new Vue({
   methods: {
     getData(name) {
       // console.log("getting data", name)
-      if(name) {
-        var xmlHttp = new XMLHttpRequest()
-        xmlHttp.onreadystatechange = () => { 
-          if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            if(this.appliedFilters > 0) {
-              this.updateData(JSON.parse(xmlHttp.responseText))
+      return new Promise((resolve, reject) => {
+        if(name) {
+          var xmlHttp = new XMLHttpRequest()
+          xmlHttp.onreadystatechange = () => { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+              resolve(JSON.parse(xmlHttp.responseText))
             }
           }
+          xmlHttp.open("GET", `http://localhost:8080/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
+          xmlHttp.send(null)
+        } else {
+          // console.log("empty data")
         }
-        xmlHttp.open("GET", `http://localhost:8080/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
-        xmlHttp.send(null)
-      } else {
-        // console.log("empty data")
-        this.updateData({})
-      }
+      })
     },
 
     updateData(newData) {
-      // console.log("updating data", newData)
-      this.dropdata = newData
+      this.$set(this, "dropdata", {})
+      this.$set(this, "dropdata", newData)
       this.search("")
     },
 
@@ -88,70 +85,117 @@ let app = new Vue({
     },
 
     updateCurrentFilters(filterID) {
-      this.appliedFilters = 0
-
-      for(let i=0;i<this.filters.length;i++) {
-        if(this.checkbox(i+1).checked) {
-          this.filters[i].on = true
-          this.appliedFilters++
-        }else{
-          this.filters[i].on = false
-        }
-      }
+      this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked
 
       this.updateSearchResults()
     },
 
     updateSearchResults() {
-      let tempMsg = ""
+      this.$set(this.filteredData, "sections", {})
 
-      for(let i=0;i<this.filters.length;i++) {
-        if(this.filters[i].on) {
-          tempMsg += `${this.filters[i].label} `
-          // TODO do this properly
-          this.getData(this.filters[i].name)
+      this.filters.forEach((filter) => {
+        if(filter.on) {
+          this.getData(filter.name)
+          .then((data) => {
+            this.updateData(data)
+          })
         }
-      }
-      if(this.appliedFilters > 0) {
-        this.getData()
-      }
-
-      if(tempMsg === "") {
-        tempMsg = "No data selected!"
-      }
-      this.message = tempMsg
-
-      // this.dropdata = data
+      })
     },
 
     search(text) {
-      this.filteredData = {}
       let searchTerms = text.split(" ")
-      let allSearchTerms
 
-      if(text != "") {
-        try {
-          this.dropdata.sections.forEach((section) => {
-            allSearchTerms = true
-            searchTerms.forEach((searchTerm) => {
-              if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
-                allSearchTerms = false
-              }
-            })
-
-            if(allSearchTerms) {
-              if(!this.filteredData.sections) this.filteredData.sections = []
-              this.filteredData.sections.push(section)
-            }
-          })
-        } catch(err) {
-          console.log(err)
-        }
-      } else {
-        this.filteredData = this.dropdata
+      if(!this.filteredData.sections) {
+        this.$set(this.filteredData, "sections", [])
       }
+      if(!this.dropdata.sections) {
+        this.$set(this.filteredData, "sections", this.dropdata)
+      } else {
+        this.$set(this.filteredData, "sections", this.searchSections(this.dropdata.sections, searchTerms))
+      }
+    },
 
+    searchSections(sections, terms) {
+      let sectionsToAdd = []
+
+      if(!sections) return []
+
+      sections.forEach((section) => {
+        let tempSection = {}
+        let addSection = true
+
+        tempSection.section = JSON.parse(JSON.stringify(section.section))
+        if(section.subSections) tempSection.subSections = JSON.parse(JSON.stringify(section.subSections))
+        if(section.items) tempSection.items = JSON.parse(JSON.stringify(section.items))
+
+        terms.forEach((searchTerm) => {
+          if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
+            addSection = false
+          }
+        })
+
+        if(addSection) {
+          sectionsToAdd.push(tempSection)
+        } else if(section.subSections) {
+          tempSection.subSections = this.searchSubsections(section.subSections, terms)
+          if(tempSection.subSections.length > 0) sectionsToAdd.push(tempSection)
+        } else if(section.items) {
+          tempSection.items = this.searchItems(section.items, terms)
+          if(tempSection.items.length > 0) sectionsToAdd.push(tempSection)
+        } else {
+          // do nothing
+        }
+      })
+
+      return sectionsToAdd
+    },
+
+    searchSubsections(subSections, terms) {
+      let subSectionsToAdd = []
+
+      subSections.forEach(subSection => {
+        let addSubSection = true
+
+        terms.forEach(searchTerm => {
+          if(!subSection.subSection.toLowerCase().includes(searchTerm.toLowerCase())) {
+            addSubSection = false
+          }
+        })
+
+        if(addSubSection) {
+          subSectionsToAdd.push(subSection)
+        } else {
+          let items = this.searchItems(subSection.items, terms)
+
+          if(items.length > 0) {
+            subSection.items = items
+            subSectionsToAdd.push(subSection)
+          }
+        }
+      })
+
+      return subSectionsToAdd
+    },
+
+    searchItems(items, terms) {
+      let itemsToAdd = []
+
+      items.forEach(item => {
+        let addItem = true
+
+        terms.forEach(searchTerm => {
+          if(!item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            addItem = false
+          }
+        })
+
+        if(addItem) {
+          itemsToAdd.push(item)
+        }
+      })
+
+      return itemsToAdd
     }
-
   }
 })

@@ -20,33 +20,28 @@
       <header class="header">
         <section class="search-wrapper">
           <input class="search-bar" type="text" v-model="searchText">
-          <button class="search-button" v-on:click="search(searchText)">
+          <button class="search-button" @click="search(searchText)">
             <img src="" alt="Search">
           </button>
         </section>
-
         <section class="filter-menu">
-          <button class="menu-button" v-on:click="toggleMenu">
+          <button class="menu-button" @click="toggleMenu">
             <span v-if="menuVisible">A</span>
             <span v-else>V</span>
           </button>
 
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
-            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" v-on:click="updateCurrentFilters(filter.id)">
+            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" @click.prevent="updateCurrentFilters(filter.id)">
               <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible">
               <label v-bind:for="filter.id" class="filter-checkbox-box"></label>
               <label v-bind:for="filter.id" class="filter-name">{{filter.label}}</label>
             </li>
           </ul>
-
         </section>
-
       </header>
 
       <section id="data" class="data-wrapper">
-        {{message}}
         <section class="section" v-for="section in filteredData.sections">
-
           <section class="title">
             <p>{{section.section}}</p>
           </section>
@@ -55,7 +50,7 @@
               <p>{{subSection.subSection}}</p>
             </section>
 
-            <section class="data" v-for="item in subSection.items">
+            <section class="data" v-for="item in subSection.items" v-bind:class="{ highlight: item.highlight }">
               <p class="column-1">{{item.name}}</p>
               <p class="column-2">{{item.itemchance}}</p>
               <p class="column-3">{{item.droprate}}</p>
@@ -63,7 +58,7 @@
 
           </section>
 
-          <section v-if="section.items" v-for="item in section.items" class="data">
+          <section v-if="section.items" v-for="item in section.items" class="data" v-bind:class="{ highlight: item.highlight }">
             <p class="column-1">{{item.name}}</p>
             <p class="column-2">{{item.itemchance}}</p>
             <p class="column-3">{{item.droprate}}</p>

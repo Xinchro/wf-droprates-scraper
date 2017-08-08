@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+* {
+  background: rgba(0,0,0,0.1);
+  padding: 5px;
+}
+
 #vue-wrapper {
   display: grid;
   grid-template-columns: 10px auto auto auto auto auto auto 10px;
@@ -12,7 +17,8 @@ body {
   position: fixed;
 
   .data-wrapper {
-    background: red;
+    box-shadow: inset red 0 0 0 1px;
+    border: none;
     overflow-y: auto;
     grid-row-start: 3;
     grid-row-end: 8;
@@ -26,7 +32,8 @@ body {
     grid-column-start: 1;
     grid-column-end: 9;
     grid-row-end: 1;
-    background: blue;
+    box-shadow: inset blue 0 0 0 1px;
+    border: none;
     padding: 10px;
     box-sizing: border-box;
     grid-template-columns: auto 40px 40px;
@@ -39,7 +46,7 @@ body {
       grid-column: 1;
 
       .search-bar {
-        background: cyan;
+        box-shadow: inset cyan 0 0 0 1px;
         border: none;
         padding: 5px;
         box-sizing: border-box;
@@ -47,10 +54,10 @@ body {
       }
 
       .search-button {
-        background: yellow;
+        box-shadow: inset yellow 0 0 0 1px;
+        border: none;
         text-overflow: ellipsis;
         overflow: hidden;
-        border: none;
         padding: 5px;
         grid-column: 2;
       }
@@ -66,7 +73,8 @@ body {
       }
 
       .menu {
-        background: pink;
+        box-shadow: inset pink 0 0 0 1px;
+        border: none;
         position: fixed;
         top: 60px;
         right: 0;
@@ -90,11 +98,13 @@ body {
           }
 
           .filter-checkbox:checked ~ .filter-checkbox-box {
-            background: green;
+            box-shadow: inset green 0 0 0 1px;
+            border: none;
           }
 
           .filter-checkbox:checked ~ .filter-name {
-            background: green;
+            box-shadow: inset green 0 0 0 1px;
+            border: none;
           }
         }
       }
@@ -106,39 +116,52 @@ body {
   }
 
   .data-wrapper {
-    background: red;
+    box-shadow: inset red 0 0 0 1px;
+    border: none;
     
     .section {
-      background: green;
+      box-shadow: inset green 0 0 0 1px;
+      border: none;
 
       .title {
-        background: blue;
-        color: white;
+        box-shadow: inset blue 0 0 0 1px;
+        border: none;
       }
 
       .subSection {
-        background: cyan;
+        box-shadow: inset cyan 0 0 0 1px;
+        border: none;
 
         .title {
-          background: pink;
+          box-shadow: inset pink 0 0 0 1px;
+          border: none;
         }
 
         .data {
-          background: teal;
+          box-shadow: inset teal 0 0 0 1px;
+          border: none;
           display: grid;
           grid-template-columns: 33.3% 33.3% 33.3%;
 
           .column-1 {
-            background: darkgreen;
+            box-shadow: inset darkgreen 0 0 0 1px;
+            border: none;
             grid-column: 1;
           }
           .column-2 {
-            background: darkgreen;
+            box-shadow: inset darkgreen 0 0 0 1px;
+            border: none;
             grid-column: 2;
           }
           .column-3 {
-            background: darkgreen;
+            box-shadow: inset darkgreen 0 0 0 1px;
+            border: none;
             grid-column: 3;
+          }
+          &.highlight {
+            font-weight: bold;
+            box-shadow: inset pink 0 0 0 1px;
+            border: none;
           }
         }
 
@@ -148,16 +171,24 @@ body {
         grid-template-columns: 33.3% 33.3% 33.3%;
 
         .column-1 {
-          background: lightgreen;
+          box-shadow: inset lightgreen 0 0 0 1px;
+          border: none;
           grid-column: 1;
         }
         .column-2 {
-          background: lightgreen;
+          box-shadow: inset lightgreen 0 0 0 1px;
+          border: none;
           grid-column: 2;
         }
         .column-3 {
-          background: lightgreen;
+          box-shadow: inset lightgreen 0 0 0 1px;
+          border: none;
           grid-column: 3;
+        }
+        &.highlight {
+          font-weight: bold;
+          box-shadow: inset pink 0 0 0 1px;
+          border: none;
         }
       }
     }
