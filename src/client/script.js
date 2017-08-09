@@ -62,7 +62,7 @@ let app = new Vue({
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
-          xmlHttp.open("GET", `http://localhost:8080/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
+          xmlHttp.open("GET", `http://wf-drops.xinchronize.com.s3-website.eu-west-2.amazonaws.com/data/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
           xmlHttp.send(null)
         } else {
           // console.log("empty data")
@@ -70,8 +70,30 @@ let app = new Vue({
       })
     },
 
+    getDataList(list) {
+      let sectionArray = []
+      let allSections = []
+
+      return new Promise((resolve, reject) => {
+        list.forEach((filter) => {
+          if(filter.on) {
+            this.getData(filter.name)
+            .then(data => sectionArray.push(data))
+            .then(() => {
+              sectionArray.forEach(array => {
+                array.sections.forEach(section => {
+                  allSections.push(section)
+                })
+              })
+            })
+          }
+        })
+
+        resolve({sections: allSections})
+      })
+    },
+
     updateData(newData) {
-      this.$set(this, "dropdata", {})
       this.$set(this, "dropdata", newData)
       this.search("")
     },
@@ -93,13 +115,10 @@ let app = new Vue({
     updateSearchResults() {
       this.$set(this.filteredData, "sections", {})
 
-      this.filters.forEach((filter) => {
-        if(filter.on) {
-          this.getData(filter.name)
-          .then((data) => {
-            this.updateData(data)
-          })
-        }
+      // this.getData(this.filters[0].name)
+      this.getDataList(this.filters)
+      .then((data) => {
+        this.updateData(data)
       })
     },
 
