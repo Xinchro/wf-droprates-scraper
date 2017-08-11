@@ -62,35 +62,78 @@ let app = new Vue({
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
-          xmlHttp.open("GET", `http://wf-drops.xinchronize.com.s3-website.eu-west-2.amazonaws.com/data/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
+          xmlHttp.open("GET", `//wf-drops.xinchronize.com/data/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
           xmlHttp.send(null)
         } else {
           // console.log("empty data")
+          resolve()
         }
       })
     },
 
     getDataList(list) {
-      let sectionArray = []
       let allSections = []
 
       return new Promise((resolve, reject) => {
-        list.forEach((filter) => {
-          if(filter.on) {
-            this.getData(filter.name)
-            .then(data => sectionArray.push(data))
-            .then(() => {
-              sectionArray.forEach(array => {
-                array.sections.forEach(section => {
-                  allSections.push(section)
-                })
-              })
-            })
-          }
-        })
+        let filters = this.filters
+        let getData = this.getData
 
-        resolve({sections: allSections})
+        // start loop function
+        a(0)
+
+        // setup loop function
+        function a(index) {
+          // set current filter
+          let filter = filters[index]
+
+          // get data only if current filter is on
+          getData(
+            filter.on ? filter.name : ""
+          )
+          .then(data => {
+            // if filter is on, push to filtered sections
+            if(filter.on) {
+              data.sections.forEach(section => {
+                allSections.push(section)
+              })
+            }
+
+            // increment loop function index
+            index++
+
+            // if index is smaller than filters, call again
+            // if not, resolve function and return filtered sections
+            if(index < filters.length) {
+              a(index)
+            } else {
+              resolve({ sections: allSections })
+            }
+          })
+        }
       })
+
+    },
+
+    updateSearchResults() {
+      this.$set(this.filteredData, "sections", {})
+
+      this.getDataList(this.filters)
+      .then((data) => {
+        this.updateData(data)
+      })
+    },
+
+    search(text) {
+      let searchTerms = text.split(" ")
+
+      if(!this.filteredData.sections) {
+        this.$set(this.filteredData, "sections", [])
+      }
+      if(!this.dropdata.sections) {
+        this.$set(this.filteredData, "sections", this.dropdata)
+      } else {
+        this.$set(this.filteredData, "sections", this.searchSections(this.dropdata.sections, searchTerms))
+      }
     },
 
     updateData(newData) {
@@ -112,29 +155,6 @@ let app = new Vue({
       this.updateSearchResults()
     },
 
-    updateSearchResults() {
-      this.$set(this.filteredData, "sections", {})
-
-      // this.getData(this.filters[0].name)
-      this.getDataList(this.filters)
-      .then((data) => {
-        this.updateData(data)
-      })
-    },
-
-    search(text) {
-      let searchTerms = text.split(" ")
-
-      if(!this.filteredData.sections) {
-        this.$set(this.filteredData, "sections", [])
-      }
-      if(!this.dropdata.sections) {
-        this.$set(this.filteredData, "sections", this.dropdata)
-      } else {
-        this.$set(this.filteredData, "sections", this.searchSections(this.dropdata.sections, searchTerms))
-      }
-    },
-
     searchSections(sections, terms) {
       let sectionsToAdd = []
 
@@ -148,9 +168,11 @@ let app = new Vue({
         if(section.subSections) tempSection.subSections = JSON.parse(JSON.stringify(section.subSections))
         if(section.items) tempSection.items = JSON.parse(JSON.stringify(section.items))
 
-        terms.forEach((searchTerm) => {
-          if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
-            addSection = false
+        terms.forEach(searchTerm => {
+          if(searchTerm.length >= 3) {
+            if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
+              addSection = false
+            }
           }
         })
 
@@ -177,8 +199,10 @@ let app = new Vue({
         let addSubSection = true
 
         terms.forEach(searchTerm => {
-          if(!subSection.subSection.toLowerCase().includes(searchTerm.toLowerCase())) {
-            addSubSection = false
+          if(searchTerm.length >= 3) {
+            if(!subSection.subSection.toLowerCase().includes(searchTerm.toLowerCase())) {
+              addSubSection = false
+            }
           }
         })
 
@@ -204,8 +228,10 @@ let app = new Vue({
         let addItem = true
 
         terms.forEach(searchTerm => {
-          if(!item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-            addItem = false
+          if(searchTerm.length >= 3) {
+            if(!item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+              addItem = false
+            }
           }
         })
 
