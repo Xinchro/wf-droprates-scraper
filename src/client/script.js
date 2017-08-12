@@ -41,7 +41,7 @@ let app = new Vue({
         id: 9,
         on: false }
     ],
-    menuVisible: false,
+    menuVisible: true,
     dropdata: {},
     filteredData: {},
     searchText: "",
