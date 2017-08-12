@@ -62,7 +62,7 @@ let app = new Vue({
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
-          xmlHttp.open("GET", `//wf-drops.xinchronize.com/data/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
+          xmlHttp.open("GET", `http://wf-drops.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous 
           xmlHttp.send(null)
         } else {
           // console.log("empty data")
@@ -138,6 +138,7 @@ let app = new Vue({
 
     updateData(newData) {
       this.$set(this, "dropdata", newData)
+      this.searchText = ""
       this.search("")
     },
 
