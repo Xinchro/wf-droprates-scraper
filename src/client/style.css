@@ -161,14 +161,14 @@ body {
   #vue-wrapper .info {
     position: fixed;
     z-index: 5;
-    width: 500px;
-    height: 500px;
-    left: calc(50vw - 250px);
-    top: calc(50vh - 250px);
+    width: 300px;
+    height: 300px;
+    left: calc(50vw - 150px);
+    top: calc(50vh - 150px);
     background: #eee;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 125px auto; }
+    grid-template-rows: 50px auto; }
     #vue-wrapper .info p {
       background: #222;
       color: #eee;
@@ -198,8 +198,7 @@ body {
       grid-row: 2;
       list-style: none;
       margin: 0;
-      padding: 0;
-      font-size: 1.5em; }
+      padding: 0; }
       #vue-wrapper .info ul li {
         display: grid;
         align-items: center;
