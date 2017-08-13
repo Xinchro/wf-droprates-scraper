@@ -198,7 +198,10 @@ let app = new Vue({
       let subSectionsToAdd = []
 
       subSections.forEach(subSection => {
+        let tempSubSection = {}
         let addSubSection = true
+
+        if(subSection.items) tempSubSection.items = JSON.parse(JSON.stringify(subSection.items))
 
         terms.forEach(searchTerm => {
           if(searchTerm.length >= 3) {
@@ -209,13 +212,13 @@ let app = new Vue({
         })
 
         if(addSubSection) {
-          subSectionsToAdd.push(subSection)
+          subSectionsToAdd.push(tempSubSection)
         } else {
-          let items = this.searchItems(subSection.items, terms)
+          let items = this.searchItems(tempSubSection.items, terms)
 
           if(items.length > 0) {
-            subSection.items = items
-            subSectionsToAdd.push(subSection)
+            tempSubSection.items = items
+            subSectionsToAdd.push(tempSubSection)
           }
         }
       })
