@@ -17,6 +17,27 @@
         <![endif]-->
 
     <section id="vue-wrapper">
+      <section class="info" v-if="displayHelp">
+        <p>
+          <span>INFO</span>
+          <i class="fa fa-times" aria-hidden="true" @click="displayHelp = false"></i>
+        </p>
+        <ul>
+          <li>
+            1. Select one or more filters from the right.
+          </li>
+          <li>
+            2. Type what you'd like to find into the search bar.
+          </li>
+          <li>
+            3. ????
+          </li>
+          <li>
+            4. Profit.
+          </li>
+        </ul>
+      </section>
+
       <header class="header">
         <section class="search-wrapper">
           <input class="search-bar" type="text" v-model="searchText" placeholder="Search...">

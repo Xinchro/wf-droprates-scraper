@@ -45,6 +45,7 @@ let app = new Vue({
     dropdata: {},
     filteredData: {},
     searchText: "",
+    displayHelp: true
   },
   watch :{
     searchText: function (text) {

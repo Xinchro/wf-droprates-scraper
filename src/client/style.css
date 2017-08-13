@@ -158,5 +158,59 @@ body {
         #vue-wrapper .data-wrapper .section .data .column-3 {
           border: none;
           grid-column: 3; }
+  #vue-wrapper .info {
+    position: fixed;
+    z-index: 5;
+    width: 500px;
+    height: 500px;
+    left: calc(50vw - 250px);
+    top: calc(50vh - 250px);
+    background: #eee;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 125px auto; }
+    #vue-wrapper .info p {
+      background: #222;
+      color: #eee;
+      font-weight: 700;
+      font-size: 2em;
+      margin: 0;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-row: 1; }
+      #vue-wrapper .info p span {
+        width: 100%; }
+      #vue-wrapper .info p .fa-times {
+        height: 50px;
+        width: 50px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer; }
+    #vue-wrapper .info ul {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 25% 25% 25% 25%;
+      grid-row: 2;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 1.5em; }
+      #vue-wrapper .info ul li {
+        display: grid;
+        align-items: center;
+        justify-content: center; }
+      #vue-wrapper .info ul > :nth-child(1) {
+        grid-row: 1; }
+      #vue-wrapper .info ul > :nth-child(2) {
+        grid-row: 2; }
+      #vue-wrapper .info ul > :nth-child(3) {
+        grid-row: 3; }
+      #vue-wrapper .info ul > :nth-child(4) {
+        grid-row: 4; }
 
 /*# sourceMappingURL=style.css.map */
