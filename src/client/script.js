@@ -49,7 +49,7 @@ let app = new Vue({
     filteredData: {},
     renderedData: {},
     searchText: "",
-    displayHelp: false,
+    displayHelp: true,
     busy: false
   },
   watch :{
