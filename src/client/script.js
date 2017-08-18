@@ -288,6 +288,15 @@ let app = new Vue({
       }
 
       this.$set(this, "renderedData", this.renderedData)
+    },
+
+    setTheme(theme) {
+      let element = document.getElementById("vue-wrapper")
+      element.className = theme
+
+      if (theme === "dark") {
+        element.className = ""
+      }
     }
   }
 })

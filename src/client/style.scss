@@ -26,7 +26,8 @@ body {
     padding: 10px;
     box-sizing: border-box;
     grid-template-columns: auto 40px 40px;
-    background: #404040;
+    grid-template-rows: 100%;
+    background: #444;
 
     @media screen and (min-width: 480px) {
       grid-template-columns: 400px auto 40px;
@@ -60,6 +61,29 @@ body {
           box-shadow: inset #303000 0 0 2px 3px;
         }
       }
+    }
+
+    .dark-light {
+      grid-column: 2;
+      display: grid;
+      grid-template-rows: 20px 20px;
+      grid-template-columns: 20px;
+      justify-content: center;
+
+      .dark, .light {
+        border: none;
+        width: 20px;
+        height: 20px;
+      }
+
+      .dark {
+        background: #444;
+      }
+
+      .light {
+        background: #DFDFDF;
+      }
+
     }
 
     .filter-menu {
@@ -306,6 +330,114 @@ body {
       >:nth-child(4){
         grid-row: 4;
       }
+    }
+  }
+}
+
+#vue-wrapper.light {
+  background: #fdfdfd;
+  color: #222;
+
+  .header {
+    background: #DFDFDF;
+
+    .search-wrapper {
+      .search-bar {
+        background: #fafafa;
+      }
+
+      .search-button {
+        background: #C2C233;
+
+        &:active {
+          background: #929211;
+          box-shadow: inset #303000 0 0 2px 3px;
+        }
+      }
+    }
+
+    .filter-menu {
+      .menu-button {
+        background: #EEE;
+
+        &:active {
+          background: #AAA;
+          box-shadow: inset #777 0 0 2px 3px;
+        }
+      }
+
+      .menu {
+        background: #fafafa;
+
+        li {
+
+          .filter-name {
+            color: #222;
+          }
+
+          .filter-checkbox:not(:checked) ~ .filter-checkbox-box {
+            background: #ba2323;
+          }
+          
+          .filter-checkbox:checked ~ .filter-checkbox-box {
+            box-shadow: inset #19b719 0 0 0 1px;
+            background: #19b719;
+          }
+
+          .filter-checkbox:checked ~ .filter-name {
+            box-shadow: inset #19b719 0 -4px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .data-wrapper {
+    background: #ececec;
+
+    .section {
+      .title {
+        background: #356bd6;
+        
+        p {
+          color: #222;
+        }
+      }
+
+      .subSection {
+        .title {
+          background: #d8458f;
+        }
+
+        .data {
+          box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0;
+
+          &.highlight {
+            &:hover {
+              background: #fafafa;
+            }
+          }
+        }
+      }
+
+      .data {
+        box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0;
+
+        &.highlight {
+          &:hover {
+            background: #fafafa;
+          }
+        }
+      }
+    }
+  }
+
+  .info {
+    background: #ddd;
+
+    p {
+      background: #bbb;
+      color: #222;
     }
   }
 }

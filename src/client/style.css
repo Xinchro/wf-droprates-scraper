@@ -23,7 +23,8 @@ body {
     padding: 10px;
     box-sizing: border-box;
     grid-template-columns: auto 40px 40px;
-    background: #404040; }
+    grid-template-rows: 100%;
+    background: #444; }
     @media screen and (min-width: 480px) {
       #vue-wrapper .header {
         grid-template-columns: 400px auto 40px; } }
@@ -49,6 +50,20 @@ body {
         #vue-wrapper .header .search-wrapper .search-button:active {
           background: #929211;
           box-shadow: inset #303000 0 0 2px 3px; }
+    #vue-wrapper .header .dark-light {
+      grid-column: 2;
+      display: grid;
+      grid-template-rows: 20px 20px;
+      grid-template-columns: 20px;
+      justify-content: center; }
+      #vue-wrapper .header .dark-light .dark, #vue-wrapper .header .dark-light .light {
+        border: none;
+        width: 20px;
+        height: 20px; }
+      #vue-wrapper .header .dark-light .dark {
+        background: #444; }
+      #vue-wrapper .header .dark-light .light {
+        background: #DFDFDF; }
     #vue-wrapper .header .filter-menu {
       right: 0;
       grid-column: 3;
@@ -214,5 +229,55 @@ body {
         grid-row: 3; }
       #vue-wrapper .info ul > :nth-child(4) {
         grid-row: 4; }
+
+#vue-wrapper.light {
+  background: #fdfdfd;
+  color: #222; }
+  #vue-wrapper.light .header {
+    background: #DFDFDF; }
+    #vue-wrapper.light .header .search-wrapper .search-bar {
+      background: #fafafa; }
+    #vue-wrapper.light .header .search-wrapper .search-button {
+      background: #C2C233; }
+      #vue-wrapper.light .header .search-wrapper .search-button:active {
+        background: #929211;
+        box-shadow: inset #303000 0 0 2px 3px; }
+    #vue-wrapper.light .header .filter-menu .menu-button {
+      background: #EEE; }
+      #vue-wrapper.light .header .filter-menu .menu-button:active {
+        background: #AAA;
+        box-shadow: inset #777 0 0 2px 3px; }
+    #vue-wrapper.light .header .filter-menu .menu {
+      background: #fafafa; }
+      #vue-wrapper.light .header .filter-menu .menu li .filter-name {
+        color: #222; }
+      #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:not(:checked) ~ .filter-checkbox-box {
+        background: #ba2323; }
+      #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-checkbox-box {
+        box-shadow: inset #19b719 0 0 0 1px;
+        background: #19b719; }
+      #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-name {
+        box-shadow: inset #19b719 0 -4px 0 0; }
+  #vue-wrapper.light .data-wrapper {
+    background: #ececec; }
+    #vue-wrapper.light .data-wrapper .section .title {
+      background: #356bd6; }
+      #vue-wrapper.light .data-wrapper .section .title p {
+        color: #222; }
+    #vue-wrapper.light .data-wrapper .section .subSection .title {
+      background: #d8458f; }
+    #vue-wrapper.light .data-wrapper .section .subSection .data {
+      box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0; }
+      #vue-wrapper.light .data-wrapper .section .subSection .data.highlight:hover {
+        background: #fafafa; }
+    #vue-wrapper.light .data-wrapper .section .data {
+      box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0; }
+      #vue-wrapper.light .data-wrapper .section .data.highlight:hover {
+        background: #fafafa; }
+  #vue-wrapper.light .info {
+    background: #ddd; }
+    #vue-wrapper.light .info p {
+      background: #bbb;
+      color: #222; }
 
 /*# sourceMappingURL=style.css.map */

@@ -59,6 +59,10 @@
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </section>
+        <section class="dark-light">
+          <button class="dark" @click="setTheme('dark')"></button>
+          <button class="light" @click="setTheme('light')"></button>
+        </section>
         <section class="filter-menu">
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
             <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" @click.prevent="updateCurrentFilters(filter.id)">
