@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-family: 'Oswald', sans-serif; }
 
+* {
+  outline: none; }
+
 #vue-wrapper {
   display: grid;
   grid-template-columns: 10px auto auto auto auto auto auto 10px;
