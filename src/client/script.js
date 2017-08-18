@@ -54,7 +54,6 @@ let app = new Vue({
   },
   watch :{
     searchText: function (text) {
-      console.log("changed")
       this.search(text)
     }
   },
@@ -132,6 +131,9 @@ let app = new Vue({
     search(text) {
       let searchTerms = text.split(" ")
 
+      renderStart = 0
+      renderEnd = 10
+
       if(!this.filteredData.sections) {
         this.$set(this.filteredData, "sections", [])
       }
@@ -139,8 +141,6 @@ let app = new Vue({
         this.$set(this.filteredData, "sections", this.dropdata)
       } else {
         this.$set(this.filteredData, "sections", this.searchSections(this.dropdata.sections, searchTerms))
-        console.log(this.filteredData.sections)
-        console.log(this.searchSections(this.dropdata.sections, searchTerms))
       }
 
       // this.renderData()
@@ -171,7 +171,6 @@ let app = new Vue({
     },
 
     searchSections(sections, terms) {
-      console.log("searching sections")
       let sectionsToAdd = []
 
       if(!sections) return []
@@ -216,6 +215,7 @@ let app = new Vue({
         let tempSubSection = {}
         let addSubSection = true
 
+        tempSubSection.subSection = JSON.parse(JSON.stringify(subSection.subSection))
         if(subSection.items) tempSubSection.items = JSON.parse(JSON.stringify(subSection.items))
 
         terms.forEach(searchTerm => {
