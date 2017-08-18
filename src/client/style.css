@@ -11,7 +11,8 @@ body {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: #222; }
+  background: #222;
+  color: #fdfdfd; }
   #vue-wrapper .header {
     display: grid;
     grid-row-start: 1;
@@ -31,13 +32,14 @@ body {
       grid-template-columns: auto 40px;
       grid-column: 1; }
       #vue-wrapper .header .search-wrapper .search-bar {
-        background: #999;
+        background: #eee;
         border: none;
         padding: 5px;
         box-sizing: border-box;
-        grid-column: 1; }
+        grid-column: 1;
+        font-family: Oswald, sans-serif; }
       #vue-wrapper .header .search-wrapper .search-button {
-        background: #909000;
+        background: #C2C233;
         border: none;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -45,21 +47,21 @@ body {
         grid-column: 2;
         display: grid; }
         #vue-wrapper .header .search-wrapper .search-button:active {
-          background: #707000;
-          box-shadow: inset #505000 0 0 2px 3px; }
+          background: #929211;
+          box-shadow: inset #303000 0 0 2px 3px; }
     #vue-wrapper .header .filter-menu {
       right: 0;
       grid-column: 3;
       display: grid; }
       #vue-wrapper .header .filter-menu .menu-button {
         display: grid;
-        background: #BBB;
+        background: #DDD;
         border: none; }
         #vue-wrapper .header .filter-menu .menu-button:active {
-          background: #999;
+          background: #AAA;
           box-shadow: inset #777 0 0 2px 3px; }
       #vue-wrapper .header .filter-menu .menu {
-        background: #ddd;
+        background: #444;
         border: none;
         position: fixed;
         top: 50px;
@@ -78,20 +80,21 @@ body {
             grid-column: 2;
             padding: 0 5px;
             display: grid;
-            align-items: center; }
+            align-items: center;
+            color: #fafafa; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:not(:checked) ~ .filter-checkbox-box {
-            background: #963232; }
+            background: #ba2323; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-checkbox-box {
-            box-shadow: inset #327d32 0 0 0 1px;
-            background: #327d32;
+            box-shadow: inset #19b719 0 0 0 1px;
+            background: #19b719;
             border: none; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-name {
-            box-shadow: inset #327d32 0 -4px 0 0;
+            box-shadow: inset #19b719 0 -4px 0 0;
             border: none; }
   #vue-wrapper .invisible {
     display: none !important; }
   #vue-wrapper .data-wrapper {
-    background: #999;
+    background: #444;
     border: none;
     overflow-y: auto;
     grid-row-start: 3;
@@ -128,7 +131,7 @@ body {
           #vue-wrapper .data-wrapper .section .subSection .data:not(.highlight) {
             font-weight: 700; }
           #vue-wrapper .data-wrapper .section .subSection .data.highlight:hover {
-            background: #BBB; }
+            background: #333; }
           #vue-wrapper .data-wrapper .section .subSection .data .column-1 {
             border: none;
             grid-column: 1; }
@@ -148,7 +151,7 @@ body {
         #vue-wrapper .data-wrapper .section .data:not(.highlight) {
           font-weight: 700; }
         #vue-wrapper .data-wrapper .section .data.highlight:hover {
-          background: #BBB; }
+          background: #333; }
         #vue-wrapper .data-wrapper .section .data .column-1 {
           border: none;
           grid-column: 1; }
@@ -165,7 +168,7 @@ body {
     height: 300px;
     left: calc(50vw - 150px);
     top: calc(50vh - 150px);
-    background: #eee;
+    background: #333;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50px auto; }
