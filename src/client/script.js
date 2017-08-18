@@ -1,3 +1,6 @@
+let renderStart = 0
+let renderEnd = 10
+
 let app = new Vue({
   el: '#vue-wrapper',
   data: {
@@ -44,17 +47,19 @@ let app = new Vue({
     menuVisible: true,
     dropdata: {},
     filteredData: {},
+    renderedData: {},
     searchText: "",
-    displayHelp: true
+    displayHelp: false,
+    busy: false
   },
   watch :{
     searchText: function (text) {
+      console.log("changed")
       this.search(text)
     }
   },
   methods: {
     getData(name) {
-      // console.log("getting data", name)
       return new Promise((resolve, reject) => {
         if(name) {
           var xmlHttp = new XMLHttpRequest()
@@ -134,7 +139,12 @@ let app = new Vue({
         this.$set(this.filteredData, "sections", this.dropdata)
       } else {
         this.$set(this.filteredData, "sections", this.searchSections(this.dropdata.sections, searchTerms))
+        console.log(this.filteredData.sections)
+        console.log(this.searchSections(this.dropdata.sections, searchTerms))
       }
+
+      // this.renderData()
+      this.addHead()
     },
 
     updateData(newData) {
@@ -152,18 +162,23 @@ let app = new Vue({
     },
 
     updateCurrentFilters(filterID) {
-      this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked
+      this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked  
+
+      renderStart = 0
+      renderEnd = 10
 
       this.updateSearchResults()
     },
 
     searchSections(sections, terms) {
+      console.log("searching sections")
       let sectionsToAdd = []
 
       if(!sections) return []
 
       sections.forEach((section) => {
         let tempSection = {}
+        this.renderedData = {}
         let addSection = true
 
         tempSection.section = JSON.parse(JSON.stringify(section.section))
@@ -171,7 +186,7 @@ let app = new Vue({
         if(section.items) tempSection.items = JSON.parse(JSON.stringify(section.items))
 
         terms.forEach(searchTerm => {
-          if(searchTerm.length >= 3) {
+          if(searchTerm.length >= 2) {
             if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
               addSection = false
             }
@@ -204,7 +219,7 @@ let app = new Vue({
         if(subSection.items) tempSubSection.items = JSON.parse(JSON.stringify(subSection.items))
 
         terms.forEach(searchTerm => {
-          if(searchTerm.length >= 3) {
+          if(searchTerm.length >= 2) {
             if(!subSection.subSection.toLowerCase().includes(searchTerm.toLowerCase())) {
               addSubSection = false
             }
@@ -233,7 +248,7 @@ let app = new Vue({
         let addItem = true
 
         terms.forEach(searchTerm => {
-          if(searchTerm.length >= 3) {
+          if(searchTerm.length >= 2) {
             if(!item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
               addItem = false
             }
@@ -246,6 +261,31 @@ let app = new Vue({
       })
 
       return itemsToAdd
+    },
+
+    addHead() {
+      this.renderedData = {sections:[]}
+
+      if(this.filteredData.sections && this.filteredData.sections.length > 0) {
+        for (let i=0; i<renderEnd; i++) {
+          if(this.filteredData.sections[i]) {
+            this.renderedData.sections.push(this.filteredData.sections[i])
+          }
+        }
+
+        if(this.filteredData.sections.length > 0) {
+          if(renderEnd+5 > this.filteredData.sections.length) {
+            renderEnd = this.filteredData.sections.length
+          } else {
+            renderStart = renderEnd
+            renderEnd += 5
+          }
+        }
+      }
+
+      this.$set(this, "renderedData", this.renderedData)
     }
   }
 })
+
+Vue.use(infiniteScroll)

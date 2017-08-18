@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-infinite-scroll"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css"> 
   </head>
@@ -40,7 +41,7 @@
 
       <header class="header">
         <section class="search-wrapper">
-          <input class="search-bar" type="text" v-model="searchText" placeholder="Search...">
+          <input class="search-bar" type="text" v-model="searchText" placeholder="Search..." @change="search(searchText)">
           <button class="search-button" @click="search(searchText)">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
@@ -61,7 +62,7 @@
       </header>
 
       <section id="data" class="data-wrapper">
-        <section class="section" v-for="section in filteredData.sections">
+        <section class="section" v-for="section in renderedData.sections">
           <section class="title">
             <p>{{section.section}}</p>
           </section>
@@ -93,8 +94,10 @@
             <p class="column-2 column">{{item.itemchance}}</p>
             <p class="column-3 column">{{item.droprate}}</p>
           </section>
-
         </section> <!-- section -->
+        
+        <div v-infinite-scroll="addHead" infinite-scroll-disabled="busy" infinite-scroll-distance="5">
+        </div>
 
       </section> <!-- end data-wrapper -->
 
