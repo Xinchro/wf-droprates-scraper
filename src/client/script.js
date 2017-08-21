@@ -131,8 +131,6 @@ let app = new Vue({
     },
 
     search(text) {
-      this.displayHelp = false
-
       let searchTerms = text.split(" ")
 
       renderStart = 0
@@ -173,8 +171,6 @@ let app = new Vue({
     },
 
     updateCurrentFilters(filterID) {
-      this.displayHelp = false
-
       if(filterID) {
         this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked
       }
