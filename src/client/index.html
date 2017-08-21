@@ -68,7 +68,7 @@
         <section class="filter-menu">
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
             <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" @click.prevent="updateCurrentFilters(filter.id)">
-              <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible">
+              <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible" v-bind:checked="filter.on">
               <label v-bind:for="filter.id" class="filter-checkbox-box"></label>
               <label v-bind:for="filter.id" class="filter-name">{{filter.label}}</label>
             </li>

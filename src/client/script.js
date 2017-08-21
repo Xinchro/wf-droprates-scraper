@@ -1,6 +1,10 @@
 let renderStart = 0
 let renderEnd = 10
 
+let sectionSearchWorker = new Worker("searchSections.js")
+// let subSectionSearchWorker = new Worker("searchSubSections.js")
+// let itemSearchWorker = new Worker("searchItems.js")
+
 let app = new Vue({
   el: '#vue-wrapper',
   data: {
@@ -138,15 +142,22 @@ let app = new Vue({
 
       if(!this.filteredData.sections) {
         this.$set(this.filteredData, "sections", [])
+        this.addHead()
       }
       if(!this.dropdata.sections) {
         this.$set(this.filteredData, "sections", this.dropdata)
+        this.addHead()
       } else {
-        this.$set(this.filteredData, "sections", this.searchSections(this.dropdata.sections, searchTerms))
-      }
 
-      // this.renderData()
-      this.addHead()
+        // new thread for search
+        sectionSearchWorker.postMessage([this.dropdata.sections, searchTerms])
+
+        // render data when search thread is complete
+        sectionSearchWorker.onmessage = (e) => {
+          this.$set(this.filteredData, "sections", e.data)
+          this.addHead()
+        }
+      }
     },
 
     updateData(newData) {
@@ -172,99 +183,6 @@ let app = new Vue({
       renderEnd = 10
 
       this.updateSearchResults()
-    },
-
-    searchSections(sections, terms) {
-      let sectionsToAdd = []
-
-      if(!sections) return []
-
-      sections.forEach((section) => {
-        let tempSection = {}
-        this.renderedData = {}
-        let addSection = true
-
-        tempSection.section = JSON.parse(JSON.stringify(section.section))
-        if(section.subSections) tempSection.subSections = JSON.parse(JSON.stringify(section.subSections))
-        if(section.items) tempSection.items = JSON.parse(JSON.stringify(section.items))
-
-        terms.forEach(searchTerm => {
-          if(searchTerm.length >= 2) {
-            if(!section.section.toLowerCase().includes(searchTerm.toLowerCase())) {
-              addSection = false
-            }
-          }
-        })
-
-        if(addSection) {
-          sectionsToAdd.push(tempSection)
-        } else if(section.subSections) {
-          tempSection.subSections = this.searchSubsections(section.subSections, terms)
-          if(tempSection.subSections.length > 0) sectionsToAdd.push(tempSection)
-        } else if(section.items) {
-          tempSection.items = this.searchItems(section.items, terms)
-          if(tempSection.items.length > 0) sectionsToAdd.push(tempSection)
-        } else {
-          // do nothing
-        }
-      })
-
-      return sectionsToAdd
-    },
-
-    searchSubsections(subSections, terms) {
-      let subSectionsToAdd = []
-
-      subSections.forEach(subSection => {
-        let tempSubSection = {}
-        let addSubSection = true
-
-        tempSubSection.subSection = JSON.parse(JSON.stringify(subSection.subSection))
-        if(subSection.items) tempSubSection.items = JSON.parse(JSON.stringify(subSection.items))
-
-        terms.forEach(searchTerm => {
-          if(searchTerm.length >= 2) {
-            if(!subSection.subSection.toLowerCase().includes(searchTerm.toLowerCase())) {
-              addSubSection = false
-            }
-          }
-        })
-
-        if(addSubSection) {
-          subSectionsToAdd.push(tempSubSection)
-        } else {
-          let items = this.searchItems(tempSubSection.items, terms)
-
-          if(items.length > 0) {
-            tempSubSection.items = items
-            subSectionsToAdd.push(tempSubSection)
-          }
-        }
-      })
-
-      return subSectionsToAdd
-    },
-
-    searchItems(items, terms) {
-      let itemsToAdd = []
-
-      items.forEach(item => {
-        let addItem = true
-
-        terms.forEach(searchTerm => {
-          if(searchTerm.length >= 2) {
-            if(!item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-              addItem = false
-            }
-          }
-        })
-
-        if(addItem) {
-          itemsToAdd.push(item)
-        }
-      })
-
-      return itemsToAdd
     },
 
     addHead() {
