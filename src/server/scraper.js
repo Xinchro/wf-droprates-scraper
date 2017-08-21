@@ -81,7 +81,8 @@ function htmlListToJson(list, listName) {
     })
   })
 
-  utils.saveFileSync("./data", "glossary", data, true)
+  utils.saveFileSync("/tmp", "glossary", data, true)
+  .then(utils.uploadToAWS("/tmp/glossary", "application/json"))
 }
 
 function htmlTableToJson(table, tableName) {
@@ -202,8 +203,8 @@ function htmlTableToJson(table, tableName) {
     }
   })
 
-  utils.saveFileSync("./data", tableName, data, true)
-  .then(utils.uploadToAWS(`./data/${tableName}`))
+  utils.saveFileSync("/tmp", tableName, data, true)
+  .then(utils.uploadToAWS(`/tmp/${tableName}`, "application/json"))
 }
 
 exports.saveEverything = saveEverything

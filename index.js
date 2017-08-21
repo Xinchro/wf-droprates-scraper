@@ -2,12 +2,12 @@ const rimraf = require("rimraf")
 const fetcher = require("./src/server/fetcher.js")
 const scraper = require("./src/server/scraper.js")
 
-clearData()
-.then(fetcher.fetch)
-.then(scrape)
+// clearData()
+// .then(fetcher.fetch)
+// .then(scrape)
 
 function scrape() {
-  let data = require("./data/stored-data.json")
+  let data = require("/tmp/stored-data.json")
   scraper.saveEverything(data)
 
   return new Promise((resolve, reject) => {
@@ -17,9 +17,15 @@ function scrape() {
 
 function clearData() {
   return new Promise((resolve, reject) => {
-    rimraf("./data/*", () => { 
+    rimraf("/tmp/*", () => { 
       console.log("Data folder cleared")
       resolve()
     })
   })
+}
+
+exports.awsHandler = function() {
+  clearData()
+  .then(fetcher.fetch)
+  .then(scrape)
 }

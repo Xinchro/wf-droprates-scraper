@@ -39,7 +39,7 @@ function saveToJson(json) {
   
   let obj = json
   
-  utils.saveFileSync("./data", "stored-data", obj, true)
+  utils.saveFileSync("/tmp", "stored-data", obj, true)
 }
 
 function fetch() {

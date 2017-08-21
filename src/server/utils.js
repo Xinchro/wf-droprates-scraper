@@ -1,5 +1,6 @@
 const fs = require("fs")
 const AWS = require("aws-sdk")
+const path = require('path')
 
 AWS.config.loadFromPath("./config.json")
 
@@ -22,37 +23,39 @@ function saveFileSync(path, fileName, data, stringify) {
       console.log(`File ${fileName} was saved successfully!`)
       res()
     } catch(e) {
-      console.error("Failed to save file", fileName)
+      console.error("Failed to save file", fileName, e)
       rej()
     }
   })
 }
 
-function uploadToAWS(fileName) {
+function uploadToAWS(fileName, contentType) {
   console.log(`Uploading ${fileName} to AWS`)
 
-  // Create S3 service object
   s3 = new AWS.S3({apiVersion: '2006-03-01'})
 
-  // call S3 to retrieve upload file to specified bucket
-  let uploadParams = { Bucket: "wf-drops-data.xinchronize.com", Key: '', Body: '' }
+  let uploadParams = { 
+    Bucket: "wf-drops-data.xinchronize.com", 
+    Key: '', 
+    Body: '',
+    ContentType: contentType 
+  }
   let file = `${fileName}.json`
 
   let fileStream = fs.createReadStream(file)
-  fileStream.on('error', function(err) {
-    console.log('File Error', err)
-  })
-  uploadParams.Body = fileStream
 
-  let path = require('path')
+  fileStream.on('error', function(err) {
+    console.log('File error', err)
+  })
+
+  uploadParams.Body = fileStream
   uploadParams.Key = path.basename(file)
 
-  // call S3 to retrieve upload file to specified bucket
   s3.upload(uploadParams, function (err, data) {
     if (err) {
-      console.log("Error", err)
+      console.log("Error uploading", err)
     } if (data) {
-      console.log("Upload Success", data.Location)
+      console.log("Upload success", data.Location)
     }
   })
 }
