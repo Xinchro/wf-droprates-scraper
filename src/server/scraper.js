@@ -203,6 +203,7 @@ function htmlTableToJson(table, tableName) {
   })
 
   utils.saveFileSync("./data", tableName, data, true)
+  .then(utils.uploadToAWS(`./data/${tableName}`))
 }
 
 exports.saveEverything = saveEverything

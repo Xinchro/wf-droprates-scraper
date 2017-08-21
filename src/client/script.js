@@ -69,7 +69,7 @@ let app = new Vue({
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
-          xmlHttp.open("GET", `https://wf-drops.xinchronize.com/data/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
+          xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
           xmlHttp.send(null)
         } else {
           // console.log("empty data")

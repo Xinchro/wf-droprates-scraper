@@ -2,3 +2,4 @@ node_modules
 .sass-cache
 data
 src/client/img/**/*.psd
+config.json
