@@ -2,8 +2,6 @@ let renderStart = 0
 let renderEnd = 10
 
 let sectionSearchWorker = new Worker("searchSections.js")
-// let subSectionSearchWorker = new Worker("searchSubSections.js")
-// let itemSearchWorker = new Worker("searchItems.js")
 
 let app = new Vue({
   el: '#vue-wrapper',
@@ -14,39 +12,39 @@ let app = new Vue({
       { name: "missionRewards",
         label: "Mission Rewards",
         id: 1,
-        on: false },
+        on: true },
       { name: "relicRewards",
         label: "Relic Rewards",
         id: 2,
-        on: false },
+        on: true },
       { name: "keyRewards",
         label: "Key Rewards",
         id: 3,
-        on: false },
+        on: true },
       { name: "transientRewards",
         label: "Transient Rewards",
         id: 4,
-        on: false },
+        on: true },
       { name: "sortiesRewards",
         label: "Sorties Rewards",
         id: 5,
-        on: false },
+        on: true },
       { name: "modsByMod",
         label: "Mods by Mod",
         id: 6,
-        on: false },
+        on: true },
       { name: "modsByEnemy",
         label: "Mods by Enemy",
         id: 7,
-        on: false },
+        on: true },
       { name: "blueprintsByBlueprint",
         label: "Blueprints by Blueprint",
         id: 8,
-        on: false },
+        on: true },
       { name: "blueprintsByEnemy",
         label: "Blueprints by Enemy",
         id: 9,
-        on: false }
+        on: true }
     ],
     menuVisible: true,
     dropdata: {},
@@ -177,7 +175,9 @@ let app = new Vue({
     updateCurrentFilters(filterID) {
       this.displayHelp = false
 
-      this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked  
+      if(filterID) {
+        this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked
+      }
 
       renderStart = 0
       renderEnd = 10
@@ -218,5 +218,8 @@ let app = new Vue({
     }
   }
 })
+
+// "launch" app and get data
+app.updateCurrentFilters()
 
 Vue.use(infiniteScroll)
