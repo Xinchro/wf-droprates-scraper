@@ -46,7 +46,7 @@ let app = new Vue({
         id: 9,
         on: true }
     ],
-    menuVisible: true,
+    menuVisible: false,
     dropdata: {},
     filteredData: {},
     renderedData: {},
