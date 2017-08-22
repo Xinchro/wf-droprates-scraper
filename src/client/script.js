@@ -158,8 +158,7 @@ let app = new Vue({
 
     updateData(newData) {
       this.$set(this, "dropdata", newData)
-      this.searchText = ""
-      this.search("")
+      this.search(this.searchText)
     },
 
     toggleMenu() {
