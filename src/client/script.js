@@ -51,8 +51,10 @@ let app = new Vue({
     filteredData: {},
     renderedData: {},
     searchText: "",
-    displayHelp: true,
-    busy: false
+    displayHelp: false,
+    busy: false,
+    titleDrops: {},
+    showTitleDrops: false,
   },
   watch :{
     searchText: function (text) {
@@ -69,7 +71,8 @@ let app = new Vue({
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
-          xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
+          xmlHttp.open("GET", `http://localhost:8080/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
+          // xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
           xmlHttp.send(null)
         } else {
           // console.log("empty data")
@@ -132,6 +135,8 @@ let app = new Vue({
 
     search(text) {
       let searchTerms = text.split(" ")
+
+      console.log(text)
 
       renderStart = 0
       renderEnd = 10
@@ -210,11 +215,95 @@ let app = new Vue({
       if (theme === "dark") {
         element.className = ""
       }
+    },
+
+    titleSearch(data) {
+      let relicRanks = ["(Intact)","(Exceptional)","(Flawless)","(Radiant)"]
+
+      relicRanks.forEach(rank => {
+        if(data.toLowerCase().includes(rank.toLowerCase())) {
+          data = data.replace(rank, "").toLowerCase()
+        }
+      })
+
+      if(data != "Nothing related") {
+        this.searchText = data
+      } else {
+        // TODO display error
+      }
+    },
+
+    resetPopup(data) {
+      let element = this.getScrollerElement(data)
+
+      element.className += " invisible"
+    },
+
+    getScrollerElement(data) {
+      return document.getElementById(`${data}-title-drop-scroller`)
+    },
+
+    togglePopup(data) {
+      let element = this.getScrollerElement(data)
+      if(element.className.includes("invisible")) {
+        this.updatePopup(data)
+      } else {
+        this.resetPopup(data)
+      }
+    },
+
+    updatePopup(data) {
+      let relicRanks = ["(Intact)","(Exceptional)","(Flawless)","(Radiant)"]
+      let includingTitles = []
+      
+      let element = this.getScrollerElement(data)
+
+      let title = data.replace("", "").toLowerCase()
+
+      this.$set(this.titleDrops, "data", "")
+
+      relicRanks.forEach(rank => {
+        if(data.toLowerCase().includes(rank.toLowerCase())) {
+          data = data.replace(rank, "").toLowerCase()
+        }
+      })
+
+      data = data.split(" ")
+
+      // new thread for search
+      sectionSearchWorker.postMessage([this.dropdata.sections, data])
+
+      // render data when search thread is complete
+      sectionSearchWorker.onmessage = (e) => {
+        e.data.forEach(section => {
+          if(!section.section.toLowerCase().includes(title.toLowerCase())) {
+            includingTitles.push(section.section)
+          }
+        })
+
+        if(includingTitles.length>0) {
+          this.$set(this.titleDrops, "data", includingTitles)
+        } else {
+          this.$set(this.titleDrops, "data", ["Nothing related"])
+        }
+
+        setTimeout(()=>{
+          element.className = element.className.replace(/ invisible/g, "")
+          if(includingTitles.length>0) {
+            element.children[1].children[0].style.animationDuration = `${element.offsetWidth/10}s` // picking titles in titles-wrapper
+          } else {
+            element.children[1].children[0].style.animationDuration = "0s"
+          }
+        },10)
+      }
     }
   }
 })
 
 // "launch" app and get data
 app.updateCurrentFilters()
+// setTimeout(() => {
+//   app.searchText = "oberon"
+// }, 500)
 
 Vue.use(infiniteScroll)

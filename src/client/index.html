@@ -80,45 +80,64 @@
       </header>
 
       <section id="data" class="data-wrapper">
-        <section class="section" v-for="section in renderedData.sections">
-          <section class="title">
-            <p>{{section.section}}</p>
-          </section>
-          <section class="subSection" v-if="section.subSections" v-for="subSection in section.subSections">
-            <section class="title">
-              <p>{{subSection.subSection}}</p>
+        <ul class="sections">
+          <li class="section" v-for="section in renderedData.sections">
+            <section class="title-wrapper">
+              <button @click="resetPopup(section.section);titleSearch(section.section)" class="title-text" v-bind:title="'Search for '+section.section">{{section.section}}</button>
+              <i class="fa fa-question-circle" @click="togglePopup(section.section)"></i>
+              <section class="scrolling-drops invisible" v-bind:id="section.section+'-title-drop-scroller'" v-bind:key="section.section+'-title-drop-scroller-key'">
+                <p>Related:</p>
+                <section class="titles-wrapper">
+                  <ul class="titles">
+                    <li class="title" v-for="title in titleDrops.data">
+                      <button class="title-button" @click="titleSearch(title)">{{title}}</button>
+                    </li>
+                  </ul>
+                </section>
+              </section>
             </section>
+            <ul class="subSections">
+              <li class="subSection" v-if="section.subSections" v-for="subSection in section.subSections">
+                <section class="title-wrapper">
+                  <p class="title-text">{{subSection.subSection}}</p>
+                </section>
+                
+                <ul class="items">
+                  <li class="item" v-if="subSection.items">
+                    <p class="column-1 column">Name</p>
+                    <p class="column-2 column">Item drop chance (if applicable)</p>
+                    <p class="column-3 column">Drop rate</p>
+                  </li> <!-- item -->
+                  <li class="item highlight" v-if="subSection.items" v-for="item in subSection.items" @click="searchText = item.name.toLowerCase()">
+                    <p class="column-1 column">{{item.name}}</p>
+                    <p class="column-2 column">{{item.itemchance}}</p>
+                    <p class="column-3 column">{{item.droprate}}</p>
+                  </li> <!-- item -->
+                </ul> <!-- items -->
 
-            <section class="data" v-if="subSection.items">
-              <p class="column-1 column">Name</p>
-              <p class="column-2 column">Item drop chance (if applicable)</p>
-              <p class="column-3 column">Drop rate</p>
-            </section>
-            <section class="data highlight" v-if="subSection.items" v-for="item in subSection.items">
-              <p class="column-1 column">{{item.name}}</p>
-              <p class="column-2 column">{{item.itemchance}}</p>
-              <p class="column-3 column">{{item.droprate}}</p>
-            </section>
+              </li> <!-- subsection -->
+            </ul> <!-- subsections -->
 
-          </section>
-
-          <section class="data" v-if="section.items">
-            <p class="column-1 column">Name</p>
-            <p class="column-2 column">Item drop chance (if applicable)</p>
-            <p class="column-3 column">Drop rate</p>
-          </section>
-          <section  class="data highlight" v-if="section.items" v-for="item in section.items">
-            <p class="column-1 column">{{item.name}}</p>
-            <p class="column-2 column">{{item.itemchance}}</p>
-            <p class="column-3 column">{{item.droprate}}</p>
-          </section>
-        </section> <!-- section -->
-        
+            <ul class="items">
+              <li class="item" v-if="section.items">
+                <p class="column-1 column">Name</p>
+                <p class="column-2 column">Item drop chance (if applicable)</p>
+                <p class="column-3 column">Drop rate</p>
+              </li> <!-- item -->
+              <li class="item highlight" v-if="section.items" v-for="item in section.items" @click="searchText = item.name.toLowerCase()">
+                <p class="column-1 column">{{item.name}}</p>
+                <p class="column-2 column">{{item.itemchance}}</p>
+                <p class="column-3 column">{{item.droprate}}</p>
+              </li> <!-- item -->
+            </ul> <!-- items -->
+          </li> <!-- section -->
+        </ul> <!-- sections -->
+          
         <div v-infinite-scroll="addHead" infinite-scroll-disabled="busy" infinite-scroll-distance="5">
         </div>
 
-      </section> <!-- end data-wrapper -->
+      </section> <!-- data-wrapper -->
 
-    </section> <!-- end vue-wrapper -->
+    </section> <!-- vue-wrapper -->
   </body>
 </html>

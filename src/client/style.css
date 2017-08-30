@@ -4,8 +4,9 @@ body {
   margin: 0;
   font-family: 'Oswald', sans-serif; }
 
-* {
-  outline: none; }
+*, button::-moz-focus-inner {
+  outline: none;
+  border: 0; }
 
 #vue-wrapper {
   display: grid;
@@ -49,10 +50,19 @@ body {
         overflow: hidden;
         padding: 5px;
         grid-column: 2;
-        display: grid; }
+        display: grid;
+        width: 40px;
+        height: 40px;
+        cursor: pointer; }
+        #vue-wrapper .header .search-wrapper .search-button:hover {
+          background: #e4e41b;
+          margin: -1px 0 0 -1px;
+          box-shadow: 1px 1px #cdcd18; }
         #vue-wrapper .header .search-wrapper .search-button:active {
           background: #929211;
-          box-shadow: inset #303000 0 0 2px 3px; }
+          margin: 0;
+          box-shadow: inset #303000 1px 1px;
+          padding: 1px 0 0 1px; }
     #vue-wrapper .header .dark-light {
       grid-column: 2;
       display: grid;
@@ -62,11 +72,13 @@ body {
       #vue-wrapper .header .dark-light .dark, #vue-wrapper .header .dark-light .light {
         border: none;
         width: 20px;
-        height: 20px; }
+        height: 20px;
+        cursor: pointer; }
       #vue-wrapper .header .dark-light .dark {
         background: #444; }
       #vue-wrapper .header .dark-light .light {
-        background: #DFDFDF; }
+        background: #DFDFDF;
+        box-shadow: #BDBDBD 0 3px, #BDBDBD 0px 1px 0 1px; }
     #vue-wrapper .header .filter-menu {
       right: 0;
       grid-column: 3;
@@ -74,10 +86,19 @@ body {
       #vue-wrapper .header .filter-menu .menu-button {
         display: grid;
         background: #DDD;
-        border: none; }
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px; }
+        #vue-wrapper .header .filter-menu .menu-button:hover {
+          background: #DDD;
+          box-shadow: #BBB 1px 1px;
+          margin: -1px 0 0 -1px; }
         #vue-wrapper .header .filter-menu .menu-button:active {
           background: #AAA;
-          box-shadow: inset #777 0 0 2px 3px; }
+          box-shadow: inset #777 1px 1px;
+          padding: 1px 0 0 1px;
+          margin: 0; }
       #vue-wrapper .header .filter-menu .menu {
         background: #444;
         border: none;
@@ -121,64 +142,174 @@ body {
     grid-column-end: 8; }
     #vue-wrapper .data-wrapper * {
       padding: 10px; }
-    #vue-wrapper .data-wrapper .section {
-      border: none; }
-      #vue-wrapper .data-wrapper .section .title {
-        background: #445577;
+    #vue-wrapper .data-wrapper .sections {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      #vue-wrapper .data-wrapper .sections .section {
         border: none; }
-        #vue-wrapper .data-wrapper .section .title p {
-          margin: 0;
-          color: white;
-          font-weight: 700;
-          font-size: 2em; }
-      #vue-wrapper .data-wrapper .section .subSection {
-        border: none;
-        padding-top: 0px;
-        padding-right: 0px; }
-        #vue-wrapper .data-wrapper .section .subSection .title {
-          background: #804060;
-          border: none; }
-        #vue-wrapper .data-wrapper .section .subSection .data {
-          box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0;
+        #vue-wrapper .data-wrapper .sections .section .title-wrapper {
+          background: #445577;
           border: none;
           display: grid;
-          grid-template-columns: 33.333% 33.333% 33.333%;
-          padding: 0; }
-          #vue-wrapper .data-wrapper .section .subSection .data .column {
-            margin: 0; }
-          #vue-wrapper .data-wrapper .section .subSection .data:not(.highlight) {
-            font-weight: 700; }
-          #vue-wrapper .data-wrapper .section .subSection .data.highlight:hover {
-            background: #333; }
-          #vue-wrapper .data-wrapper .section .subSection .data .column-1 {
+          grid-template-columns: fit-content(100%) 70px auto;
+          grid-template-rows: 70px; }
+          #vue-wrapper .data-wrapper .sections .section .title-wrapper .title-text {
+            margin: 0;
+            color: white;
+            font-weight: 700;
+            font-size: 2em;
+            grid-column: 1;
             border: none;
-            grid-column: 1; }
-          #vue-wrapper .data-wrapper .section .subSection .data .column-2 {
+            background: none;
+            display: inline-grid;
+            justify-content: left;
+            cursor: pointer; }
+            #vue-wrapper .data-wrapper .sections .section .title-wrapper .title-text[title]:hover:after {
+              content: "ouch";
+              padding: 4px 8px;
+              color: #333;
+              position: absolute;
+              left: 0;
+              top: 100%;
+              z-index: 20;
+              white-space: nowrap;
+              border-radius: 5px;
+              box-shadow: 0px 0px 4px #222; }
+            #vue-wrapper .data-wrapper .sections .section .title-wrapper .title-text:hover {
+              text-decoration: underline;
+              cursor: pointer; }
+          #vue-wrapper .data-wrapper .sections .section .title-wrapper .fa {
+            font-size: 2em;
+            align-content: center;
+            justify-content: center;
+            display: grid;
+            grid-column: 2;
+            grid-row: 1; }
+            #vue-wrapper .data-wrapper .sections .section .title-wrapper .fa:hover {
+              background: #aebad0;
+              margin: 0 1px 1px 0;
+              box-shadow: 1px 1px #8e9fbe;
+              cursor: pointer; }
+            #vue-wrapper .data-wrapper .sections .section .title-wrapper .fa:active {
+              background: #2f3b51;
+              margin: 1px 0 0 1px;
+              box-shadow: inset 1px 1px #1c2231;
+              cursor: pointer; }
+          #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops {
+            display: grid;
+            grid-column: 3;
+            grid-row: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            grid-template-columns: fit-content(100%) auto auto;
+            grid-template-rows: 60px;
+            align-content: center; }
+            #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops p {
+              display: grid;
+              align-content: center;
+              padding: 0 5px;
+              grid-column: 1;
+              border-left: 5px solid white;
+              margin: 0;
+              color: white;
+              font-weight: 700;
+              font-size: 2em; }
+            #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops .titles-wrapper {
+              overflow: hidden;
+              grid-column: 2;
+              display: grid; }
+              #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops .titles-wrapper .titles {
+                list-style: none;
+                position: relative;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                align-content: center;
+                animation-name: scrollLeft;
+                animation-duration: 60s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                left: 0%; }
+                #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops .titles-wrapper .titles .title {
+                  display: inline;
+                  grid-row: 1; }
+                  #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops .titles-wrapper .titles .title .title-button {
+                    background: none;
+                    border: none;
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: inherit;
+                    padding: 0;
+                    margin: 0; }
+                    #vue-wrapper .data-wrapper .sections .section .title-wrapper .scrolling-drops .titles-wrapper .titles .title .title-button:hover {
+                      text-decoration: underline;
+                      cursor: pointer; }
+        #vue-wrapper .data-wrapper .sections .section .subSections {
+          padding: 0;
+          margin: 0;
+          list-style: none; }
+          #vue-wrapper .data-wrapper .sections .section .subSections .subSection {
             border: none;
-            grid-column: 2; }
-          #vue-wrapper .data-wrapper .section .subSection .data .column-3 {
-            border: none;
-            grid-column: 3; }
-      #vue-wrapper .data-wrapper .section .data {
-        box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0;
-        display: grid;
-        grid-template-columns: 33.333% 33.333% 33.333%;
-        padding: 0; }
-        #vue-wrapper .data-wrapper .section .data .column {
-          margin: 0; }
-        #vue-wrapper .data-wrapper .section .data:not(.highlight) {
-          font-weight: 700; }
-        #vue-wrapper .data-wrapper .section .data.highlight:hover {
-          background: #333; }
-        #vue-wrapper .data-wrapper .section .data .column-1 {
-          border: none;
-          grid-column: 1; }
-        #vue-wrapper .data-wrapper .section .data .column-2 {
-          border: none;
-          grid-column: 2; }
-        #vue-wrapper .data-wrapper .section .data .column-3 {
-          border: none;
-          grid-column: 3; }
+            padding-top: 0px;
+            padding-right: 0px; }
+            #vue-wrapper .data-wrapper .sections .section .subSections .subSection .title-wrapper {
+              background: #804060;
+              border: none; }
+              #vue-wrapper .data-wrapper .sections .section .subSections .subSection .title-wrapper .title-text:hover {
+                cursor: default;
+                text-decoration: none; }
+            #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items {
+              padding: 0;
+              margin: 0;
+              list-style: none; }
+              #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item {
+                box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0;
+                border: none;
+                display: grid;
+                grid-template-columns: 33.333% 33.333% 33.333%;
+                padding: 0;
+                cursor: pointer; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item:not(.highlight) {
+                  font-weight: 700; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item.highlight:hover {
+                  background: #333; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item .column {
+                  margin: 0; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item .column-1 {
+                  border: none;
+                  grid-column: 1; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item .column-2 {
+                  border: none;
+                  grid-column: 2; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items .item .column-3 {
+                  border: none;
+                  grid-column: 3; }
+        #vue-wrapper .data-wrapper .sections .section .items {
+          padding: 0;
+          margin: 0;
+          list-style: none; }
+          #vue-wrapper .data-wrapper .sections .section .items .item {
+            box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0;
+            display: grid;
+            grid-template-columns: 33.333% 33.333% 33.333%;
+            padding: 0;
+            cursor: pointer; }
+            #vue-wrapper .data-wrapper .sections .section .items .item:not(.highlight) {
+              font-weight: 700; }
+            #vue-wrapper .data-wrapper .sections .section .items .item.highlight:hover {
+              background: #333; }
+            #vue-wrapper .data-wrapper .sections .section .items .item .column {
+              margin: 0; }
+            #vue-wrapper .data-wrapper .sections .section .items .item .column-1 {
+              border: none;
+              grid-column: 1; }
+            #vue-wrapper .data-wrapper .sections .section .items .item .column-2 {
+              border: none;
+              grid-column: 2; }
+            #vue-wrapper .data-wrapper .sections .section .items .item .column-3 {
+              border: none;
+              grid-column: 3; }
   #vue-wrapper .info {
     position: fixed;
     z-index: 5;
@@ -233,23 +364,26 @@ body {
       #vue-wrapper .info ul > :nth-child(4) {
         grid-row: 4; }
 
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%); }
+  50% {
+    transform: translateX(-50%); }
+  100% {
+    transform: translateX(-100%); } }
 #vue-wrapper.light {
   background: #fdfdfd;
   color: #222; }
   #vue-wrapper.light .header {
-    background: #DFDFDF; }
+    background: #EFEFEF; }
     #vue-wrapper.light .header .search-wrapper .search-bar {
       background: #fafafa; }
-    #vue-wrapper.light .header .search-wrapper .search-button {
-      background: #C2C233; }
-      #vue-wrapper.light .header .search-wrapper .search-button:active {
-        background: #929211;
-        box-shadow: inset #303000 0 0 2px 3px; }
-    #vue-wrapper.light .header .filter-menu .menu-button {
-      background: #EEE; }
-      #vue-wrapper.light .header .filter-menu .menu-button:active {
-        background: #AAA;
-        box-shadow: inset #777 0 0 2px 3px; }
+    #vue-wrapper.light .header .dark-light .dark {
+      background: #444;
+      box-shadow: #666 0 -3px, #666 0px -1px 0 1px; }
+    #vue-wrapper.light .header .dark-light .light {
+      background: #DFDFDF;
+      box-shadow: none; }
     #vue-wrapper.light .header .filter-menu .menu {
       background: #fafafa; }
       #vue-wrapper.light .header .filter-menu .menu li .filter-name {
@@ -263,20 +397,21 @@ body {
         box-shadow: inset #19b719 0 -4px 0 0; }
   #vue-wrapper.light .data-wrapper {
     background: #ececec; }
-    #vue-wrapper.light .data-wrapper .section .title {
+    #vue-wrapper.light .data-wrapper .sections .section .title-wrapper {
       background: #356bd6; }
-      #vue-wrapper.light .data-wrapper .section .title p {
+      #vue-wrapper.light .data-wrapper .sections .section .title-wrapper button {
         color: #222; }
-    #vue-wrapper.light .data-wrapper .section .subSection .title {
+      #vue-wrapper.light .data-wrapper .sections .section .title-wrapper .scrolling-drops p {
+        color: #222;
+        border-left: 5px solid #222; }
+    #vue-wrapper.light .data-wrapper .sections .section .subSections .subSection .title-wrapper {
       background: #d8458f; }
-    #vue-wrapper.light .data-wrapper .section .subSection .data {
-      box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0; }
-      #vue-wrapper.light .data-wrapper .section .subSection .data.highlight:hover {
-        background: #fafafa; }
-    #vue-wrapper.light .data-wrapper .section .data {
-      box-shadow: inset teal 0 -1px 0 0, inset teal 0 1px 0 0; }
-      #vue-wrapper.light .data-wrapper .section .data.highlight:hover {
-        background: #fafafa; }
+      #vue-wrapper.light .data-wrapper .sections .section .subSections .subSection .title-wrapper .title-text {
+        color: #222; }
+    #vue-wrapper.light .data-wrapper .sections .section .subSections .subSection .items .item.highlight:hover {
+      background: #fafafa; }
+    #vue-wrapper.light .data-wrapper .sections .section .items .item.highlight:hover {
+      background: #fafafa; }
   #vue-wrapper.light .info {
     background: #ddd; }
     #vue-wrapper.light .info p {
