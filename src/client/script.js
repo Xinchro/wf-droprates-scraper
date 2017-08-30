@@ -51,7 +51,7 @@ let app = new Vue({
     filteredData: {},
     renderedData: {},
     searchText: "",
-    displayHelp: false,
+    displayHelp: true,
     busy: false,
     titleDrops: {},
     showTitleDrops: false,
@@ -71,8 +71,7 @@ let app = new Vue({
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
-          xmlHttp.open("GET", `http://localhost:8080/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
-          // xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
+          xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
           xmlHttp.send(null)
         } else {
           // console.log("empty data")
@@ -302,8 +301,5 @@ let app = new Vue({
 
 // "launch" app and get data
 app.updateCurrentFilters()
-// setTimeout(() => {
-//   app.searchText = "oberon"
-// }, 500)
 
 Vue.use(infiniteScroll)
