@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
     <link rel="shortcut icon" href="/img/icon.png?v=1.0" type="image/png">
-    <title>Warframe Droprate Explorer</title>
+    <title>Warframe Drops</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://unpkg.com/vue"></script>
@@ -133,10 +133,19 @@
           </li> <!-- section -->
         </ul> <!-- sections -->
 
-        <div v-infinite-scroll="addHead" infinite-scroll-disabled="busy" infinite-scroll-distance="5">
+        <div v-infinite-scroll="addHead" infinite-scroll-disabled="busy" infinite-scroll-distance="50">
         </div>
 
       </section> <!-- data-wrapper -->
+
+      <footer class="footer">
+        <ul class="crumbs">
+          <li class="crumb" v-for="(crumb, index) in crumbs" @click="gotoCrumb(index)">
+            <i class="fa fa-chevron-right"></i>
+            <span class="crumb-text">{{crumb}}</span>
+          </li>
+        </ul>
+      </footer> <!-- footer -->
 
     </section> <!-- vue-wrapper -->
   </body>

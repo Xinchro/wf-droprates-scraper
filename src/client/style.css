@@ -11,7 +11,7 @@ body {
 #vue-wrapper {
   display: grid;
   grid-template-columns: 10px auto auto auto auto auto auto 10px;
-  grid-template-rows: 60px 10px auto auto auto auto auto 10px;
+  grid-template-rows: 60px 10px auto auto auto auto 70px 10px;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -137,7 +137,7 @@ body {
     border: none;
     overflow-y: auto;
     grid-row-start: 3;
-    grid-row-end: 8;
+    grid-row-end: 7;
     grid-column-start: 2;
     grid-column-end: 8; }
     #vue-wrapper .data-wrapper * {
@@ -363,6 +363,37 @@ body {
         grid-row: 3; }
       #vue-wrapper .info ul > :nth-child(4) {
         grid-row: 4; }
+  #vue-wrapper .footer {
+    position: fixed;
+    width: calc(100% - 20px);
+    height: 40px;
+    bottom: 0;
+    background: #333;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: right;
+    padding: 10px; }
+    #vue-wrapper .footer .crumbs {
+      padding: 0;
+      list-style: none;
+      grid-row: 1;
+      grid-column: 1;
+      white-space: nowrap;
+      overflow: hidden; }
+      #vue-wrapper .footer .crumbs .crumb {
+        display: inline-grid;
+        align-items: center;
+        padding: 5px; }
+        #vue-wrapper .footer .crumbs .crumb .fa-chevron-right {
+          grid-row: 1;
+          grid-column: 1;
+          padding-right: 5px; }
+        #vue-wrapper .footer .crumbs .crumb .crumb-text {
+          grid-row: 1;
+          grid-column: 2; }
 
 @keyframes scrollLeft {
   0% {
@@ -417,5 +448,8 @@ body {
     #vue-wrapper.light .info p {
       background: #bbb;
       color: #222; }
+  #vue-wrapper.light .footer {
+    background: #ececec;
+    color: #333; }
 
 /*# sourceMappingURL=style.css.map */

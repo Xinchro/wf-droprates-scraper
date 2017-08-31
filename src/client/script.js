@@ -55,6 +55,9 @@ let app = new Vue({
     busy: false,
     titleDrops: {},
     showTitleDrops: false,
+    crumbs: [],
+    typingTimeout: {},
+    usedBreadcrumb: false,
   },
   watch :{
     searchText: function (text) {
@@ -64,6 +67,20 @@ let app = new Vue({
   methods: {
     start() {
       this.loadParams()
+      
+      // watcher for when user hits "back" on browser, or equiv.
+      window.onpopstate =  () => {
+        this.loadParams()
+        // make sure we can go back far enough
+        if(!this.gotoCrumb(this.crumbs.length-2)) {
+          // if not, default to first crumb and reset array and query params
+          this.searchText = this.crumbs[0]
+          this.crumbs = []
+          this.addCrumb(this.searchText)
+          this.setQueryParam("q", this.searchText)
+        }
+      }
+
       app.updateCurrentFilters()
     },
 
@@ -161,8 +178,17 @@ let app = new Vue({
           this.addHead()
         }
       }
+        clearTimeout(this.typingTimeout)
+        this.typingTimeout = setTimeout(()=>{
+          this.setQueryParam("q", this.searchText)
 
-      this.setQueryParam("q", this.searchText)
+          if(!this.usedBreadcrumb) {
+            this.addCrumb(this.searchText)
+          }
+
+          this.setDocumentTitle(this.searchText)
+          this.usedBreadcrumb = false
+        }, 500)
     },
 
     updateData(newData) {
@@ -239,6 +265,7 @@ let app = new Vue({
 
       if(data != "Nothing related") {
         this.searchText = data
+        // this.addCrumb(this.searchText)
       } else {
         // TODO display error
       }
@@ -325,6 +352,7 @@ let app = new Vue({
             "value": query.split("=")[1]
           } //construct object
 
+          ob.value = decodeURIComponent(ob.value)
 
           // check if value is an array
           if(query.split("=")[1].includes(",")) {
@@ -377,7 +405,7 @@ let app = new Vue({
       // add to history/url
       if (history.pushState) {
         let state = {}
-        let title = ""
+        let title = this.searchText
         let path  = `${queryStr}`
 
         history.pushState(state, title, path);
@@ -412,7 +440,31 @@ let app = new Vue({
             break
         }
       })
+    },
 
+    addCrumb(crumb) {
+      if(crumb != "") this.crumbs.push(crumb) // add crumb if not empty
+    },
+
+    gotoCrumb(crumbNo) {
+      this.usedBreadcrumb = true // used a breadcrumb
+      if(this.crumbs.length > 0 
+        && (this.crumbs.length - Math.abs(crumbNo)) > 0
+        && (this.crumbs.slice(0, crumbNo).length) >= 0) {
+        // checks to not break anything if values are exceeded
+        
+        this.searchText = this.crumbs[crumbNo]
+        this.crumbs = this.crumbs.slice(0, crumbNo+1)
+
+        this.setQueryParam("q", this.searchText)
+
+        return true
+      }
+      return false
+    },
+
+    setDocumentTitle(text) {
+      document.title = `${text} - Warframe Drops`
     }
   }
 })
