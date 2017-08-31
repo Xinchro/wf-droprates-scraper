@@ -152,8 +152,9 @@ body {
           background: #445577;
           border: none;
           display: grid;
-          grid-template-columns: fit-content(100%) 70px auto;
-          grid-template-rows: 70px; }
+          grid-template-columns: min-content 70px auto;
+          grid-template-rows: 70px;
+          white-space: nowrap; }
           #vue-wrapper .data-wrapper .sections .section .title-wrapper .title-text {
             margin: 0;
             color: white;

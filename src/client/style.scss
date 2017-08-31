@@ -209,8 +209,9 @@ body {
           background: #445577;
           border: none;
           display: grid;
-          grid-template-columns: fit-content(100%) 70px auto;
+          grid-template-columns: min-content 70px auto;
           grid-template-rows: 70px;
+          white-space: nowrap;
 
           .title-text {
             margin: 0;
