@@ -62,6 +62,11 @@ let app = new Vue({
     }
   },
   methods: {
+    start() {
+      this.loadParams()
+      app.updateCurrentFilters()
+    },
+
     getData(name) {
       return new Promise((resolve, reject) => {
         if(name) {
@@ -135,8 +140,6 @@ let app = new Vue({
     search(text) {
       let searchTerms = text.split(" ")
 
-      console.log(text)
-
       renderStart = 0
       renderEnd = 10
 
@@ -158,6 +161,8 @@ let app = new Vue({
           this.addHead()
         }
       }
+
+      this.setQueryParam("q", this.searchText)
     },
 
     updateData(newData) {
@@ -182,6 +187,13 @@ let app = new Vue({
       renderEnd = 10
 
       this.updateSearchResults()
+
+      let filterString = ""
+      this.filters.forEach(filter=>{
+        if(filter.on) filterString += `${filter.id},`
+      })
+      filterString = filterString.slice(0,-1)
+      this.setQueryParam("filters", filterString)
     },
 
     addHead() {
@@ -295,11 +307,117 @@ let app = new Vue({
           }
         },10)
       }
+    },
+
+    getQueryParams() {
+      let queries = ""
+      let queryParams = []
+
+      queries = window.location.search.split("?")[1] // remove question mark
+
+      if(queries) {
+        queries = queries.split("&") // split each query up
+
+        queries.forEach(query => {
+          // let ob = {}
+          let ob = {
+            "key": query.split("=")[0],
+            "value": query.split("=")[1]
+          } //construct object
+
+
+          // check if value is an array
+          if(query.split("=")[1].includes(",")) {
+            let array = ob.value.split(",") // split array at comma
+
+            array.forEach((num, i) => {
+              array[i] = parseInt(num)
+            })
+            ob.value = array// set value as array
+          }
+
+          queryParams.push(ob) // push query object to array
+        })
+      }
+
+      return queryParams
+    },
+
+    setQueryParam(key, value) {
+      let queryStr = "/?" // set up query string
+
+      let params = this.getQueryParams() // get current params
+
+      let paramExists = false
+
+      // loop through params and check for matches
+      params.forEach(query => {
+        if(key === query.key) {
+          // if param to change is already in url bar, change it
+          query.value = value
+          // make sure we know it's been changed
+          paramExists = true
+        }
+      })
+
+      // if nothing matched in url, add to url
+      if(!paramExists) {
+        params.push({
+          "key": key,
+          "value": value
+        })
+      }
+
+      // look throught the param array with new values and add to the query string
+      params.forEach((param, index) => {
+        index > 0 ? queryStr += "&" : "" // only prepend ampersand after first instance
+        queryStr += `${param.key}=${param.value}`
+      })
+
+      // add to history/url
+      if (history.pushState) {
+        let state = {}
+        let title = ""
+        let path  = `${queryStr}`
+
+        history.pushState(state, title, path);
+      }
+    },
+
+    loadParams() {
+      let params = this.getQueryParams() //get params
+
+      // loop through params and assign variables their values
+      params.forEach(param => {
+        switch(param.key) {
+          case "q":
+            this.searchText = param.value
+            break
+          case "filters":
+            this.filters.forEach(filter => {
+              filter.on = false
+            })
+            // make sure filters value is object(array)
+            if(typeof(param.value) === 'object') {
+              param.value.forEach(filterID => {
+                // js is stupid and thinks NaN is a number, so check for that
+                if(typeof(filterID) === 'number' && !isNaN(filterID)) {
+                  this.filters[filterID-1].on = true
+                }
+              })
+            }
+            break
+          default:
+            console.log(`${param.key} is not a valid param`)
+            break
+        }
+      })
+
     }
   }
 })
 
-// "launch" app and get data
-app.updateCurrentFilters()
+// launch app
+app.start()
 
 Vue.use(infiniteScroll)
