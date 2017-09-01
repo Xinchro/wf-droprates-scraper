@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "css": "scss src/client/style.scss src/client/style.css",
+    "aws": "aws s3 sync src/client/ s3://wf-drops.xinchronize.com",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Xinchro",
