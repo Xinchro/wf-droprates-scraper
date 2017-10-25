@@ -6,6 +6,11 @@
   "scripts": {
     "css": "scss src/client/style.scss src/client/style.css",
     "aws": "aws s3 sync src/client/ s3://wf-drops.xinchronize.com",
+    "host:data": "http-server data -p 8080 --cors",
+    "host:client": "http-server src/client -p 80",
+    "build:watch": "npm run css",
+    "watch:all": "watch-spawn -i -p \"src/client/**/*.+(js|scss|html)\" npm run build:watch",
+    "dev": "run-p watch:all host:data host:client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Xinchro",
@@ -19,6 +24,9 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "rimraf": "^2.6.1"
+    "npm": "^5.5.1",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.1",
+    "watch-spawn": "^2.0.0"
   }
 }
