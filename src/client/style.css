@@ -26,12 +26,12 @@
     border: none;
     padding: 10px;
     box-sizing: border-box;
-    grid-template-columns: auto 40px 40px;
+    grid-template-columns: auto 40px 50px;
     grid-template-rows: 100%;
     background: #444; }
     @media screen and (min-width: 480px) {
       #vue-wrapper .header {
-        grid-template-columns: 400px auto 40px; } }
+        grid-template-columns: 400px auto 50px; } }
     #vue-wrapper .header .search-wrapper {
       display: grid;
       grid-template-columns: auto 40px;
@@ -85,11 +85,18 @@
       display: grid; }
       #vue-wrapper .header .filter-menu .menu-button {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
         background: #DDD;
         border: none;
         cursor: pointer;
-        width: 40px;
-        height: 40px; }
+        width: 50px;
+        height: 40px;
+        text-transform: uppercase;
+        padding: 5px; }
+        #vue-wrapper .header .filter-menu .menu-button span {
+          display: grid;
+          justify-content: center;
+          align-content: center; }
         #vue-wrapper .header .filter-menu .menu-button:hover {
           background: #DDD;
           box-shadow: #BBB 1px 1px;
@@ -97,7 +104,7 @@
         #vue-wrapper .header .filter-menu .menu-button:active {
           background: #AAA;
           box-shadow: inset #777 1px 1px;
-          padding: 1px 0 0 1px;
+          padding: 1px 0 0 6px;
           margin: 0; }
       #vue-wrapper .header .filter-menu .menu {
         background: #444;
@@ -113,6 +120,15 @@
         #vue-wrapper .header .filter-menu .menu li {
           display: grid;
           grid-template-columns: 30px auto; }
+          #vue-wrapper .header .filter-menu .menu li .filter-checkbox-box {
+            background: #1919b7; }
+          #vue-wrapper .header .filter-menu .menu li a {
+            grid-column: 2;
+            padding: 0 5px;
+            display: grid;
+            align-items: center;
+            color: #fafafa;
+            text-decoration: none; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox, #vue-wrapper .header .filter-menu .menu li .filter-checkbox-box {
             grid-column: 1; }
           #vue-wrapper .header .filter-menu .menu li .filter-name {
@@ -365,6 +381,8 @@
       box-shadow: none; }
     #vue-wrapper.light .header .filter-menu .menu {
       background: #fafafa; }
+      #vue-wrapper.light .header .filter-menu .menu li a {
+        color: #222; }
       #vue-wrapper.light .header .filter-menu .menu li .filter-name {
         color: #222; }
       #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:not(:checked) ~ .filter-checkbox-box {

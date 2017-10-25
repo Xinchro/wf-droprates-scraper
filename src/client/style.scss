@@ -30,12 +30,12 @@
     border: none;
     padding: 10px;
     box-sizing: border-box;
-    grid-template-columns: auto 40px 40px;
+    grid-template-columns: auto 40px 50px;
     grid-template-rows: 100%;
     background: #444;
 
     @media screen and (min-width: 480px) {
-      grid-template-columns: 400px auto 40px;
+      grid-template-columns: 400px auto 50px;
     }
 
     .search-wrapper {
@@ -113,11 +113,20 @@
 
       .menu-button {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
         background: #DDD;
         border: none;
         cursor: pointer;
-        width: 40px;
+        width: 50px;
         height: 40px;
+        text-transform: uppercase;
+        padding: 5px;
+
+        span {
+          display: grid;
+          justify-content: center;
+          align-content: center;
+        }
 
         &:hover {
           background: #DDD;
@@ -128,7 +137,7 @@
         &:active {
           background: #AAA;
           box-shadow: inset #777 1px 1px;
-          padding: 1px 0 0 1px;
+          padding: 1px 0 0 6px;
           margin: 0;
         }
       }
@@ -148,6 +157,19 @@
         li {
           display: grid;
           grid-template-columns: 30px auto;
+
+          .filter-checkbox-box {
+            background: #1919b7;
+          }
+
+          a {
+            grid-column: 2;
+            padding: 0 5px;
+            display: grid;
+            align-items: center;
+            color: #fafafa;
+            text-decoration: none;
+          }
 
           .filter-checkbox, .filter-checkbox-box {
             grid-column: 1;
@@ -535,7 +557,10 @@
         background: #fafafa;
 
         li {
-
+          a {
+            color: #222;
+          }
+          
           .filter-name {
             color: #222;
           }
