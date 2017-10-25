@@ -47,30 +47,10 @@
         <![endif]-->
 
     <section id="vue-wrapper">
-      <section class="info" v-if="displayHelp">
-        <p>
-          <span>INFO</span>
-        </p>
-        <ul>
-          <li>
-            1. Type what you'd like to find into the search bar.
-          </li>
-          <li>
-            2. Narrow your search by deselecting one or more filters from the top right.
-          </li>
-          <li>
-            3. ????
-          </li>
-          <li>
-            4. Grofit!
-          </li>
-        </ul>
-      </section>
-
       <header class="header">
         <section class="search-wrapper">
-          <input class="search-bar" type="text" v-model="searchText" placeholder="Search..." @change="search(searchText)" @click="displayHelp = false">
-          <button class="search-button" @click="displayHelp = false; search(searchText)">
+          <input class="search-bar" type="text" v-model="searchText" placeholder="Search..." @change="search(searchText)">
+          <button class="search-button" @click="search(searchText)">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </section>
@@ -80,7 +60,7 @@
         </section>
         <section class="filter-menu">
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
-            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" @click.prevent="displayHelp = false; updateCurrentFilters(filter.id)">
+            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id }" @click.prevent="updateCurrentFilters(filter.id)">
               <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible" v-bind:checked="filter.on">
               <label v-bind:for="filter.id" class="filter-checkbox-box"></label>
               <label v-bind:for="filter.id" class="filter-name">{{filter.label}}</label>

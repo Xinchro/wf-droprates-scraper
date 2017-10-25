@@ -51,7 +51,6 @@ let app = new Vue({
     filteredData: {},
     renderedData: {},
     searchText: "",
-    displayHelp: true,
     busy: false,
     titleDrops: {},
     showTitleDrops: false,
