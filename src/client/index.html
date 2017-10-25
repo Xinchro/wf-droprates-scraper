@@ -61,13 +61,17 @@
         <section class="filter-menu">
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
             <li style="gridRow:1;">
-              <div class="filter-checkbox-box"></div>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrC1O7WbsAnX8NOrnFukwLigsaaca17fI_oZpXyn-zcVvKkA/viewform" target="_none">Feedback</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrC1O7WbsAnX8NOrnFukwLigsaaca17fI_oZpXyn-zcVvKkA/viewform" target="_none" class="filter-checkbox-box"><i class="fa fa-globe"></i></a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrC1O7WbsAnX8NOrnFukwLigsaaca17fI_oZpXyn-zcVvKkA/viewform" target="_none" class="list-label">Feedback</a>
             </li>
-            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id+1 }" @click.prevent="updateCurrentFilters(filter.id)">
+            <li class="title" style="gridRow:2">Filters</li>
+            <li v-for="filter in filters" v-bind:style="{ gridRow:filter.id+2 }" @click.prevent="updateCurrentFilters(filter.id)">
               <input v-bind:id="filter.id" v-bind:name="filter.name" type="checkbox" class="filter-checkbox invisible" v-bind:checked="filter.on">
-              <label v-bind:for="filter.id" class="filter-checkbox-box"></label>
-              <label v-bind:for="filter.id" class="filter-name">{{filter.label}}</label>
+              <label v-bind:for="filter.id" class="filter-checkbox-box">
+                <i v-if="filters[filter.id-1].on" class="fa fa-check"></i>
+                <i v-if="!filters[filter.id-1].on" class="fa fa-times"></i>
+              </label>
+              <label v-bind:for="filter.id" class="filter-name list-label">{{filter.label}}</label>
             </li>
           </ul>
           <button class="menu-button" @click="toggleMenu">

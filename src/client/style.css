@@ -107,24 +107,65 @@
           padding: 1px 0 0 6px;
           margin: 0; }
       #vue-wrapper .header .filter-menu .menu {
+        display: grid;
+        grid-template-rows: repeat(11, 30px);
+        position: fixed;
         background: #444;
         border: none;
-        position: fixed;
         top: 50px;
         right: 10px;
         padding: 0;
         margin: 0;
         list-style: none;
-        display: grid;
-        grid-template-rows: repeat(9, 30px); }
+        max-height: calc(100vh - 50px - 60px);
+        overflow-y: auto;
+        overflow-x: hidden; }
         #vue-wrapper .header .filter-menu .menu li {
           display: grid;
-          grid-template-columns: 30px auto; }
+          position: relative;
+          grid-template-columns: 30px auto;
+          white-space: nowrap; }
+          #vue-wrapper .header .filter-menu .menu li:not(.title):after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1; }
+          #vue-wrapper .header .filter-menu .menu li:hover .list-label:after {
+            width: 100%; }
+          #vue-wrapper .header .filter-menu .menu li.title {
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center; }
+            #vue-wrapper .header .filter-menu .menu li.title:before {
+              content: "-";
+              grid-column: 1; }
+            #vue-wrapper .header .filter-menu .menu li.title:after {
+              content: "-";
+              grid-column: 3; }
+          #vue-wrapper .header .filter-menu .menu li .list-label {
+            position: relative;
+            padding-right: 20px;
+            cursor: pointer; }
+            #vue-wrapper .header .filter-menu .menu li .list-label:after {
+              content: "";
+              background: rgba(0, 111, 255, 0.1);
+              height: 100%;
+              position: absolute;
+              width: 0px;
+              right: 0;
+              transition: width 0.25s linear;
+              z-index: -1; }
+          #vue-wrapper .header .filter-menu .menu li .filter-checkbox:not(:checked) ~ .list-label:after {
+            background: rgba(186, 35, 35, 0.1); }
+          #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .list-label:after {
+            background: rgba(25, 183, 25, 0.1); }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox-box {
-            background: #1919b7; }
+            color: #006fff;
+            text-align: center;
+            font-size: 1.25em;
+            cursor: pointer; }
           #vue-wrapper .header .filter-menu .menu li a {
             grid-column: 2;
-            padding: 0 5px;
             display: grid;
             align-items: center;
             color: #fafafa;
@@ -133,18 +174,15 @@
             grid-column: 1; }
           #vue-wrapper .header .filter-menu .menu li .filter-name {
             grid-column: 2;
-            padding: 0 5px;
             display: grid;
             align-items: center;
             color: #fafafa; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:not(:checked) ~ .filter-checkbox-box {
-            background: #ba2323; }
+            color: #ba2323; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-checkbox-box {
-            box-shadow: inset #19b719 0 0 0 1px;
-            background: #19b719;
+            color: #19b719;
             border: none; }
           #vue-wrapper .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-name {
-            box-shadow: inset #19b719 0 -4px 0 0;
             border: none; }
   #vue-wrapper .invisible {
     display: none !important; }
@@ -385,13 +423,12 @@
         color: #222; }
       #vue-wrapper.light .header .filter-menu .menu li .filter-name {
         color: #222; }
+      #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox-box {
+        color: #006fff; }
       #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:not(:checked) ~ .filter-checkbox-box {
-        background: #ba2323; }
+        color: #ba2323; }
       #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-checkbox-box {
-        box-shadow: inset #19b719 0 0 0 1px;
-        background: #19b719; }
-      #vue-wrapper.light .header .filter-menu .menu li .filter-checkbox:checked ~ .filter-name {
-        box-shadow: inset #19b719 0 -4px 0 0; }
+        color: #19b719; }
   #vue-wrapper.light .data-wrapper {
     background: #ececec; }
     #vue-wrapper.light .data-wrapper .sections .section .title-wrapper {
