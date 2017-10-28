@@ -108,7 +108,7 @@
           margin: 0; }
       #vue-wrapper .header .filter-menu .menu {
         display: grid;
-        grid-template-rows: repeat(11, 30px);
+        grid-auto-rows: 30px;
         position: fixed;
         background: #444;
         border: none;

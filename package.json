@@ -11,6 +11,7 @@
     "build:watch": "npm run css",
     "watch:all": "watch-spawn -i -p \"src/client/**/*.+(js|scss|html)\" npm run build:watch",
     "dev": "run-p watch:all host:data host:client",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Xinchro",
