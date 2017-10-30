@@ -376,26 +376,13 @@
     display: grid;
     grid-template-columns: auto;
     align-items: center;
-    justify-items: right;
     padding: 10px; }
-    #vue-wrapper .footer .crumbs {
-      padding: 0;
-      list-style: none;
-      grid-row: 1;
-      grid-column: 1;
-      white-space: nowrap;
-      overflow: hidden; }
-      #vue-wrapper .footer .crumbs .crumb {
-        display: inline-grid;
-        align-items: center;
-        padding: 5px; }
-        #vue-wrapper .footer .crumbs .crumb .fa-chevron-right {
-          grid-row: 1;
-          grid-column: 1;
-          padding-right: 5px; }
-        #vue-wrapper .footer .crumbs .crumb .crumb-text {
-          grid-row: 1;
-          grid-column: 2; }
+    #vue-wrapper .footer .cookie-policy {
+      width: 100%; }
+      #vue-wrapper .footer .cookie-policy a {
+        color: red; }
+      #vue-wrapper .footer .cookie-policy a:visited {
+        color: #960000; }
 
 @keyframes scrollLeft {
   0% {

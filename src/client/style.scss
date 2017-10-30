@@ -539,32 +539,16 @@
     display: grid;
     grid-template-columns: auto;
     align-items: center;
-    justify-items: right;
     padding: 10px;
 
-    .crumbs {
-      padding: 0;
-      list-style: none;
-      grid-row: 1;
-      grid-column: 1;
-      white-space: nowrap;
-      overflow: hidden;
+    .cookie-policy {
+      width: 100%;
 
-      .crumb {
-        display: inline-grid;
-        align-items: center;
-        padding: 5px;
-
-        .fa-chevron-right {
-          grid-row: 1;
-          grid-column: 1;
-          padding-right: 5px;
-        }
-
-        .crumb-text {
-          grid-row: 1;
-          grid-column: 2;
-        }
+      a {
+        color: red;
+      }
+      a:visited {
+        color: rgb(150,0,0);
       }
     }
   }
@@ -706,14 +690,10 @@
     background: #ececec;
     color: #333;
 
-    .crumbs {
-      .crumb {
-
-        .fa-chevron-right {
-        }
-
-        .crumb-text {
-        }
+    .cookie-policy {
+      a {
+      }
+      a:visited {
       }
     }
   }
