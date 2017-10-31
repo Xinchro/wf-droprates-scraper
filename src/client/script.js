@@ -65,8 +65,6 @@ let app = new Vue({
   },
   methods: {
     start() {
-      this.loadParams()
-      
       // watcher for when user hits "back" on browser, or equiv.
       window.onpopstate =  () => {
         this.loadParams()
@@ -80,7 +78,16 @@ let app = new Vue({
         }
       }
 
-      app.updateCurrentFilters()
+      // set prefered filters first, then apply query params (if they exist)
+      // query overwrites for link sharing purposes
+      this.setFilters(this.arrayFromString(this.doLocalStorage("get", "filters")))
+      .then(() => {
+        this.loadParams()
+        this.updateCurrentFilters()
+      })
+
+      // set preferred theme
+      this.setTheme(this.doLocalStorage("get", "theme"))
     },
 
     getData(name) {
@@ -214,11 +221,14 @@ let app = new Vue({
       this.updateSearchResults()
 
       let filterString = ""
+
       this.filters.forEach(filter=>{
         if(filter.on) filterString += `${filter.id},`
       })
       filterString = filterString.slice(0,-1)
+
       this.setQueryParam("filters", filterString)
+      this.doLocalStorage("set", "filters", filterString)
     },
 
     addHead() {
@@ -251,6 +261,8 @@ let app = new Vue({
       if (theme === "dark") {
         element.className = ""
       }
+
+      this.doLocalStorage("set", "theme", theme)
     },
 
     titleSearch(data) {
@@ -355,12 +367,7 @@ let app = new Vue({
 
           // check if value is an array
           if(query.split("=")[1].includes(",")) {
-            let array = ob.value.split(",") // split array at comma
-
-            array.forEach((num, i) => {
-              array[i] = parseInt(num)
-            })
-            ob.value = array// set value as array
+            ob.value = this.arrayFromString(ob.value) // split array at comma
           }
 
           queryParams.push(ob) // push query object to array
@@ -368,6 +375,16 @@ let app = new Vue({
       }
 
       return queryParams
+    },
+
+    arrayFromString(arrayStr) {
+      let array = arrayStr.split(",")
+
+      array.forEach((num, i) => {
+        array[i] = parseInt(num)
+      })
+
+      return array// return array
     },
 
     setQueryParam(key, value) {
@@ -424,20 +441,30 @@ let app = new Vue({
             this.filters.forEach(filter => {
               filter.on = false
             })
-            // make sure filters value is object(array)
-            if(typeof(param.value) === 'object') {
-              param.value.forEach(filterID => {
-                // js is stupid and thinks NaN is a number, so check for that
-                if(typeof(filterID) === 'number' && !isNaN(filterID)) {
-                  this.filters[filterID-1].on = true
-                }
-              })
-            }
+            this.setFilters(param.value)
             break
           default:
-            console.log(`${param.key} is not a valid param`)
+            console.error(`${param.key} is not a valid param`)
             break
         }
+      })
+    },
+
+    setFilters(array) {
+      return new Promise((resolve, reject)=>{
+        this.filters.forEach(filter => {
+          filter.on = false
+        })
+        if(typeof(array) === 'object') {
+          array.forEach(filterID => {
+            // js is stupid and thinks NaN is a number, so check for that
+            if(typeof(filterID) === 'number' && !isNaN(filterID)) {
+              this.filters[filterID-1].on = true
+            }
+          })
+        }
+
+        resolve()
       })
     },
 
@@ -464,6 +491,29 @@ let app = new Vue({
 
     setDocumentTitle(text) {
       document.title = `${text} - Warframe Drops`
+    },
+
+    doLocalStorage(type, item, data) {
+      try {
+        switch(type.toLowerCase()) {
+          case "set":
+            return window.localStorage.setItem(item, data)
+            break
+          case "get":
+            if(window.localStorage.getItem(item)) {
+              return window.localStorage.getItem(item)
+            } // else return nothing
+            break
+          case "remove":
+            return window.localStorage.removeItem(item)
+            break
+          default:
+            console.error("local storage supported, but no action type specified")
+        }
+      } catch(e) {
+        console.error("Local storage not supported!")
+        console.error(e)
+      }
     }
   }
 })
