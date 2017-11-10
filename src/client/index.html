@@ -32,11 +32,7 @@
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-52457968-4', 'auto');
-      ga('send', 'pageview');
-
+      })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga')
     </script>
     <!-- end ganalytics -->
 
@@ -49,14 +45,14 @@
     <section id="vue-wrapper">
       <header class="header">
         <section class="search-wrapper">
-          <input class="search-bar" type="text" v-model="searchText" placeholder="Search..." @change="search(searchText)">
-          <button class="search-button" @click="search(searchText)">
+          <input class="search-bar" type="text" v-model="searchText" placeholder="Search..." @input="searchBar(searchText)">
+          <button class="search-button" @click="searchBar(searchText)">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </section>
         <section class="dark-light">
-          <button class="dark" @click="setTheme('dark')"></button>
-          <button class="light" @click="setTheme('light')"></button>
+          <button class="dark" @click="setTheme('dark');gaEvent('themeSwitch', 'click', 'dark')"></button>
+          <button class="light" @click="setTheme('light');gaEvent('themeSwitch', 'click', 'light')"></button>
         </section>
         <section class="filter-menu">
           <ul class="menu" v-bind:class="{ invisible: !menuVisible }">
@@ -86,14 +82,14 @@
         <ul class="sections">
           <li class="section" v-for="section in renderedData.sections">
             <section class="title-wrapper">
-              <button @click="resetPopup(section.section);titleSearch(section.section)" class="title-text" v-bind:title="'Search for '+section.section">{{section.section}}</button>
-              <i class="fa fa-question-circle" @click="togglePopup(section.section)"></i>
+              <button @click="resetRelated(section.section);searchTitle(section.section)" class="title-text" v-bind:title="'Search for '+section.section">{{section.section}}</button>
+              <i class="fa fa-question-circle" @click="toggleRelated(section.section)"></i>
               <section class="scrolling-drops invisible" v-bind:id="section.section+'-title-drop-scroller'" v-bind:key="section.section+'-title-drop-scroller-key'">
                 <p>Related:</p>
                 <section class="titles-wrapper">
                   <ul class="titles">
                     <li class="title" v-for="title in titleDrops.data">
-                      <button class="title-button" @click="titleSearch(title)">{{title}}</button>
+                      <button class="title-button" @click="searchRelated(title)">{{title}}</button>
                     </li>
                   </ul>
                 </section>
@@ -111,7 +107,7 @@
                     <p class="column-2 column">Item drop chance (if applicable)</p>
                     <p class="column-3 column">Drop rate</p>
                   </li> <!-- item -->
-                  <li class="item highlight" v-if="subSection.items" v-for="item in subSection.items" @click="searchText = item.name.toLowerCase()">
+                  <li class="item highlight" v-if="subSection.items" v-for="item in subSection.items" @click="searchItem(item.name.toLowerCase())">
                     <p class="column-1 column">{{item.name}}</p>
                     <p class="column-2 column">{{item.itemchance}}</p>
                     <p class="column-3 column">{{item.droprate}}</p>
@@ -127,7 +123,7 @@
                 <p class="column-2 column">Item drop chance (if applicable)</p>
                 <p class="column-3 column">Drop rate</p>
               </li> <!-- item -->
-              <li class="item highlight" v-if="section.items" v-for="item in section.items" @click="searchText = item.name.toLowerCase()">
+              <li class="item highlight" v-if="section.items" v-for="item in section.items" @click="searchItem(item.name.toLowerCase())">
                 <p class="column-1 column">{{item.name}}</p>
                 <p class="column-2 column">{{item.itemchance}}</p>
                 <p class="column-3 column">{{item.droprate}}</p>

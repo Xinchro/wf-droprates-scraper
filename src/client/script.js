@@ -57,11 +57,9 @@ let app = new Vue({
     crumbs: [],
     typingTimeout: {},
     usedBreadcrumb: false,
+    gaLoaded: false,
   },
   watch :{
-    searchText: function (text) {
-      this.search(text)
-    }
   },
   methods: {
     start() {
@@ -88,17 +86,25 @@ let app = new Vue({
 
       // set preferred theme
       this.setTheme(this.doLocalStorage("get", "theme"))
+
+      // ga startup
+      ga(() => {
+        ga('create', 'UA-52457968-4', 'auto')
+        ga('send', 'pageview')
+      })
     },
 
     getData(name) {
       return new Promise((resolve, reject) => {
         if(name) {
-          var xmlHttp = new XMLHttpRequest()
+          const xmlHttp = new XMLHttpRequest()
+
           xmlHttp.onreadystatechange = () => { 
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
               resolve(JSON.parse(xmlHttp.responseText))
             }
           }
+
           xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
           xmlHttp.send(null)
         } else {
@@ -160,6 +166,77 @@ let app = new Vue({
       })
     },
 
+    searchBar(text) {
+      // wait a while before committing to a search, while typing
+      clearTimeout(this.typingTimeout)
+      this.typingTimeout = setTimeout(()=>{
+        this.search(text)
+        // fire off a ga event to save the term tracked via input bar
+        this.gaEvent("search", "input", `bar - ${text ? text : "blank"}`)
+      }, 500)
+    },
+
+    searchItem(text) {
+      // update search bar text and search
+      this.searchText = text
+      this.search(text)
+      // fire off a ga event to save the term tracked via input bar
+      this.gaEvent("search", "click", `item - ${text ? text : "blank"}`)
+    },
+
+    searchTitle(text) {
+      let newText = this.stripRelicText(text).text
+      let isRelic = this.stripRelicText(text).isRelic
+
+      if(newText != "Nothing related") {
+        this.searchText = newText
+        this.search(newText)
+        // fire off a ga event to save the term tracked via input bar
+        // this.addCrumb(this.searchText)
+      } else {
+        // TODO display error
+      }
+
+      // fire off a ga event for relics
+      this.gaEvent("search", "click", `title - ${isRelic ? "relic - " : "" }${newText ? newText : "blank"}`)
+    },
+
+    searchRelated(text) {
+      let newText = this.stripRelicText(text).text
+      let isRelic = this.stripRelicText(text).isRelic
+
+      if(newText != "Nothing related") {
+        this.searchText = newText
+        this.search(newText)
+        // fire off a ga event to save the term tracked via input bar
+        // this.addCrumb(this.searchText)
+      } else {
+        // TODO display error
+      }
+
+      // fire off a ga event for relics
+      this.gaEvent("search", "click", `related - ${isRelic ? "relic - " : "" }${newText ? newText : "blank"}`)
+    },
+
+    stripRelicText(text) {
+      // array of text to strip
+      let relicRanks = ["(Intact)","(Exceptional)","(Flawless)","(Radiant)"]
+
+      let stripped = false
+
+      // stripping loop
+      relicRanks.forEach(rank => {
+        // strip text if it matches and say we've stripped at least one thing
+        if(text.toLowerCase().includes(rank.toLowerCase())) {
+          text = text.replace(rank, "").toLowerCase()
+          stripped = true
+        }
+      })
+
+      // return obj with both the stripped text and if it has had to be stripped
+      return { "text": text, "isRelic": stripped }
+    },
+
     search(text) {
       let searchTerms = text.split(" ")
 
@@ -184,17 +261,15 @@ let app = new Vue({
           this.addHead()
         }
       }
-        clearTimeout(this.typingTimeout)
-        this.typingTimeout = setTimeout(()=>{
-          this.setQueryParam("q", this.searchText)
 
-          if(!this.usedBreadcrumb) {
-            this.addCrumb(this.searchText)
-          }
+      this.setQueryParam("q", this.searchText)
 
-          this.setDocumentTitle(this.searchText)
-          this.usedBreadcrumb = false
-        }, 500)
+      if(!this.usedBreadcrumb) {
+        this.addCrumb(this.searchText)
+      }
+
+      this.setDocumentTitle(this.searchText)
+      this.usedBreadcrumb = false
     },
 
     updateData(newData) {
@@ -213,6 +288,7 @@ let app = new Vue({
     updateCurrentFilters(filterID) {
       if(filterID) {
         this.filters[filterID-1].on = this.checkbox(filterID).checked = !this.checkbox(filterID).checked
+        this.gaEvent("toggleFilter", "click", this.filters[filterID-1].name)
       }
 
       renderStart = 0
@@ -220,6 +296,13 @@ let app = new Vue({
 
       this.updateSearchResults()
 
+      let filterString = this.getCurrentFiltersString()
+
+      this.setQueryParam("filters", filterString)
+      this.doLocalStorage("set", "filters", filterString)
+    },
+
+    getCurrentFiltersString() {
       let filterString = ""
 
       this.filters.forEach(filter=>{
@@ -227,8 +310,7 @@ let app = new Vue({
       })
       filterString = filterString.slice(0,-1)
 
-      this.setQueryParam("filters", filterString)
-      this.doLocalStorage("set", "filters", filterString)
+      return filterString
     },
 
     addHead() {
@@ -263,26 +345,12 @@ let app = new Vue({
       }
 
       this.doLocalStorage("set", "theme", theme)
+
+      return theme
     },
 
-    titleSearch(data) {
-      let relicRanks = ["(Intact)","(Exceptional)","(Flawless)","(Radiant)"]
 
-      relicRanks.forEach(rank => {
-        if(data.toLowerCase().includes(rank.toLowerCase())) {
-          data = data.replace(rank, "").toLowerCase()
-        }
-      })
-
-      if(data != "Nothing related") {
-        this.searchText = data
-        // this.addCrumb(this.searchText)
-      } else {
-        // TODO display error
-      }
-    },
-
-    resetPopup(data) {
+    resetRelated(data) {
       let element = this.getScrollerElement(data)
 
       element.className += " invisible"
@@ -292,16 +360,17 @@ let app = new Vue({
       return document.getElementById(`${data}-title-drop-scroller`)
     },
 
-    togglePopup(data) {
+    toggleRelated(data) {
       let element = this.getScrollerElement(data)
       if(element.className.includes("invisible")) {
-        this.updatePopup(data)
+        this.updateRelated(data)
       } else {
-        this.resetPopup(data)
+        this.resetRelated(data)
       }
+      this.gaEvent("toggleRelated", "click", data)
     },
 
-    updatePopup(data) {
+    updateRelated(data) {
       let relicRanks = ["(Intact)","(Exceptional)","(Flawless)","(Radiant)"]
       let includingTitles = []
       
@@ -378,13 +447,18 @@ let app = new Vue({
     },
 
     arrayFromString(arrayStr) {
-      let array = arrayStr.split(",")
+      // check if string is empty
+      if(arrayStr != undefined && arrayStr != "") {
+        let array = arrayStr.split(",")
 
-      array.forEach((num, i) => {
-        array[i] = parseInt(num)
-      })
+        array.forEach((num, i) => {
+          array[i] = parseInt(num)
+        })
 
-      return array// return array
+        return array // return array
+      } else {
+        return [1,2,3,4,5,7,6,8,9] // if no string, return full array
+      }
     },
 
     setQueryParam(key, value) {
@@ -513,6 +587,39 @@ let app = new Vue({
       } catch(e) {
         console.error("Local storage not supported!")
         console.error(e)
+      }
+    },
+
+    gaEvent(category, action, label) {
+      // make sure ga is loaded and working before doing anything else
+      if(!this.gaLoaded) {
+        ga(
+          () => {
+            this.gaLoaded=true
+            this.gaEvent(category, action, label)
+          }
+        )
+      } else {
+        // make sure we have all the mandatory args we need, if not just don't do anything
+        if(
+            (category == undefined || category == "") ||
+            (action == undefined || action == "")
+          ) {
+          console.error("failed to send ga event", category, action, label)
+          return
+        }
+        // check if a label has been set and warn if not
+        if(label == undefined || label == "") {
+          console.warn("no label set for this ga event", category, action, label)
+        } else {
+          // event.label = ""
+        }
+
+        ga(() => {
+          ga('set', 'dimension1', this.getCurrentFiltersString())
+          // send the ga event
+          ga('send', 'event', category, action, label)
+        })
       }
     }
   }

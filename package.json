@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "css": "scss src/client/style.scss src/client/style.css",
-    "aws": "aws s3 sync src/client/ s3://wf-drops.xinchronize.com",
+    "sync:live": "aws s3 sync src/client/ s3://wf-drops.xinchronize.com",
+    "sync:staging": "aws s3 sync src/client/ s3://wf-drops-staging.xinchronize.com",
     "host:data": "http-server data -p 8080 --cors",
     "host:client": "http-server src/client -p 80",
     "build:watch": "npm run css",
