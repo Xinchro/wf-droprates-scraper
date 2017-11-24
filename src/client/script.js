@@ -102,6 +102,9 @@ let app = new Vue({
           xmlHttp.onreadystatechange = () => { 
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
               resolve(JSON.parse(xmlHttp.responseText))
+            } else if (xmlHttp.status == 404) {
+              reject(name)
+              console.error(`Could not get ${name}. Tweet @xinchronize this error and tell him he's bad at Javascript.`)
             }
           }
 
@@ -141,6 +144,18 @@ let app = new Vue({
               })
             }
 
+            // increment loop function index
+            index++
+
+            // if index is smaller than filters, call again
+            // if not, resolve function and return filtered sections
+            if(index < filters.length) {
+              a(index)
+            } else {
+              resolve({ sections: allSections })
+            }
+          }, data => {
+            console.error(`${data} rejected.`)
             // increment loop function index
             index++
 
