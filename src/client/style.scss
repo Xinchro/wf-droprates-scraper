@@ -442,6 +442,29 @@
               }
             }
 
+            .subSubSections {
+              padding: 0;
+              margin: 0;
+              list-style: none;
+
+              .subSubSection {
+                border: none;
+                padding-top: 0px;
+                padding-right: 0px;
+
+                .title-wrapper {
+                  background: #A04060;
+                  border: none;
+                  .title-text {
+                    &:hover {
+                      cursor: default;
+                      text-decoration: none;
+                    }
+                  }
+                }
+              }
+            }
+
             .items {
               padding: 0;
               margin: 0;

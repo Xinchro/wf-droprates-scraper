@@ -314,6 +314,20 @@
               #vue-wrapper .data-wrapper .sections .section .subSections .subSection .title-wrapper .title-text:hover {
                 cursor: default;
                 text-decoration: none; }
+            #vue-wrapper .data-wrapper .sections .section .subSections .subSection .subSubSections {
+              padding: 0;
+              margin: 0;
+              list-style: none; }
+              #vue-wrapper .data-wrapper .sections .section .subSections .subSection .subSubSections .subSubSection {
+                border: none;
+                padding-top: 0px;
+                padding-right: 0px; }
+                #vue-wrapper .data-wrapper .sections .section .subSections .subSection .subSubSections .subSubSection .title-wrapper {
+                  background: #A04060;
+                  border: none; }
+                  #vue-wrapper .data-wrapper .sections .section .subSections .subSection .subSubSections .subSubSection .title-wrapper .title-text:hover {
+                    cursor: default;
+                    text-decoration: none; }
             #vue-wrapper .data-wrapper .sections .section .subSections .subSection .items {
               padding: 0;
               margin: 0;

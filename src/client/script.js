@@ -22,28 +22,36 @@ let app = new Vue({
         id: 3,
         on: true },
       { name: "transientRewards",
-        label: "Transient Rewards",
+        label: "Dynamic Location Rewards",
         id: 4,
         on: true },
       { name: "sortiesRewards",
         label: "Sorties Rewards",
         id: 5,
         on: true },
+      { name: "bountyRewards",
+        label: "Cetus Bounty Rewards",
+        id: 6,
+        on: true },
       { name: "modsByMod",
         label: "Mods by Mod",
-        id: 6,
+        id: 7,
         on: true },
       { name: "modsByEnemy",
         label: "Mods by Enemy",
-        id: 7,
+        id: 8,
         on: true },
       { name: "blueprintsByBlueprint",
         label: "Blueprints by Blueprint",
-        id: 8,
+        id: 9,
         on: true },
       { name: "blueprintsByEnemy",
         label: "Blueprints by Enemy",
-        id: 9,
+        id: 10,
+        on: true },
+      { name: "miscDrops",
+        label: "Miscellaneous",
+        id: 11,
         on: true }
     ],
     menuVisible: false,
@@ -111,7 +119,7 @@ let app = new Vue({
           xmlHttp.open("GET", `https://wf-drops-data.xinchronize.com/${name}.json?=${new Date(new Date().getTime()).toLocaleString()}`, true) // true for asynchronous
           xmlHttp.send(null)
         } else {
-          reject(name)
+          reject("No name to fetch.")
         }
       })
     },
@@ -154,7 +162,7 @@ let app = new Vue({
               resolve({ sections: allSections })
             }
           }, data => {
-            console.error(`${data} rejected.`)
+            console.error(`${data} - Rejected`)
             // increment loop function index
             index++
 

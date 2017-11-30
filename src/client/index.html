@@ -101,8 +101,30 @@
                   <p class="title-text">{{subSection.subSection}}</p>
                 </section>
                 
+                <ul class="subSubSections">
+                  <li class="subSubSection" v-if="subSection.subSubSections" v-for="subSubSection in subSection.subSubSections">
+                    <section class="title-wrapper">
+                      <p class="title-text">{{subSubSection.subSubSection}}</p>
+                    </section>
+
+                    <ul class="items">
+                      <li class="item" v-if="subSubSection.items">
+                        <p class="column-1 column">Name</p>
+                        <p class="column-2 column">Item drop chance (if applicable)</p>
+                        <p class="column-3 column">Drop rate</p>
+                      </li> <!-- item -->
+                      <li class="item highlight" v-if="subSubSection.items" v-for="item in subSubSection.items" @click="searchItem(item.name.toLowerCase())">
+                        <p class="column-1 column">{{item.name}}</p>
+                        <p class="column-2 column">{{item.itemchance}}</p>
+                        <p class="column-3 column">{{item.droprate}}</p>
+                      </li> <!-- item -->
+                    </ul> <!-- items -->
+
+                  </li> <!-- subsection -->
+                </ul> <!-- subsections -->
+
                 <ul class="items">
-                  <li class="item" v-if="subSection.items">
+                  <li class="item" v-if="subSection.items && !subSection.subSubSections">
                     <p class="column-1 column">Name</p>
                     <p class="column-2 column">Item drop chance (if applicable)</p>
                     <p class="column-3 column">Drop rate</p>
