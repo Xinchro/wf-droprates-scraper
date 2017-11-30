@@ -1,66 +1,82 @@
+require("dotenv").config()
+
 const utils = require("./utils")
 
 function saveEverything(data) {
-  saveGlossary(data)
-  saveMissionRewards(data)
-  saveRelicRewards(data)
-  saveKeyRewards(data)
-  saveTransientRewards(data)
-  saveSortiesRewards(data)
-  saveModsByMod(data)
-  saveModsByEnemy(data)
-  saveBlueprintsByBlueprint(data)
-  saveBlueprintsByEnemy(data)
+const dataSet = data.dom[1].children[1]
+
+  saveGlossary(dataSet)
+  saveMissionRewards(dataSet)
+  saveRelicRewards(dataSet)
+  saveKeyRewards(dataSet)
+  saveTransientRewards(dataSet)
+  saveSortiesRewards(dataSet)
+  saveBountyRewards(dataSet)
+  saveModsByMod(dataSet)
+  saveModsByEnemy(dataSet)
+  saveBlueprintsByBlueprint(dataSet)
+  saveBlueprintsByEnemy(dataSet)
+  saveMiscDrops(dataSet)
 }
 
 function saveGlossary(data) {
-  let glossary = data.dom[2].children[1].children[4]
+  let glossary = data.children[4]
   htmlListToJson(glossary, "glossary")
 }
 
 function saveMissionRewards(data) {
-  let missionRewards = data.dom[2].children[1].children[6]
+  let missionRewards = data.children[6]
   htmlTableToJson(missionRewards, "missionRewards")
 }
 
 function saveRelicRewards(data) {
-  let relicRewards = data.dom[2].children[1].children[8]
+  let relicRewards = data.children[8]
   htmlTableToJson(relicRewards, "relicRewards")
 }
 
 function saveKeyRewards(data) {
-  let keyRewards = data.dom[2].children[1].children[10]
+  let keyRewards = data.children[10]
   htmlTableToJson(keyRewards, "keyRewards")
 }
 
 function saveTransientRewards(data) {
-  let transientRewards = data.dom[2].children[1].children[12]
+  let transientRewards = data.children[12]
   htmlTableToJson(transientRewards, "transientRewards")
 }
 
 function saveSortiesRewards(data) {
-  let sortiesRewards = data.dom[2].children[1].children[14]
+  let sortiesRewards = data.children[14]
   htmlTableToJson(sortiesRewards, "sortiesRewards")
 }
 
+function saveBountyRewards(data) {
+  let bountyRewards = data.children[16]
+  htmlTableToJson(bountyRewards, "bountyRewards")
+}
+
 function saveModsByMod(data) {
-  let modsByMod = data.dom[2].children[1].children[16]
+  let modsByMod = data.children[18]
   htmlTableToJson(modsByMod, "modsByMod")
 }
 
 function saveModsByEnemy(data) {
-  let modsByEnemy = data.dom[2].children[1].children[18]
+  let modsByEnemy = data.children[20]
   htmlTableToJson(modsByEnemy, "modsByEnemy")
 }
 
 function saveBlueprintsByBlueprint(data) {
-  let blueprintsByBlueprint = data.dom[2].children[1].children[20]
+  let blueprintsByBlueprint = data.children[22]
   htmlTableToJson(blueprintsByBlueprint, "blueprintsByBlueprint")
 }
 
 function saveBlueprintsByEnemy(data) {
-  let blueprintsByEnemy = data.dom[2].children[1].children[22]
+  let blueprintsByEnemy = data.children[24]
   htmlTableToJson(blueprintsByEnemy, "blueprintsByEnemy")
+}
+
+function saveMiscDrops(data) {
+  let miscDrops = data.children[26]
+  htmlTableToJson(miscDrops, "miscDrops")
 }
 
 function htmlListToJson(list, listName) {
@@ -81,8 +97,8 @@ function htmlListToJson(list, listName) {
     })
   })
 
-  utils.saveFileSync("/tmp", "glossary", data, true)
-  .then(utils.uploadToAWS("/tmp/glossary", "application/json"))
+  utils.saveFileSync(`${process.env.DATA_FOLDER}`, "glossary", data, true)
+  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/glossary`, "application/json"))
 }
 
 function htmlTableToJson(table, tableName) {
@@ -97,7 +113,8 @@ function htmlTableToJson(table, tableName) {
 
   let title = true
 
-  let currentSection, currentSubSection
+
+  let currentSection, currentSubSection, currentSubSubSection
   table.children.forEach((row, index) => {
     if(row.children[0].attribs) {
       if(row.children[0].attribs.class === "blank-row") {
@@ -153,21 +170,50 @@ function htmlTableToJson(table, tableName) {
       if(currentSubSection) {
         // subsection
 
-        // check if the item has 2 or 3 columns
-         if(row.children.length === 2) {
-           currentSubSection.items.push({
-             name: row.children[0].children[0].data,
-             droprate: row.children[1].children[0].data
-           })
-         } else if(row.children.length === 3) {
-           currentSubSection.items.push({
-             name: row.children[0].children[0].data,
-             itemchance: row.children[1].children[0].data,
-             droprate: row.children[2].children[0].data
-           })
-         } else {
-           console.error("Irregular number of columns in item")
-         }
+        // check for blank cell (bounties)
+        if(row.children[0].children) {
+          // check if the item has 2 or 3 columns
+          if(row.children.length === 2) {
+            currentSubSection.items.push({
+              name: row.children[0].children[0].data,
+              droprate: row.children[1].children[0].data
+            })
+            currentSubSection = currentSection.subSections[currentSection.subSections.length-1]
+          } else if(row.children.length === 3) {
+            currentSubSection.items.push({
+              name: row.children[0].children[0].data,
+              itemchance: row.children[1].children[0].data,
+              droprate: row.children[2].children[0].data
+            })
+          } else {
+            console.error("Irregular number of columns in item")
+          }
+        } else {
+          // bounties (blank first cell)
+
+          // if current subSection doesn't have a subSubSection, make one
+          if(!currentSubSection.subSubSections) {
+            currentSubSection.subSubSections = []
+            currentSubSubSection = null
+          }
+          
+          if(row.children.length === 2) {
+            // title
+            currentSubSection.subSubSections.push({
+              subSubSection: row.children[1].children[0].data,
+              items: []
+            })
+            currentSubSubSection = currentSubSection.subSubSections[currentSubSection.subSubSections.length - 1]
+          } else if(row.children.length === 3) {
+            // item
+            currentSubSubSection.items.push({
+              name: row.children[1].children[0].data,
+              droprate: row.children[2].children[0].data
+            })
+          } else {
+            console.error("Bounty column error")
+          }
+        }
       } else {
         // section
 
@@ -177,13 +223,15 @@ function htmlTableToJson(table, tableName) {
           delete currentSection.subSections
         }
 
+
         // check if the item has 2 or 3 columns
         if(row.children.length === 2) {
           currentSection.items.push({
             name: row.children[0].children[0].data,
             droprate: row.children[1].children[0].data
           })
-        } else if(row.children.length === 3) {
+        } else 
+        if(row.children.length === 3) {
           if(row.children[0].children === undefined || row.children[0].children[0] === "") {
             currentSection.items.push({
               name: row.children[1].children[0].data,
@@ -197,14 +245,15 @@ function htmlTableToJson(table, tableName) {
             })
           }
         } else {
+          utils.saveFileSync(`${process.env.DATA_FOLDER}`, "what", row.children, true)
           console.error("Irregular number of columns in item")
         }
       }
     }
   })
 
-  utils.saveFileSync("/tmp", tableName, data, true)
-  .then(utils.uploadToAWS(`/tmp/${tableName}`, "application/json"))
+  utils.saveFileSync(`${process.env.DATA_FOLDER}`, tableName, data, true)
+  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/${tableName}`, "application/json"))
 }
 
 exports.saveEverything = saveEverything

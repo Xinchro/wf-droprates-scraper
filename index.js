@@ -1,31 +1,52 @@
+require("dotenv").config()
+
 const rimraf = require("rimraf")
+const fs = require('fs');
 const fetcher = require("./src/server/fetcher.js")
 const scraper = require("./src/server/scraper.js")
-
-// clearData()
-// .then(fetcher.fetch)
-// .then(scrape)
+const generator = require("./src/server/generateHTML.js")
 
 function scrape() {
-  let data = require("/tmp/stored-data.json")
+  let data = require(`${process.env.DATA_FOLDER}/stored-data.json`)
   scraper.saveEverything(data)
 
   return new Promise((resolve, reject) => {
-    resolve()
+    resolve(data)
   })
 }
 
 function clearData() {
   return new Promise((resolve, reject) => {
-    rimraf("/tmp/*", () => { 
-      console.log("Data folder cleared")
+    if (fs.existsSync(process.env.DATA_FOLDER)){
+      rimraf(`${process.env.DATA_FOLDER}/*`, () => { 
+        console.log("Data folder cleared")
+        resolve()
+      })
+    } else {
+      fs.mkdirSync(process.env.DATA_FOLDER)
+      console.log("Data folder created")
       resolve()
-    })
+    }
+  })
+
+}
+function generateHTML() {
+  return new Promise((resolve, reject) => {
+    resolve(generator.generateHTML())
   })
 }
 
 exports.awsHandler = function() {
   clearData()
-  .then(fetcher.fetch)
+  .then(fetcher.fetchData)
   .then(scrape)
+  .then(generateHTML)
+}
+
+exports.doScrape = function() {
+  scrape()
+}
+
+exports.doGenerateHTML = function() {
+  generateHTML()
 }
