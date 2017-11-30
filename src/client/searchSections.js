@@ -73,6 +73,9 @@ searchSubSections = function(subSections, terms) {
     // copy items (if exist) to temp section
     if(subSection.items) tempSubSection.items = JSON.parse(JSON.stringify(subSection.items))
 
+    // copy subSubSections (if exist) to temp section
+    if(subSection.subSubSections) tempSubSection.subSubSections = JSON.parse(JSON.stringify(subSection.subSubSections))
+
     // loop through each search term and check against sub title
     terms.forEach(searchTerm => {
       // limit search to 2 char min
@@ -88,6 +91,12 @@ searchSubSections = function(subSections, terms) {
     // if all terms match, add to array
     if(addSubSection) {
       subSectionsToAdd.push(tempSubSection)
+    } else if(subSection.subSubSections) {
+      // check subsubsections with terms, if exist, and add to sub
+      tempSubSection.subSubSections = searchSubSubSections(tempSubSection.subSubSections, terms)
+      if(tempSubSection.subSubSections.length > 0) {
+        subSectionsToAdd.push(tempSubSection)
+      }
     } else if(subSection.items) {
       // check items with terms, if exist, and add to sub
       tempSubSection.items = searchItems(tempSubSection.items, terms)
@@ -99,6 +108,49 @@ searchSubSections = function(subSections, terms) {
 
   // return all the subs to add
   return subSectionsToAdd
+}
+
+searchSubSubSections = function(subSubSections, terms) {
+  let subSubSectionsToAdd = []
+
+  subSubSections.forEach(subSubSection => {
+    // temp subsubsection to add stuff to
+    let tempSubSubSection = {}
+    // know whether to add subsubsection or not
+    let addSubSubSection = true
+
+    // set temp sub title
+    tempSubSubSection.subSubSection = JSON.parse(JSON.stringify(subSubSection.subSubSection))
+
+    // copy items (if exist) to temp section
+    if(subSubSection.items) tempSubSubSection.items = JSON.parse(JSON.stringify(subSubSection.items))
+
+    // loop through each search term and check against sub title
+    terms.forEach(searchTerm => {
+      // limit search to 2 char min
+      if(searchTerm.length >= minSearchLimit) {
+        // check if sub title includes terms
+        // on first mismatch, don't add to array
+        if(!subSubSection.subSubSection.toLowerCase().includes(searchTerm.toLowerCase())) {
+          addSubSubSection = false
+        }
+      }
+    })
+
+    // if all terms match, add to array
+    if(addSubSubSection) {
+      subSubSectionsToAdd.push(tempSubSubSection)
+    } else if(subSubSection.items) {
+      // check items with terms, if exist, and add to sub
+      tempSubSubSection.items = searchItems(tempSubSubSection.items, terms)
+      if(tempSubSubSection.items.length > 0) {
+        subSubSectionsToAdd.push(tempSubSubSection)
+      }
+    }
+  })
+
+  // return all the subs to add
+  return subSubSectionsToAdd
 }
 
 searchItems = function(items, terms) {

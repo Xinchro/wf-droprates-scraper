@@ -21,7 +21,7 @@ let app = new Vue({
         label: "Key Rewards",
         id: 3,
         on: true },
-      { name: "transientRewards",
+      { name: "dynamicRewards",
         label: "Dynamic Location Rewards",
         id: 4,
         on: true },
