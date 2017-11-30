@@ -23,8 +23,12 @@ function clearData() {
         resolve()
       })
     } else {
-      fs.mkdirSync(process.env.DATA_FOLDER)
-      console.log("Data folder created")
+      try {
+        fs.mkdirSync(process.env.DATA_FOLDER)
+        console.log("Data folder created")
+      } catch(e) {
+        console.error(`Failed top make ${process.env.DATA_FOLDER} folder`)
+      }
       resolve()
     }
   })

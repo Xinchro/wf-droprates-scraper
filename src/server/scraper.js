@@ -9,7 +9,7 @@ const dataSet = data.dom[1].children[1]
   saveMissionRewards(dataSet)
   saveRelicRewards(dataSet)
   saveKeyRewards(dataSet)
-  saveTransientRewards(dataSet)
+  saveDynamicRewards(dataSet)
   saveSortiesRewards(dataSet)
   saveBountyRewards(dataSet)
   saveModsByMod(dataSet)
@@ -39,9 +39,9 @@ function saveKeyRewards(data) {
   htmlTableToJson(keyRewards, "keyRewards")
 }
 
-function saveTransientRewards(data) {
-  let transientRewards = data.children[12]
-  htmlTableToJson(transientRewards, "transientRewards")
+function saveDynamicRewards(data) {
+  let dynamicRewards = data.children[12]
+  htmlTableToJson(dynamicRewards, "dynamicRewards")
 }
 
 function saveSortiesRewards(data) {
@@ -97,8 +97,8 @@ function htmlListToJson(list, listName) {
     })
   })
 
-  utils.saveFileSync(`${process.env.DATA_FOLDER}`, "glossary", data, true)
-  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/glossary`, "application/json"))
+  utils.saveFileSync(`${process.env.DATA_FOLDER}`, "glossary.json", data, true)
+  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/glossary.json`, "application/json"))
 }
 
 function htmlTableToJson(table, tableName) {
@@ -245,15 +245,14 @@ function htmlTableToJson(table, tableName) {
             })
           }
         } else {
-          utils.saveFileSync(`${process.env.DATA_FOLDER}`, "what", row.children, true)
           console.error("Irregular number of columns in item")
         }
       }
     }
   })
 
-  utils.saveFileSync(`${process.env.DATA_FOLDER}`, tableName, data, true)
-  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/${tableName}`, "application/json"))
+  utils.saveFileSync(`${process.env.DATA_FOLDER}`, `${tableName}.json`, data, true)
+  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/${tableName}.json`, "application/json"))
 }
 
 exports.saveEverything = saveEverything
@@ -261,7 +260,7 @@ exports.saveGlossary = saveGlossary
 exports.saveMissionRewards = saveMissionRewards
 exports.saveRelicRewards = saveRelicRewards
 exports.saveKeyRewards = saveKeyRewards
-exports.saveTransientRewards = saveTransientRewards
+exports.saveDynamicRewards = saveDynamicRewards
 exports.saveSortiesRewards = saveSortiesRewards
 exports.saveModsByMod = saveModsByMod
 exports.saveModsByEnemy = saveModsByEnemy

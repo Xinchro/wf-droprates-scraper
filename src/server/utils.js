@@ -5,13 +5,16 @@ const path = require('path')
 AWS.config.loadFromPath("./config.json")
 
 function saveFile(path, fileName, data, stringify) {
-  if(stringify) data = JSON.stringify(data, null, 2)
-  fs.writeFile(`${path}/${fileName}.json`, data, function(err) {
-    if(err) {
-      console.log(`Failed to save ${fileName}!`)
-      return console.log(err)
-    }
-    console.log(`File ${fileName} was saved successfully!`)
+  return new Promise((resolve, reject) => {
+    if(stringify) data = JSON.stringify(data, null, 2)
+    fs.writeFile(`${path}/${fileName}`, data, function(err) {
+      if(err) {
+        console.error(`Failed to save ${fileName}!`, err)
+        reject(err)
+      }
+      console.log(`File ${fileName} was saved successfully!`)
+      resolve(`File ${fileName} was saved successfully!`)
+    })
   })
 }
 
@@ -19,7 +22,7 @@ function saveFileSync(path, fileName, data, stringify) {
   return new Promise((res, rej) => {
     try {
       if(stringify) data = JSON.stringify(data, null, 2)
-      fs.writeFileSync(`${path}/${fileName}.json`, data)
+      fs.writeFileSync(`${path}/${fileName}`, data)
       console.log(`File ${fileName} was saved successfully!`)
       res()
     } catch(e) {
@@ -40,7 +43,7 @@ function uploadToAWS(fileName, contentType) {
     Body: '',
     ContentType: contentType 
   }
-  let file = `${fileName}.json`
+  let file = `${fileName}`
 
   let fileStream = fs.createReadStream(file)
 

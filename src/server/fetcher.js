@@ -47,7 +47,7 @@ function saveToJson(json) {
   
   let obj = json
   
-  utils.saveFileSync(`${process.env.DATA_FOLDER}`, "stored-data", obj, true)
+  utils.saveFileSync(`${process.env.DATA_FOLDER}`, "stored-data.json", obj, true)
 }
 
 function fetchData() {

@@ -1,5 +1,5 @@
 const fs = require("fs")
-const htmltidy = require("htmltidy").tidy
+const utils = require("./utils")
 const templateURI = "./src/server/templates/base.html"
 const liTemplateURI = "./src/server/templates/li.html"
 
@@ -10,13 +10,13 @@ exports.generateHTML = function() {
   getTemplate(templateURI)
   .then(fillTemplate, globalReject)
   .then(exportHTML, globalReject)
-  .then(console.log, globalReject)
+  .then(() => utils.uploadToAWS(`${process.env.DATA_FOLDER}/index.html`, "text/html"), globalReject)
 }
   
 function getFileNames() {
   // get the file names in directory
   return new Promise((resolve, reject)=> {
-    fs.readdir("./tmp", function(err, items) {
+    fs.readdir(process.env.DATA_FOLDER, function(err, items) {
       if(err) {
         console.error("Failed to list JSON directory")
         reject("Failed to list JSON directory")
@@ -66,7 +66,7 @@ function fillTemplate(template) {
                 default:
                   // add to rendered list
                   li += liTemplate
-                  .replace(/#url#/g,`/${name}`)
+                  .replace(/#url#/g,`https://wf-drops-data.xinchronize.com/${name}`)
                   .replace(/#name#/g,`${name.replace(".json", "")}`)
               }
             })
@@ -105,32 +105,14 @@ function getCurrentDate() {
 function exportHTML(html) {
   // export generated HTML file
   return new Promise((resolve, reject) => {
-    tidy(html)
-    .then((tidyHTML) => {
-      fs.writeFile("./tmp/index.html", tidyHTML, function(err) {
-        if(err) {
-          console.log("Failed to generate and save JSON listing!")
-          reject(err)
-        }
-        resolve("JSON listing generated.")
-      })
-    })
+    utils.saveFileSync(`${process.env.DATA_FOLDER}`, "index.html", html, false)
+    .then(() => {
+      console.log("JSON listing generated and saved!")
+      resolve("JSON listing generated and saved!")
+    }, reject)
   })
 }
 
 function globalReject(message) {
   console.error(message)
-}
-
-function tidy(html) {
-  // tidy and indent HTML
-  return new Promise((resolve, reject) => {
-    htmltidy(html, 
-      {
-        doctype: 'html5',
-        hideComments: false,
-        indent: true,
-        dropEmptyElements: false
-      }, (err, html) => resolve(html))
-  })
 }
