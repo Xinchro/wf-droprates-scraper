@@ -479,7 +479,14 @@ let app = new Vue({
 
         return array // return array
       } else {
-        return [1,2,3,4,5,7,6,8,9] // if no string, return full array
+        let arr = []
+
+        // fill array with numbers
+        this.filters.forEach((ele, i) => {
+          arr.push(i+1)
+        })
+
+        return arr // if no string, return full array
       }
     },
 
@@ -534,9 +541,6 @@ let app = new Vue({
             this.searchText = param.value
             break
           case "filters":
-            this.filters.forEach(filter => {
-              filter.on = false
-            })
             this.setFilters(param.value)
             break
           default:
@@ -548,10 +552,13 @@ let app = new Vue({
 
     setFilters(array) {
       return new Promise((resolve, reject)=>{
-        this.filters.forEach(filter => {
-          filter.on = false
-        })
         if(typeof(array) === 'object') {
+          // clear filters
+          this.filters.forEach(filter => {
+            filter.on = false
+          })
+
+          // loop through and set filters
           array.forEach(filterID => {
             // js is stupid and thinks NaN is a number, so check for that
             if(typeof(filterID) === 'number' && !isNaN(filterID)) {
