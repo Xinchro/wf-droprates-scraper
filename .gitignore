@@ -69,3 +69,6 @@ tmp
 
 # aws config
 config.json
+
+# photoshop asset files
+**/*.psd
