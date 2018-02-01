@@ -65,5 +65,5 @@ Just try stick to the style already present. I started off learning the [Google 
 ## Who?
 
 So far:  
-[Digital Extremes](http://www.digitalextremes.com/) - data overloards  
+[Digital Extremes](http://www.digitalextremes.com/) - data overlords  
 [Xinchro](https://github.com/Xinchro/) - code monkey 🐒
