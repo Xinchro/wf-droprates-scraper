@@ -40,42 +40,51 @@ function saveFileSync(path, fileName, data, stringify) {
 
 function uploadToAWS(fileName, contentType) {
   return new Promise((res, rej) => {
-    console.log(`Uploading ${fileName} to AWS`)
+    if(process.env.NODE_ENV === "prod") {
+      console.log(`Uploading ${fileName} to AWS`)
 
-    s3 = new AWS.S3({apiVersion: '2006-03-01'})
+      s3 = new AWS.S3({apiVersion: '2006-03-01'})
 
-    let uploadParams = {
-      Bucket: "wf-drops-data.xinchronize.com",
-      Key: '',
-      Body: '',
-      ContentType: contentType
-    }
-    let file = `${fileName}`
-
-    let fileStream = fs.createReadStream(file)
-
-    fileStream.on('error', function(err) {
-      console.log('File error', err)
-    })
-
-    uploadParams.Body = fileStream
-    uploadParams.Key = path.basename(file)
-
-    s3.upload(uploadParams, function (err, data) {
-      if (err) {
-        console.log("Error uploading", err)
-        rej({
-          filename: fileName,
-          message: `${fileName} failed to uploaded!`
-        })
-      } if (data) {
-        res({
-          filename: fileName,
-          message: `${fileName} uploaded!`
-        })
-        console.log("Upload success", data.Location)
+      let uploadParams = {
+        Bucket: "wf-drops-data.xinchronize.com",
+        Key: '',
+        Body: '',
+        ContentType: contentType
       }
-    })
+      let file = `${fileName}`
+
+      let fileStream = fs.createReadStream(file)
+
+      fileStream.on('error', function(err) {
+        console.log('File error', err)
+      })
+
+      uploadParams.Body = fileStream
+      uploadParams.Key = path.basename(file)
+
+      s3.upload(uploadParams, function (err, data) {
+        if (err) {
+          console.log("Error uploading", err)
+          rej({
+            filename: fileName,
+            message: `${fileName} failed to uploaded!`
+          })
+        } if (data) {
+          res({
+            filename: fileName,
+            message: `${fileName} uploaded!`
+          })
+          console.log("Upload success", data.Location)
+        }
+      })
+    } else {
+      console.log(`Fake uploading ${fileName} to AWS`)
+
+      res({
+        filename: fileName,
+        message: "yes, your file uploaded just fine"
+      })
+    }
 
   })
 }
