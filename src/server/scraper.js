@@ -3,7 +3,7 @@ require("dotenv").config()
 const utils = require("./utils")
 
 function saveEverything(data) {
-const dataSet = data.dom[1].children[1]
+const dataSet = data.dom[2].children[1]
 
   saveGlossary(dataSet)
   saveMissionRewards(dataSet)
@@ -119,7 +119,7 @@ function htmlTableToJson(table, tableName) {
     if(row.children[0].attribs) {
       if(row.children[0].attribs.class === "blank-row") {
         title = true
-        return 
+        return
       }
     }
     if(row.children[0].name === "th") {
@@ -196,7 +196,7 @@ function htmlTableToJson(table, tableName) {
             currentSubSection.subSubSections = []
             currentSubSubSection = null
           }
-          
+
           if(row.children.length === 2) {
             // title
             currentSubSection.subSubSections.push({
@@ -230,7 +230,7 @@ function htmlTableToJson(table, tableName) {
             name: row.children[0].children[0].data,
             droprate: row.children[1].children[0].data
           })
-        } else 
+        } else
         if(row.children.length === 3) {
           if(row.children[0].children === undefined || row.children[0].children[0] === "") {
             currentSection.items.push({
@@ -251,6 +251,7 @@ function htmlTableToJson(table, tableName) {
     }
   })
 
+  // TODO this is bad, fix it
   utils.saveFileSync(`${process.env.DATA_FOLDER}`, `${tableName}.json`, data, true)
   .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/${tableName}.json`, "application/json"))
 }
