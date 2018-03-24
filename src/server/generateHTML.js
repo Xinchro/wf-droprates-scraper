@@ -5,11 +5,11 @@ const liTemplateURI = "./src/server/templates/li.html"
 
 function generateHTML() {
   return new Promise((res, rej) => {
-    let completeHTML = "<html><body>ya dun goofed</body></html>"
-
     // generate the JSON listing HTML file
     getTemplate(templateURI)
-    .then(res(fillTemplate), rej(globalReject))
+    .then((response) => {
+      res(fillTemplate(response))
+    }, rej)
   })
 }
 
