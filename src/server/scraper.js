@@ -8,17 +8,7 @@ function scrapeEverything(data) {
 
   return [
     scrapeGlossary(dataSet),
-    scrapeMissionRewards(dataSet),
-    scrapeRelicRewards(dataSet),
-    scrapeKeyRewards(dataSet),
-    scrapeDynamicRewards(dataSet),
-    scrapeSortiesRewards(dataSet),
-    scrapeBountyRewards(dataSet),
-    scrapeModsByMod(dataSet),
-    scrapeModsByEnemy(dataSet),
-    scrapeBlueprintsByBlueprint(dataSet),
-    scrapeBlueprintsByEnemy(dataSet),
-    scrapeMiscDrops(dataSet)
+    ...scrapeSections(dataSet)
   ]
 }
 
@@ -75,59 +65,26 @@ function scrapeGlossary(data) {
   return htmlListToJson(glossary, "glossary")
 }
 
-function scrapeMissionRewards(data) {
-  let missionRewards = data.children[6]
-  return htmlTableToJson(missionRewards, "missionRewards")
-}
+function scrapeSections(data) {
+  console.log("Scraping sections...")
 
-function scrapeRelicRewards(data) {
-  let relicRewards = data.children[8]
-  return htmlTableToJson(relicRewards, "relicRewards")
-}
+  let sections = []
 
-function scrapeKeyRewards(data) {
-  let keyRewards = data.children[10]
-  return htmlTableToJson(keyRewards, "keyRewards")
-}
+  data.children.forEach((element, index) => {
+    if(element.attribs && element.attribs.id) { // check if we have an id (we're dealing with a table's header)
+      const child = data.children[index+1] // set child as next element
+      if(
+        child.type === "tag" // child is a tag
+        && child.name === "table" // child is a table
+      ) {
+        sections.push(htmlTableToJson(child, element.attribs.id)) // scrape child and add to sections
+      }
+    }
+  })
 
-function scrapeDynamicRewards(data) {
-  let dynamicRewards = data.children[12]
-  return htmlTableToJson(dynamicRewards, "dynamicRewards")
-}
+  if(sections.length < 1) throw "Less than 1 section scraped"
 
-function scrapeSortiesRewards(data) {
-  let sortiesRewards = data.children[14]
-  return htmlTableToJson(sortiesRewards, "sortiesRewards")
-}
-
-function scrapeBountyRewards(data) {
-  let bountyRewards = data.children[16]
-  return htmlTableToJson(bountyRewards, "bountyRewards")
-}
-
-function scrapeModsByMod(data) {
-  let modsByMod = data.children[18]
-  return htmlTableToJson(modsByMod, "modsByMod")
-}
-
-function scrapeModsByEnemy(data) {
-  let modsByEnemy = data.children[20]
-  return htmlTableToJson(modsByEnemy, "modsByEnemy")
-}
-
-function scrapeBlueprintsByBlueprint(data) {
-  let blueprintsByBlueprint = data.children[22]
-  return htmlTableToJson(blueprintsByBlueprint, "blueprintsByBlueprint")
-}
-
-function scrapeBlueprintsByEnemy(data) {
-  let blueprintsByEnemy = data.children[24]
-  return htmlTableToJson(blueprintsByEnemy, "blueprintsByEnemy")
-}
-
-function scrapeMiscDrops(data) {
-  let miscDrops = data.children[26]
-  return htmlTableToJson(miscDrops, "miscDrops")
+  return sections
 }
 
 function htmlListToJson(list, listName) {
@@ -312,12 +269,3 @@ function htmlTableToJson(table, tableName) {
 
 exports.scrapeEverything = scrapeEverything
 exports.scrapeGlossary = scrapeGlossary
-exports.scrapeMissionRewards = scrapeMissionRewards
-exports.scrapeRelicRewards = scrapeRelicRewards
-exports.scrapeKeyRewards = scrapeKeyRewards
-exports.scrapeDynamicRewards = scrapeDynamicRewards
-exports.scrapeSortiesRewards = scrapeSortiesRewards
-exports.scrapeModsByMod = scrapeModsByMod
-exports.scrapeModsByEnemy = scrapeModsByEnemy
-exports.scrapeBlueprintsByBlueprint = scrapeBlueprintsByBlueprint
-exports.scrapeBlueprintsByEnemy = scrapeBlueprintsByEnemy
