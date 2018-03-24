@@ -43,7 +43,7 @@ exports.awsHandler = function() {
     .then(generateHTML) // generate data landing page
     .then(saveHTML) // save the landing page
     .then((response) => {
-      return uploadToAWS(`${response.path}/${response.filename}`, "application/json")
+      return uploadToAWS(`${response.path}/${response.filename}`, "text/html")
     }) // upload landing page
     .catch((err) => {
       console.error("Error in handler -", err)
