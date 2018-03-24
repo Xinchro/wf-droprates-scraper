@@ -19,13 +19,13 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.100.0",
+    "dotenv": "^4.0.0",
     "htmlparser": "^1.7.7",
     "jsonfile": "^3.0.1",
     "node-fetch": "^1.7.1",
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "dotenv": "^4.0.0",
     "npm": "^5.5.1",
     "npm-run-all": "^4.1.1",
     "rimraf": "^2.6.1",
