@@ -3,16 +3,16 @@ const utils = require("./utils")
 const templateURI = "./src/server/templates/base.html"
 const liTemplateURI = "./src/server/templates/li.html"
 
-exports.generateHTML = function() {
-  let completeHTML = "<html><body>ya dun goofed</body></html>"
+function generateHTML() {
+  return new Promise((res, rej) => {
+    let completeHTML = "<html><body>ya dun goofed</body></html>"
 
-  // generate the JSON listing HTML file
-  getTemplate(templateURI)
-  .then(fillTemplate, globalReject)
-  .then(exportHTML, globalReject)
-  .then(() => utils.uploadToAWS(`${process.env.DATA_FOLDER}/index.html`, "text/html"), globalReject)
+    // generate the JSON listing HTML file
+    getTemplate(templateURI)
+    .then(res(fillTemplate), rej(globalReject))
+  })
 }
-  
+
 function getFileNames() {
   // get the file names in directory
   return new Promise((resolve, reject)=> {
@@ -102,17 +102,25 @@ function getCurrentDate() {
   return date
 }
 
-function exportHTML(html) {
+function saveHTML(html) {
   // export generated HTML file
-  return new Promise((resolve, reject) => {
+  return new Promise((res, rej) => {
     utils.saveFileSync(`${process.env.DATA_FOLDER}`, "index.html", html, false)
     .then(() => {
       console.log("JSON listing generated and saved!")
-      resolve("JSON listing generated and saved!")
-    }, reject)
+      res({
+        path: process.env.DATA_FOLDER,
+        filename: "index.html",
+        data: html,
+        message: "JSON listing generated and saved!"
+      })
+    }, rej)
   })
 }
 
 function globalReject(message) {
   console.error(message)
 }
+
+exports.generateHTML = generateHTML
+exports.saveHTML = saveHTML

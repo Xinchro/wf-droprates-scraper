@@ -2,22 +2,24 @@ require("dotenv").config()
 
 const utils = require("./utils")
 
-function saveEverything(data) {
+function scrapeEverything(data) {
   // set our working data to the body tag, found in the dom
   const dataSet = getBody(getHTML(data.dom))
 
-  saveGlossary(dataSet)
-  saveMissionRewards(dataSet)
-  saveRelicRewards(dataSet)
-  saveKeyRewards(dataSet)
-  saveDynamicRewards(dataSet)
-  saveSortiesRewards(dataSet)
-  saveBountyRewards(dataSet)
-  saveModsByMod(dataSet)
-  saveModsByEnemy(dataSet)
-  saveBlueprintsByBlueprint(dataSet)
-  saveBlueprintsByEnemy(dataSet)
-  saveMiscDrops(dataSet)
+  return [
+    scrapeGlossary(dataSet),
+    scrapeMissionRewards(dataSet),
+    scrapeRelicRewards(dataSet),
+    scrapeKeyRewards(dataSet),
+    scrapeDynamicRewards(dataSet),
+    scrapeSortiesRewards(dataSet),
+    scrapeBountyRewards(dataSet),
+    scrapeModsByMod(dataSet),
+    scrapeModsByEnemy(dataSet),
+    scrapeBlueprintsByBlueprint(dataSet),
+    scrapeBlueprintsByEnemy(dataSet),
+    scrapeMiscDrops(dataSet)
+  ]
 }
 
 function getHTML(dom) {
@@ -68,64 +70,64 @@ function getBody(html) {
   if(failed) throw "Failed to find body tag"
 }
 
-function saveGlossary(data) {
+function scrapeGlossary(data) {
   let glossary = data.children[4]
-  htmlListToJson(glossary, "glossary")
+  return htmlListToJson(glossary, "glossary")
 }
 
-function saveMissionRewards(data) {
+function scrapeMissionRewards(data) {
   let missionRewards = data.children[6]
-  htmlTableToJson(missionRewards, "missionRewards")
+  return htmlTableToJson(missionRewards, "missionRewards")
 }
 
-function saveRelicRewards(data) {
+function scrapeRelicRewards(data) {
   let relicRewards = data.children[8]
-  htmlTableToJson(relicRewards, "relicRewards")
+  return htmlTableToJson(relicRewards, "relicRewards")
 }
 
-function saveKeyRewards(data) {
+function scrapeKeyRewards(data) {
   let keyRewards = data.children[10]
-  htmlTableToJson(keyRewards, "keyRewards")
+  return htmlTableToJson(keyRewards, "keyRewards")
 }
 
-function saveDynamicRewards(data) {
+function scrapeDynamicRewards(data) {
   let dynamicRewards = data.children[12]
-  htmlTableToJson(dynamicRewards, "dynamicRewards")
+  return htmlTableToJson(dynamicRewards, "dynamicRewards")
 }
 
-function saveSortiesRewards(data) {
+function scrapeSortiesRewards(data) {
   let sortiesRewards = data.children[14]
-  htmlTableToJson(sortiesRewards, "sortiesRewards")
+  return htmlTableToJson(sortiesRewards, "sortiesRewards")
 }
 
-function saveBountyRewards(data) {
+function scrapeBountyRewards(data) {
   let bountyRewards = data.children[16]
-  htmlTableToJson(bountyRewards, "bountyRewards")
+  return htmlTableToJson(bountyRewards, "bountyRewards")
 }
 
-function saveModsByMod(data) {
+function scrapeModsByMod(data) {
   let modsByMod = data.children[18]
-  htmlTableToJson(modsByMod, "modsByMod")
+  return htmlTableToJson(modsByMod, "modsByMod")
 }
 
-function saveModsByEnemy(data) {
+function scrapeModsByEnemy(data) {
   let modsByEnemy = data.children[20]
-  htmlTableToJson(modsByEnemy, "modsByEnemy")
+  return htmlTableToJson(modsByEnemy, "modsByEnemy")
 }
 
-function saveBlueprintsByBlueprint(data) {
+function scrapeBlueprintsByBlueprint(data) {
   let blueprintsByBlueprint = data.children[22]
-  htmlTableToJson(blueprintsByBlueprint, "blueprintsByBlueprint")
+  return htmlTableToJson(blueprintsByBlueprint, "blueprintsByBlueprint")
 }
 
-function saveBlueprintsByEnemy(data) {
+function scrapeBlueprintsByEnemy(data) {
   let blueprintsByEnemy = data.children[24]
-  htmlTableToJson(blueprintsByEnemy, "blueprintsByEnemy")
+  return htmlTableToJson(blueprintsByEnemy, "blueprintsByEnemy")
 }
 
-function saveMiscDrops(data) {
+function scrapeMiscDrops(data) {
   let miscDrops = data.children[26]
-  htmlTableToJson(miscDrops, "miscDrops")
+  return htmlTableToJson(miscDrops, "miscDrops")
 }
 
 function htmlListToJson(list, listName) {
@@ -133,7 +135,7 @@ function htmlListToJson(list, listName) {
     return console.log("Error reading list to convert")
   }
   if(!listName) {
-    return console.log("Error - no filename to save to")
+    return console.log("Error - no filename to scrape to")
   }
 
   let data = { glossaryList: [] }
@@ -146,8 +148,10 @@ function htmlListToJson(list, listName) {
     })
   })
 
-  utils.saveFileSync(`${process.env.DATA_FOLDER}`, "glossary.json", data, true)
-  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/glossary.json`, "application/json"))
+  return {
+    name: listName,
+    data: data
+  }
 }
 
 function htmlTableToJson(table, tableName) {
@@ -155,7 +159,7 @@ function htmlTableToJson(table, tableName) {
     return console.log("Error reading table to convert")
   }
   if(!tableName) {
-    return console.log("Error - no filename to save to")
+    return console.log("Error - no filename to scrape to")
   }
 
   let data = { sections: [] }
@@ -300,19 +304,20 @@ function htmlTableToJson(table, tableName) {
     }
   })
 
-  // TODO this is bad, fix it
-  utils.saveFileSync(`${process.env.DATA_FOLDER}`, `${tableName}.json`, data, true)
-  .then(utils.uploadToAWS(`${process.env.DATA_FOLDER}/${tableName}.json`, "application/json"))
+  return {
+    name: tableName,
+    data: data
+  }
 }
 
-exports.saveEverything = saveEverything
-exports.saveGlossary = saveGlossary
-exports.saveMissionRewards = saveMissionRewards
-exports.saveRelicRewards = saveRelicRewards
-exports.saveKeyRewards = saveKeyRewards
-exports.saveDynamicRewards = saveDynamicRewards
-exports.saveSortiesRewards = saveSortiesRewards
-exports.saveModsByMod = saveModsByMod
-exports.saveModsByEnemy = saveModsByEnemy
-exports.saveBlueprintsByBlueprint = saveBlueprintsByBlueprint
-exports.saveBlueprintsByEnemy = saveBlueprintsByEnemy
+exports.scrapeEverything = scrapeEverything
+exports.scrapeGlossary = scrapeGlossary
+exports.scrapeMissionRewards = scrapeMissionRewards
+exports.scrapeRelicRewards = scrapeRelicRewards
+exports.scrapeKeyRewards = scrapeKeyRewards
+exports.scrapeDynamicRewards = scrapeDynamicRewards
+exports.scrapeSortiesRewards = scrapeSortiesRewards
+exports.scrapeModsByMod = scrapeModsByMod
+exports.scrapeModsByEnemy = scrapeModsByEnemy
+exports.scrapeBlueprintsByBlueprint = scrapeBlueprintsByBlueprint
+exports.scrapeBlueprintsByEnemy = scrapeBlueprintsByEnemy
