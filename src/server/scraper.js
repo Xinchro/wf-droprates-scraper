@@ -3,7 +3,8 @@ require("dotenv").config()
 const utils = require("./utils")
 
 function saveEverything(data) {
-const dataSet = data.dom[2].children[1]
+  // set our working data to the body tag, found in the dom
+  const dataSet = getBody(getHTML(data.dom))
 
   saveGlossary(dataSet)
   saveMissionRewards(dataSet)
@@ -17,6 +18,54 @@ const dataSet = data.dom[2].children[1]
   saveBlueprintsByBlueprint(dataSet)
   saveBlueprintsByEnemy(dataSet)
   saveMiscDrops(dataSet)
+}
+
+function getHTML(dom) {
+  // check if dom empty
+  if(dom.length === 0) throw "dom is empty"
+
+  let failed = true
+
+  // loop through dom to find the html tag
+  return dom.find((element, index) => {
+    if(
+      element.type === "tag"
+      && element.name === "html"
+    ) {
+      console.log(`Found HTML tag at dom index ${index}`)
+      // didn't fail to find the tag
+      failed = false
+      // found the correct element
+      return true
+    }
+  })
+
+  // throw if we failed to find the html tag
+  if(failed) throw "Failed to find HTML tag"
+}
+
+function getBody(html) {
+  // throw if children empty
+  if(html.children.length === 0) throw "html has 0 children"
+
+  let failed = true
+
+  // loop through children to find the body tag
+  return html.children.find((element, index) => {
+    if(
+      element.type === "tag"
+      && element.name === "body"
+    ) {
+      console.log(`Found body tag at html children index ${index}`)
+      // didn't fail to find the tag
+      failed = false
+      // foudn the correct element
+      return true
+    }
+  })
+
+  // throw error if we failed to find the tag
+  if(failed) throw "Failed to find body tag"
 }
 
 function saveGlossary(data) {
